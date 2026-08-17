@@ -1,0 +1,75 @@
+{
+  "tabs": {
+    "inicio": "Home",
+    "canciones": "Songs",
+    "perfil": "Profile"
+  },
+  "inicio": {
+    "greeting": "Welcome back",
+    "streak": "streak",
+    "streakDays": "{{count}} day",
+    "streakDays_other": "{{count}} days",
+    "progress": "progress",
+    "levelOf": "Lv. {{current}} of {{total}}",
+    "unit": "Unit 1 · Fundamentals",
+    "continuePractice": "Continue practicing"
+  },
+  "canciones": {
+    "title": "Songs",
+    "subtitle": "Repertoire available to practice",
+    "publicDomain": "Public domain",
+    "licensed": "Licensed",
+    "pendingReview": "License pending human review before publishing."
+  },
+  "perfil": {
+    "title": "Profile",
+    "levelsCompleted": "levels completed",
+    "streakDaysLabel": "day streak",
+    "chordsLearned": "Chords learned",
+    "noChordsYet": "No chords learned yet.",
+    "curriculum": "Curriculum",
+    "language": "Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "signInGoogle": "Sign in with Google",
+    "signOut": "Sign out",
+    "synced": "Progress synced",
+    "syncWarning": "Your progress is only saved on this phone. Sign in with Google to back it up to the cloud so you don't lose it if you switch devices."
+  },
+  "leccion": {
+    "close": "Close",
+    "playChord": "Play the chord (arpeggiated)",
+    "playNote": "Play the note",
+    "correct": "Correct!",
+    "incorrect": "That's not the note — try again.",
+    "modeKeyboard": "Touch keyboard",
+    "modeMic": "Microphone",
+    "micPermissionDenied": "Microphone permission denied.",
+    "listening": "Listening…",
+    "micHint": "Tap \"Listen\" and play the note on your piano.",
+    "heardNotes": "Notes heard: {{notes}}",
+    "stopListening": "Stop",
+    "startListening": "Listen with microphone",
+    "levelComplete": "{{title}} complete",
+    "noSteps": "This level doesn't have practice steps loaded yet.",
+    "back": "Back",
+    "continue": "Continue",
+    "finger": "Finger {{number}}",
+    "congrats": "Congratulations!",
+    "congratsBody": "You finished \"{{title}}\". Repeat it as many times as you want until you master it, or move on to the next level.",
+    "repeatLevel": "Repeat this level",
+    "nextLevel": "Next: {{title}}"
+  },
+  "curriculum": {
+    "lvl0Teoria": { "title": "Fundamentals: Theory", "subtitle": "Note locations and posture" },
+    "lvl0Practica": { "title": "Fundamentals: Practice", "subtitle": "Identify notes with both hands" },
+    "lvl1Melodia": { "title": "Right-hand melody", "subtitle": "Amazing Grace, note by note" },
+    "lvl2Teoria": { "title": "Chords: Theory", "subtitle": "What they are and how they're built" },
+    "lvl2Practica": { "title": "Chords: Practice", "subtitle": "Major and minor triads" },
+    "lvl3": { "title": "Inversions", "subtitle": "First and second inversion" },
+    "lvl4": { "title": "Worship progressions", "subtitle": "I-V-vi-IV in common keys" },
+    "songSublimeGracia": "Amazing Grace"
+  }
+}

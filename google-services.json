@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "755570463340",
+    "project_id": "worshipkeys-4cfed",
+    "storage_bucket": "worshipkeys-4cfed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755570463340:android:0f6ee8682c8b8813767e49",
+        "android_client_info": {
+          "package_name": "com.worshipkeys.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755570463340-osoad4f009kusm890ehioju35340l60p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.worshipkeys.app",
+            "certificate_hash": "d28ba3594a48811ea4a3d91658c4861fc4b9e051"
+          }
+        },
+        {
+          "client_id": "755570463340-t31rppf92lqab01nutit7qr9he978b5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUl9qQsqOVCISptnSqfbPeRxED8mcumxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755570463340-t31rppf92lqab01nutit7qr9he978b5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

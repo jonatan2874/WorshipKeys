@@ -1,0 +1,75 @@
+{
+  "tabs": {
+    "inicio": "Inicio",
+    "canciones": "Canciones",
+    "perfil": "Perfil"
+  },
+  "inicio": {
+    "greeting": "Bienvenido de nuevo",
+    "streak": "racha",
+    "streakDays": "{{count}} día",
+    "streakDays_other": "{{count}} días",
+    "progress": "progreso",
+    "levelOf": "Nv. {{current}} de {{total}}",
+    "unit": "Unidad 1 · Fundamentos",
+    "continuePractice": "Continuar práctica"
+  },
+  "canciones": {
+    "title": "Canciones",
+    "subtitle": "Repertorio disponible para practicar",
+    "publicDomain": "Dominio público",
+    "licensed": "Licenciada",
+    "pendingReview": "Licencia pendiente de revisión humana antes de publicar."
+  },
+  "perfil": {
+    "title": "Perfil",
+    "levelsCompleted": "niveles completados",
+    "streakDaysLabel": "días de racha",
+    "chordsLearned": "Acordes aprendidos",
+    "noChordsYet": "Todavía no hay acordes aprendidos.",
+    "curriculum": "Currículo",
+    "language": "Idioma",
+    "theme": "Tema",
+    "themeSystem": "Sistema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "signInGoogle": "Iniciar sesión con Google",
+    "signOut": "Cerrar sesión",
+    "synced": "Progreso sincronizado",
+    "syncWarning": "Tu progreso se guarda solo en este teléfono. Inicia sesión con Google para guardarlo en la nube y no perderlo si cambias de dispositivo."
+  },
+  "leccion": {
+    "close": "Cerrar",
+    "playChord": "Toca el acorde (arpegiado)",
+    "playNote": "Toca la nota",
+    "correct": "¡Correcto!",
+    "incorrect": "Esa no es la nota — intenta de nuevo.",
+    "modeKeyboard": "Teclado táctil",
+    "modeMic": "Micrófono",
+    "micPermissionDenied": "Permiso de micrófono denegado.",
+    "listening": "Escuchando…",
+    "micHint": "Toca \"Escuchar\" y toca la nota en tu piano.",
+    "heardNotes": "Notas captadas: {{notes}}",
+    "stopListening": "Detener",
+    "startListening": "Escuchar micrófono",
+    "levelComplete": "{{title}} completo",
+    "noSteps": "Este nivel todavía no tiene pasos de práctica cargados.",
+    "back": "Volver",
+    "continue": "Continuar",
+    "finger": "Dedo {{number}}",
+    "congrats": "¡Felicidades!",
+    "congratsBody": "Terminaste \"{{title}}\". Puedes repetirlo las veces que quieras hasta dominarlo, o seguir con el siguiente nivel.",
+    "repeatLevel": "Repetir este nivel",
+    "nextLevel": "Siguiente: {{title}}"
+  },
+  "curriculum": {
+    "lvl0Teoria": { "title": "Fundamentos: Teoría", "subtitle": "Ubicación de notas y postura" },
+    "lvl0Practica": { "title": "Fundamentos: Práctica", "subtitle": "Identifica las notas con ambas manos" },
+    "lvl1Melodia": { "title": "Melodía con mano derecha", "subtitle": "Sublime Gracia, nota por nota" },
+    "lvl2Teoria": { "title": "Acordes: Teoría", "subtitle": "Qué son y cómo se forman" },
+    "lvl2Practica": { "title": "Acordes: Práctica", "subtitle": "Triadas mayores y menores" },
+    "lvl3": { "title": "Inversiones", "subtitle": "Primera y segunda inversión" },
+    "lvl4": { "title": "Progresiones de alabanza", "subtitle": "I-V-vi-IV en tonalidades comunes" },
+    "songSublimeGracia": "Sublime Gracia"
+  }
+}
