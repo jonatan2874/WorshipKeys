@@ -1,48 +1,55 @@
 /**
- * WorshipKeys — dirección visual "Verde salmo" (aprobada).
- * Teal fresco como acento de marca, ámbar reservado para estados "completado".
+ * WorshipKeys — dirección visual "Salterio" (mockup de referencia).
+ * Verde "vespers" fresco como acento de marca, dorado reservado para
+ * estados "completado", pergamino como base neutra en vez de mint.
  */
 
 import '@/global.css';
 
 export const Colors = {
   light: {
-    text: '#16241C',
-    textSecondary: '#6B7C73',
-    background: '#F6FBF8',
-    backgroundElement: '#E3F3EC',
-    backgroundSelected: '#D3EBE0',
-    accent: '#17A398',
-    accentStrong: '#0E7A70',
+    text: '#3A3B52',
+    textSecondary: '#8B8EA6',
+    background: '#FAF9F4',
+    backgroundElement: '#F0EEE3',
+    backgroundSelected: '#E9E6D9',
+    accent: '#43B77B',
+    accentStrong: '#2FA06A',
     accentOn: '#FFFFFF',
-    done: '#F2A93B',
-    doneStrong: '#C97D00',
-    currentRing: 'rgba(23, 163, 152, 0.16)',
-    border: '#DCEFE6',
+    done: '#F0A94E',
+    doneStrong: '#DB9235',
+    currentRing: 'rgba(67, 183, 123, 0.16)',
+    border: '#EDEAE0',
+    // Fondo de avisos tipo snackbar (p. ej. "no te escuchamos bien") —
+    // deliberadamente neutro/oscuro en ambos temas, distinto del resto de
+    // la paleta, para que se lea como un aviso del sistema y no como
+    // contenido de la lección.
+    micToastBg: 'rgba(58, 59, 82, 0.94)',
   },
   dark: {
-    text: '#EAF3EE',
-    textSecondary: '#8FA79C',
-    background: '#0F1713',
-    backgroundElement: '#1A2620',
-    backgroundSelected: '#22332B',
-    accent: '#22C7B8',
-    accentStrong: '#159485',
-    accentOn: '#062420',
-    done: '#F2A93B',
-    doneStrong: '#C97D00',
-    currentRing: 'rgba(34, 199, 184, 0.22)',
-    border: '#22332B',
+    text: '#F3F1E8',
+    textSecondary: '#A6A8BE',
+    background: '#1C1D2B',
+    backgroundElement: '#262739',
+    backgroundSelected: '#2E3044',
+    accent: '#4FCB8D',
+    accentStrong: '#38A873',
+    accentOn: '#0B2118',
+    done: '#F0A94E',
+    doneStrong: '#DB9235',
+    currentRing: 'rgba(79, 203, 141, 0.22)',
+    border: '#2E3044',
+    micToastBg: 'rgba(10, 11, 18, 0.94)',
   },
 } as const;
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
 
-// Cargadas vía useFonts (expo-font) en el layout raíz — ver src/hooks/use-app-fonts.ts.
+// Cargadas vía useFonts (expo-font) en el layout raíz — ver src/app/_layout.tsx.
 export const Fonts = {
-  display: 'Fredoka_700Bold',
-  displaySemiBold: 'Fredoka_600SemiBold',
-  displayMedium: 'Fredoka_500Medium',
+  display: 'Baloo2_700Bold',
+  displaySemiBold: 'Baloo2_600SemiBold',
+  displayMedium: 'Baloo2_500Medium',
   body: 'Nunito_400Regular',
   bodyMedium: 'Nunito_600SemiBold',
   bodyBold: 'Nunito_800ExtraBold',

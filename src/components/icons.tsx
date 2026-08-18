@@ -69,6 +69,29 @@ export function IconFlame({ size = 14, color = '#fff' }: IconProps) {
   );
 }
 
+export function IconMicOff({ size = 18, color = '#fff' }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <Path
+        d="M15 9.5V6a3 3 0 00-5.83-1M9 9v2.5a3 3 0 004.24 2.73M5 10.5c0 .3.02.6.06.9M12 18v3M8.5 21h7"
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path d="M19 10.5a7 7 0 01-1.16 3.87M3 3l18 18" stroke={color} strokeWidth={2} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
+export function IconClose({ size = 14, color = '#fff' }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <Path d="M5 5l14 14M19 5L5 19" stroke={color} strokeWidth={2} strokeLinecap="round" />
+    </Svg>
+  );
+}
+
 export function IconBars({ size = 14, color = '#fff' }: IconProps) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">

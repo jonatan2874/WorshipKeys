@@ -20,3 +20,12 @@ export function getLevelStatuses(levels: Level[], completedLevelIds: string[]): 
 
   return statuses;
 }
+
+/** Clave de i18n de la etapa (p. ej. "Primeros pasos") para el banner del
+ * nivel actual: mientras se está en "Teoría", "Mano derecha" o "Mano
+ * izquierda" debe seguir diciendo "Primeros pasos", no el nombre corto de
+ * cada botón individual. Si el nivel no pertenece a ninguna etapa
+ * (`stage` sin definir), se usa directamente su propio título. */
+export function getStageLabel(level: Level): string {
+  return level.stage ?? level.title;
+}

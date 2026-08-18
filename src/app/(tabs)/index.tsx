@@ -4,16 +4,17 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { IconBars, IconFlame } from '@/components/icons';
-import { LevelPath } from '@/components/level-path';
+import { LevelAccordion } from '@/components/level-accordion';
 import { PressButton } from '@/components/press-button';
 import { StatChip } from '@/components/stat-chip';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Radii, Spacing } from '@/constants/theme';
+import { MaxContentWidth, Radii, Spacing } from '@/constants/theme';
 import { useProgress } from '@/contexts/progress-context';
 import { useTheme } from '@/hooks/use-theme';
-import { getLevelStatuses } from '@/lib/curriculum/progress';
-import { sampleLevels } from '@/lib/curriculum/sample-data';
+import { getLevelStatuses, getStageLabel } from '@/lib/curriculum/progress';
+import { curriculumStages, sampleLevels } from '@/lib/curriculum/sample-data';
+import { groupLevelsByStage } from '@/lib/curriculum/stages';
 
 export default function InicioScreen() {
   const theme = useTheme();
@@ -22,8 +23,9 @@ export default function InicioScreen() {
   const { progress } = useProgress();
 
   const statuses = getLevelStatuses(sampleLevels, progress.completedLevelIds);
-  const levelNumbers = Object.fromEntries(sampleLevels.map((level, index) => [level.id, index + 1]));
+  const stages = groupLevelsByStage(sampleLevels, curriculumStages, statuses);
   const currentLevel = sampleLevels.find((level) => statuses[level.id] === 'current');
+  const currentStageNumber = stages.find((s) => s.status === 'current')?.number ?? stages[0]?.number ?? '0';
 
   return (
     <ThemedView style={styles.container}>
@@ -37,10 +39,7 @@ export default function InicioScreen() {
             />
             <StatChip
               icon={<IconBars />}
-              value={t('inicio.levelOf', {
-                current: levelNumbers[currentLevel?.id ?? sampleLevels[0].id],
-                total: sampleLevels.length,
-              })}
+              value={t('inicio.levelOf', { current: currentStageNumber, total: stages.length })}
               label={t('inicio.progress')}
             />
           </View>
@@ -51,15 +50,14 @@ export default function InicioScreen() {
 
           <View style={[styles.banner, { backgroundColor: theme.accent }]}>
             <ThemedText type="label" style={{ color: theme.accentOn }}>
-              {currentLevel ? t(currentLevel.title) : t('inicio.unit')}
+              {currentLevel ? t(getStageLabel(currentLevel)) : t('inicio.unit')}
             </ThemedText>
           </View>
 
-          <LevelPath
-            levels={sampleLevels}
+          <LevelAccordion
+            stages={stages}
             statuses={statuses}
-            levelNumbers={levelNumbers}
-            onSelectLevel={(level) => router.push(`/leccion?levelId=${level.id}`)}
+            onSelectLesson={(level) => router.push(`/leccion?levelId=${level.id}`)}
           />
 
           <PressButton
@@ -79,6 +77,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.four,
     paddingTop: Spacing.two,
     paddingBottom: Spacing.six,
+    maxWidth: MaxContentWidth,
+    width: '100%',
+    alignSelf: 'center',
   },
   chips: {
     flexDirection: 'row',

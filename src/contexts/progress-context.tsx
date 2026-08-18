@@ -67,10 +67,18 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  // Día local ('YYYY-MM-DD') agregado a practiceDates si no estaba ya —
+  // base real (no inventada) para el calendario semanal del perfil.
+  function withPracticeToday(prev: UserProgress): UserProgress {
+    const today = new Date().toLocaleDateString('sv-SE'); // 'sv-SE' da YYYY-MM-DD en hora local
+    if (prev.practiceDates.includes(today)) return prev;
+    return { ...prev, practiceDates: [...prev.practiceDates, today] };
+  }
+
   function completeLevel(levelId: string) {
     setProgress((prev) => {
       const next: UserProgress = {
-        ...prev,
+        ...withPracticeToday(prev),
         completedLevelIds: prev.completedLevelIds.includes(levelId)
           ? prev.completedLevelIds
           : [...prev.completedLevelIds, levelId],
@@ -85,7 +93,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     setProgress((prev) => {
       if ((prev.stepProgress[levelId] ?? 0) >= stepIndex) return prev;
       const next: UserProgress = {
-        ...prev,
+        ...withPracticeToday(prev),
         stepProgress: { ...prev.stepProgress, [levelId]: stepIndex },
       };
       persist(next);

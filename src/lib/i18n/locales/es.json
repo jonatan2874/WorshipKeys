@@ -1,4 +1,28 @@
 {
+  "bienvenida": {
+    "eyebrow": "Piano · Adoración · Desde cero",
+    "headline": "Tu música,\ntu ofrenda.",
+    "pitch": "Escuchamos lo que tocas a través del micrófono y te guiamos nota por nota, sin importar dónde empieces.",
+    "start": "Comenzar",
+    "haveAccount": "Ya tengo una cuenta"
+  },
+  "onboarding": {
+    "step": "Paso {{current}} de {{total}}",
+    "levelQuestion": "¿Cuál es tu nivel hoy?",
+    "levelSubtitle": "Ajustamos cada lección a tu punto de partida real.",
+    "skillNever": "Nunca he tocado",
+    "skillNeverDesc": "Empezamos por la postura y las notas",
+    "skillBasic": "Sé lo básico",
+    "skillBasicDesc": "Leo algunas notas y toco acordes simples",
+    "skillFluent": "Toco con soltura",
+    "skillFluentDesc": "Quiero perfeccionar oído y repertorio",
+    "goalQuestion": "¿Para qué quieres tocar?",
+    "goalChurch": "Servir en mi iglesia",
+    "goalFamily": "Acompañar a mi familia",
+    "goalHymns": "Himnos clásicos",
+    "goalPersonal": "Crecimiento personal",
+    "createPath": "Crear mi ruta"
+  },
   "tabs": {
     "inicio": "Inicio",
     "canciones": "Canciones",
@@ -12,19 +36,41 @@
     "progress": "progreso",
     "levelOf": "Nv. {{current}} de {{total}}",
     "unit": "Unidad 1 · Fundamentos",
-    "continuePractice": "Continuar práctica"
+    "continuePractice": "Continuar práctica",
+    "stageLabel": "Nivel {{number}} · {{title}}",
+    "lessonCount": "{{done}}/{{total}} lecciones",
+    "kindTeoria": "teoría",
+    "kindPractica": "práctica",
+    "kindProximamente": "próximamente"
   },
   "canciones": {
     "title": "Canciones",
     "subtitle": "Repertorio disponible para practicar",
     "publicDomain": "Dominio público",
     "licensed": "Licenciada",
-    "pendingReview": "Licencia pendiente de revisión humana antes de publicar."
+    "pendingReview": "Licencia pendiente de revisión humana antes de publicar.",
+    "searchPlaceholder": "Buscar canción",
+    "filterAll": "Todas",
+    "noResults": "No hay canciones que coincidan con la búsqueda."
   },
   "perfil": {
     "title": "Perfil",
     "levelsCompleted": "niveles completados",
     "streakDaysLabel": "días de racha",
+    "lessonsPracticed": "lecciones practicadas",
+    "week": "Tu semana",
+    "weekdayMon": "L",
+    "weekdayTue": "M",
+    "weekdayWed": "X",
+    "weekdayThu": "J",
+    "weekdayFri": "V",
+    "weekdaySat": "S",
+    "weekdaySun": "D",
+    "badgesTitle": "Logros",
+    "badges": {
+      "racha7": "Racha de 7 días",
+      "primerAcorde": "Primer acorde"
+    },
     "chordsLearned": "Acordes aprendidos",
     "noChordsYet": "Todavía no hay acordes aprendidos.",
     "curriculum": "Currículo",
@@ -47,6 +93,7 @@
     "modeKeyboard": "Teclado táctil",
     "modeMic": "Micrófono",
     "micPermissionDenied": "Permiso de micrófono denegado.",
+    "micNotSupported": "El micrófono no está disponible en esta vista previa — usa la pestaña \"Teclado táctil\".",
     "listening": "Escuchando…",
     "micHint": "Toca \"Escuchar\" y toca la nota en tu piano.",
     "heardNotes": "Notas captadas: {{notes}}",
@@ -56,20 +103,48 @@
     "noSteps": "Este nivel todavía no tiene pasos de práctica cargados.",
     "back": "Volver",
     "continue": "Continuar",
+    "previous": "Atrás",
     "finger": "Dedo {{number}}",
     "congrats": "¡Felicidades!",
     "congratsBody": "Terminaste \"{{title}}\". Puedes repetirlo las veces que quieras hasta dominarlo, o seguir con el siguiente nivel.",
     "repeatLevel": "Repetir este nivel",
-    "nextLevel": "Siguiente: {{title}}"
+    "nextLevel": "Siguiente: {{title}}",
+    "micTrouble": "No te estamos escuchando bien",
+    "micTroubleBody": "Acércate al micrófono o sube el volumen del piano.",
+    "micTroubleSwitchToKeyboard": "Usar teclado táctil",
+    "micTroubleDismiss": "Cerrar aviso"
   },
   "curriculum": {
-    "lvl0Teoria": { "title": "Fundamentos: Teoría", "subtitle": "Ubicación de notas y postura" },
-    "lvl0Practica": { "title": "Fundamentos: Práctica", "subtitle": "Identifica las notas con ambas manos" },
+    "stage0": { "title": "Postura y el mapa del teclado" },
+    "stage1": { "title": "Notas y primeras melodías" },
+    "stage2": { "title": "Acordes y notación americana" },
+    "stage3": { "title": "Inversiones" },
+    "stage4": { "title": "Acordes menores" },
+    "stage5": { "title": "Escalas" },
+    "stage6": { "title": "Tonalidades de alabanza" },
+    "stage7": { "title": "Ritmo y acompañamiento" },
+    "stage8": { "title": "Tocar de oído" },
+    "stage9": { "title": "Repertorio y en vivo" },
+    "stage99": { "title": "Opcional: Lectura en pentagrama" },
+    "lvl0Teoria": {
+      "title": "Teoría",
+      "subtitle": "Ubicación de notas y numeración de dedos, mano derecha e izquierda"
+    },
+    "lvl0PracticaDerecha": { "title": "Mano derecha", "subtitle": "Práctica" },
+    "lvl0PracticaIzquierda": { "title": "Mano izquierda", "subtitle": "Práctica" },
     "lvl1Melodia": { "title": "Melodía con mano derecha", "subtitle": "Sublime Gracia, nota por nota" },
     "lvl2Teoria": { "title": "Acordes: Teoría", "subtitle": "Qué son y cómo se forman" },
     "lvl2Practica": { "title": "Acordes: Práctica", "subtitle": "Triadas mayores y menores" },
     "lvl3": { "title": "Inversiones", "subtitle": "Primera y segunda inversión" },
-    "lvl4": { "title": "Progresiones de alabanza", "subtitle": "I-V-vi-IV en tonalidades comunes" },
-    "songSublimeGracia": "Sublime Gracia"
+    "lvl4AcordesMenores": { "title": "Acordes menores", "subtitle": "Próximamente" },
+    "lvl5Escalas": { "title": "Escalas", "subtitle": "Próximamente" },
+    "lvl6Tonalidades": { "title": "Tonalidades de alabanza", "subtitle": "Próximamente" },
+    "lvl7Ritmo": { "title": "Ritmo y acompañamiento", "subtitle": "Próximamente" },
+    "lvl8Oido": { "title": "Tocar de oído", "subtitle": "Próximamente" },
+    "lvl9Repertorio": { "title": "Repertorio y en vivo", "subtitle": "Próximamente" },
+    "lvl99Lectura": { "title": "Lectura en pentagrama", "subtitle": "Próximamente" },
+    "songSublimeGracia": "Sublime Gracia",
+    "songCuanGrandeEsEl": "Cuán Grande Es Él",
+    "songGrandeEsTuFidelidad": "Grande Es Tu Fidelidad"
   }
 }

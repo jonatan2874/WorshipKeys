@@ -4,32 +4,42 @@ import { ThemedText } from '@/components/themed-text';
 import { Radii, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 
-/** Botón con relieve ("3D"): sombra sólida inferior, estilo Duolingo/Simply Piano. */
+/** Botón plano minimal: relleno sólido, sin sombra ni efecto 3D — solo se
+ * oscurece un poco al presionar. `variant="secondary"` es una versión con
+ * contorno para acciones de menor jerarquía (p. ej. "Volver") que conviven
+ * junto a la acción principal. */
 export function PressButton({
   label,
   onPress,
   style,
+  variant = 'primary',
 }: {
   label: string;
   onPress: () => void;
   style?: ViewStyle;
+  variant?: 'primary' | 'secondary';
 }) {
   const theme = useTheme();
+  const isSecondary = variant === 'secondary';
 
   return (
     <Pressable
       onPress={onPress}
       style={({ pressed }) => [
         styles.button,
-        {
-          backgroundColor: theme.accent,
-          shadowColor: theme.accentStrong,
-          transform: pressed ? [{ translateY: 3 }] : [{ translateY: 0 }],
-          shadowOffset: { width: 0, height: pressed ? 1 : 5 },
-        },
+        isSecondary
+          ? {
+              backgroundColor: theme.background,
+              borderWidth: 1.5,
+              borderColor: theme.border,
+              opacity: pressed ? 0.7 : 1,
+            }
+          : {
+              backgroundColor: pressed ? theme.accentStrong : theme.accent,
+            },
         style,
       ]}>
-      <ThemedText type="subtitle" style={{ color: theme.accentOn, fontSize: 15 }}>
+      <ThemedText type="subtitle" style={{ color: isSecondary ? theme.text : theme.accentOn, fontSize: 15 }}>
         {label}
       </ThemedText>
     </Pressable>
@@ -43,8 +53,5 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md,
     paddingVertical: Spacing.three,
     paddingHorizontal: Spacing.five,
-    shadowOpacity: 1,
-    shadowRadius: 0,
-    elevation: 5,
   },
 });

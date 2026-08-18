@@ -33,6 +33,8 @@ export interface MicPitchDetectorState {
   isListening: boolean;
   hasPermission: boolean | null;
   detectedNote: DetectedNote | null;
+  /** false donde expo-audio no implementa captura de audio real (web). */
+  isSupported: boolean;
   start: () => Promise<void>;
   stop: () => void;
 }
@@ -99,6 +101,13 @@ export function useMicPitchDetector(): MicPitchDetectorState {
   const isStreamingRef = useRef(false);
 
   const start = useCallback(async () => {
+    // expo-audio no implementa useAudioStream en web (siempre devuelve
+    // stream: null) — sin captura real no tiene sentido ni pedir permiso.
+    if (!stream) {
+      setHasPermission(false);
+      return;
+    }
+
     const current = await getRecordingPermissionsAsync();
     let granted = current.granted;
     if (!granted) {
@@ -142,5 +151,5 @@ export function useMicPitchDetector(): MicPitchDetectorState {
     };
   }, [stream]);
 
-  return { isListening, hasPermission, detectedNote, start, stop };
+  return { isListening, hasPermission, detectedNote, isSupported: !!stream, start, stop };
 }

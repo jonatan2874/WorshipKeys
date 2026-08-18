@@ -1,10 +1,52 @@
-import { Level, Song, UserProgress } from './types';
+import { StageDef } from './stages';
+import { Level, NotePoolItem, Song, UserProgress } from './types';
+
+/** Las 12 etapas del currículo (0–9 y "opcional"), en el orden en que se
+ * muestran en el camino de niveles. */
+export const curriculumStages: StageDef[] = [
+  { key: 'curriculum.stage0.title', number: '0' },
+  { key: 'curriculum.stage1.title', number: '1' },
+  { key: 'curriculum.stage2.title', number: '2' },
+  { key: 'curriculum.stage3.title', number: '3' },
+  { key: 'curriculum.stage4.title', number: '4' },
+  { key: 'curriculum.stage5.title', number: '5' },
+  { key: 'curriculum.stage6.title', number: '6' },
+  { key: 'curriculum.stage7.title', number: '7' },
+  { key: 'curriculum.stage8.title', number: '8' },
+  { key: 'curriculum.stage9.title', number: '9' },
+  { key: 'curriculum.stage99.title', number: '99' },
+];
+
+/** Las 7 notas de la posición básica de la mano derecha — pool para el
+ * repaso al azar de "Práctica notas: Mano derecha". */
+const rightHandNotePool: NotePoolItem[] = [
+  { note: 'C4', displayName: 'Do', fingerNumber: 1, hand: 'right' },
+  { note: 'D4', displayName: 'Re', fingerNumber: 2, hand: 'right' },
+  { note: 'E4', displayName: 'Mi', fingerNumber: 3, hand: 'right' },
+  { note: 'F4', displayName: 'Fa', fingerNumber: 4, hand: 'right' },
+  { note: 'G4', displayName: 'Sol', fingerNumber: 5, hand: 'right' },
+  { note: 'A4', displayName: 'La', hand: 'right' },
+  { note: 'B4', displayName: 'Si', hand: 'right' },
+];
+
+/** Las 7 notas de la posición básica de la mano izquierda — pool para el
+ * repaso al azar de "Práctica notas: Mano izquierda". */
+const leftHandNotePool: NotePoolItem[] = [
+  { note: 'C3', displayName: 'Do', fingerNumber: 5, hand: 'left' },
+  { note: 'D3', displayName: 'Re', fingerNumber: 4, hand: 'left' },
+  { note: 'E3', displayName: 'Mi', fingerNumber: 3, hand: 'left' },
+  { note: 'F3', displayName: 'Fa', fingerNumber: 2, hand: 'left' },
+  { note: 'G3', displayName: 'Sol', fingerNumber: 1, hand: 'left' },
+  { note: 'A3', displayName: 'La', hand: 'left' },
+  { note: 'B3', displayName: 'Si', hand: 'left' },
+];
 
 export const sampleLevels: Level[] = [
   {
     id: 'lvl-0a-teoria-fundamentos',
     title: 'curriculum.lvl0Teoria.title',
     subtitle: 'curriculum.lvl0Teoria.subtitle',
+    stage: 'curriculum.stage0.title',
     role: 'fundamentos',
     steps: [
       {
@@ -59,14 +101,15 @@ export const sampleLevels: Level[] = [
         expectedNotes: [],
         displayName: 'Lo que viene: práctica',
         instructionText:
-          'Ya viste todo lo que necesitas. En el siguiente nivel practicas identificando estas notas con las dos manos — sin más explicaciones de por medio, para que puedas repetirlo las veces que quieras sin releer la teoría.',
+          'Ya viste todo lo que necesitas. Primero practicas identificando notas con la mano derecha, y luego con la izquierda — sin más explicaciones de por medio, para que puedas repetirlo las veces que quieras sin releer la teoría. Los acordes vienen más adelante — por ahora es solo notas.',
       },
     ],
   },
   {
-    id: 'lvl-0b-practica-fundamentos',
-    title: 'curriculum.lvl0Practica.title',
-    subtitle: 'curriculum.lvl0Practica.subtitle',
+    id: 'lvl-0b-practica-derecha',
+    title: 'curriculum.lvl0PracticaDerecha.title',
+    subtitle: 'curriculum.lvl0PracticaDerecha.subtitle',
+    stage: 'curriculum.stage0.title',
     role: 'fundamentos',
     steps: [
       {
@@ -111,46 +154,6 @@ export const sampleLevels: Level[] = [
       },
       {
         kind: 'note',
-        expectedNotes: ['E4'],
-        instructionText: 'Identifica: Mi (E)',
-        displayName: 'Mi',
-        fingerNumber: 3,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['C4'],
-        instructionText: 'Identifica: Do (C) central',
-        displayName: 'Do',
-        fingerNumber: 1,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['G4'],
-        instructionText: 'Identifica: Sol (G)',
-        displayName: 'Sol',
-        fingerNumber: 5,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['D4'],
-        instructionText: 'Identifica: Re (D)',
-        displayName: 'Re',
-        fingerNumber: 2,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['F4'],
-        instructionText: 'Identifica: Fa (F)',
-        displayName: 'Fa',
-        fingerNumber: 4,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
         expectedNotes: ['A4'],
         instructionText: 'Toca La (A), justo después de Sol',
         displayName: 'La',
@@ -163,36 +166,19 @@ export const sampleLevels: Level[] = [
         displayName: 'Si',
         hand: 'right',
       },
-      {
-        kind: 'note',
-        expectedNotes: ['A4'],
-        instructionText: 'Identifica: La (A)',
-        displayName: 'La',
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['C4'],
-        instructionText: 'Identifica: Do (C) central',
-        displayName: 'Do',
-        fingerNumber: 1,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['B4'],
-        instructionText: 'Identifica: Si (B)',
-        displayName: 'Si',
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['E4'],
-        instructionText: 'Identifica: Mi (E)',
-        displayName: 'Mi',
-        fingerNumber: 3,
-        hand: 'right',
-      },
+    ],
+    // El repaso ("Identifica…") se genera al azar en cada intento —
+    // distinto orden y distintas notas cada vez que se entra o se repite
+    // el nivel, en vez de la misma secuencia memorizable.
+    practicePool: { notes: rightHandNotePool, noteQuizCount: 10 },
+  },
+  {
+    id: 'lvl-0c-practica-izquierda',
+    title: 'curriculum.lvl0PracticaIzquierda.title',
+    subtitle: 'curriculum.lvl0PracticaIzquierda.subtitle',
+    stage: 'curriculum.stage0.title',
+    role: 'fundamentos',
+    steps: [
       {
         kind: 'note',
         expectedNotes: ['C3'],
@@ -235,30 +221,6 @@ export const sampleLevels: Level[] = [
       },
       {
         kind: 'note',
-        expectedNotes: ['E3'],
-        instructionText: 'Identifica con la izquierda: Mi (E)',
-        displayName: 'Mi',
-        fingerNumber: 3,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['C3'],
-        instructionText: 'Identifica con la izquierda: Do (C) grave',
-        displayName: 'Do',
-        fingerNumber: 5,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['F3'],
-        instructionText: 'Identifica con la izquierda: Fa (F)',
-        displayName: 'Fa',
-        fingerNumber: 2,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
         expectedNotes: ['A3'],
         instructionText: 'Toca La grave (A)',
         displayName: 'La',
@@ -271,104 +233,14 @@ export const sampleLevels: Level[] = [
         displayName: 'Si',
         hand: 'left',
       },
-      {
-        kind: 'note',
-        expectedNotes: ['G3'],
-        instructionText: 'Identifica con la izquierda: Sol (G)',
-        displayName: 'Sol',
-        fingerNumber: 1,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['B3'],
-        instructionText: 'Identifica con la izquierda: Si (B)',
-        displayName: 'Si',
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['D3'],
-        instructionText: 'Identifica con la izquierda: Re (D)',
-        displayName: 'Re',
-        fingerNumber: 4,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['A3'],
-        instructionText: 'Identifica con la izquierda: La (A)',
-        displayName: 'La',
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['C4'],
-        instructionText: 'Repaso mezclado — identifica: Do (C) central',
-        displayName: 'Do',
-        fingerNumber: 1,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['G3'],
-        instructionText: 'Repaso mezclado — identifica con la izquierda: Sol (G)',
-        displayName: 'Sol',
-        fingerNumber: 1,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['E4'],
-        instructionText: 'Repaso mezclado — identifica: Mi (E)',
-        displayName: 'Mi',
-        fingerNumber: 3,
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['C3'],
-        instructionText: 'Repaso mezclado — identifica con la izquierda: Do (C) grave',
-        displayName: 'Do',
-        fingerNumber: 5,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['B4'],
-        instructionText: 'Repaso mezclado — identifica: Si (B)',
-        displayName: 'Si',
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['F3'],
-        instructionText: 'Repaso mezclado — identifica con la izquierda: Fa (F)',
-        displayName: 'Fa',
-        fingerNumber: 2,
-        hand: 'left',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['A4'],
-        instructionText: 'Repaso mezclado — identifica: La (A)',
-        displayName: 'La',
-        hand: 'right',
-      },
-      {
-        kind: 'note',
-        expectedNotes: ['D3'],
-        instructionText: 'Repaso mezclado — identifica con la izquierda: Re (D)',
-        displayName: 'Re',
-        fingerNumber: 4,
-        hand: 'left',
-      },
     ],
+    practicePool: { notes: leftHandNotePool, noteQuizCount: 10 },
   },
   {
     id: 'lvl-1-melodia',
     title: 'curriculum.lvl1Melodia.title',
     subtitle: 'curriculum.lvl1Melodia.subtitle',
+    stage: 'curriculum.stage1.title',
     role: 'melodia',
     steps: [
       { kind: 'note', expectedNotes: ['G4'], instructionText: 'Primera nota: Sol', displayName: 'Sol', hand: 'right' },
@@ -385,6 +257,7 @@ export const sampleLevels: Level[] = [
     id: 'lvl-2a-teoria-acordes',
     title: 'curriculum.lvl2Teoria.title',
     subtitle: 'curriculum.lvl2Teoria.subtitle',
+    stage: 'curriculum.stage2.title',
     role: 'acordes',
     steps: [
       {
@@ -393,6 +266,13 @@ export const sampleLevels: Level[] = [
         displayName: '¿Qué es un acorde?',
         instructionText:
           'Un acorde es un grupo de 3 o más notas que suenan juntas y forman un color armónico. En vez de tocar una melodía nota por nota, con acordes puedes acompañar una canción completa — es la base para tocar de oído en la iglesia.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Notación americana',
+        instructionText:
+          'De aquí en adelante los acordes se nombran con letras en vez de en español — es el mismo sistema que vas a ver en cualquier cancionero de iglesia: Do=C, Re=D, Mi=E, Fa=F, Sol=G, La=A, Si=B. Una letra sola (como "C") es acorde mayor; letra + "m" (como "Am") es acorde menor.',
       },
       {
         kind: 'info',
@@ -407,7 +287,7 @@ export const sampleLevels: Level[] = [
         expectedNotes: [],
         displayName: 'Los 4 acordes de este nivel',
         instructionText:
-          'Vas a aprender Do mayor (Do-Mi-Sol), Sol mayor (Sol-Si-Re), Fa mayor (Fa-La-Do) y La menor (La-Do-Mi). Los mayores suenan brillantes; el menor suena más melancólico — misma fórmula, pero con la tercera un semitono más abajo.',
+          'Vas a aprender C (Do-Mi-Sol), G (Sol-Si-Re), F (Fa-La-Do) y Am (La-Do-Mi). Los mayores suenan brillantes; el menor suena más melancólico — misma fórmula, pero con la tercera un semitono más abajo.',
       },
       {
         kind: 'info',
@@ -430,78 +310,84 @@ export const sampleLevels: Level[] = [
     id: 'lvl-2b-practica-acordes',
     title: 'curriculum.lvl2Practica.title',
     subtitle: 'curriculum.lvl2Practica.subtitle',
+    stage: 'curriculum.stage2.title',
     role: 'acordes',
-    steps: [
-      {
-        kind: 'chord',
-        expectedNotes: ['C4', 'E4', 'G4'],
-        instructionText: 'Toca las 3 notas juntas: Do, Mi, Sol',
-        displayName: 'Do mayor',
-        recommendedMode: 'teclado',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['G3', 'B3', 'D4'],
-        instructionText: 'Toca las 3 notas juntas: Sol, Si, Re',
-        displayName: 'Sol mayor',
-        recommendedMode: 'teclado',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['F3', 'A3', 'C4'],
-        instructionText: 'Toca las 3 notas juntas: Fa, La, Do',
-        displayName: 'Fa mayor',
-        recommendedMode: 'teclado',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['A3', 'C4', 'E4'],
-        instructionText: 'Toca las 3 notas juntas: La, Do, Mi',
-        displayName: 'La menor',
-        recommendedMode: 'teclado',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['C4', 'E4', 'G4'],
-        instructionText: 'Arpegia: Do, luego Mi, luego Sol, una por una',
-        displayName: 'Do mayor',
-        recommendedMode: 'microfono',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['G3', 'B3', 'D4'],
-        instructionText: 'Arpegia: Sol, luego Si, luego Re, una por una',
-        displayName: 'Sol mayor',
-        recommendedMode: 'microfono',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['F3', 'A3', 'C4'],
-        instructionText: 'Arpegia: Fa, luego La, luego Do, una por una',
-        displayName: 'Fa mayor',
-        recommendedMode: 'microfono',
-      },
-      {
-        kind: 'chord',
-        expectedNotes: ['A3', 'C4', 'E4'],
-        instructionText: 'Arpegia: La, luego Do, luego Mi, una por una',
-        displayName: 'La menor',
-        recommendedMode: 'microfono',
-      },
-    ],
+    steps: [],
+    // Los 4 acordes se practican en bloque y luego arpegiados, pero en
+    // orden al azar y distinto en cada intento (incluyendo "repetir nivel").
+    // Nombres en notación americana (C/G/F/Am), consistente con el paso de
+    // teoría "Notación americana" de lvl-2a.
+    practicePool: {
+      chords: [
+        { notes: ['C4', 'E4', 'G4'], displayName: 'C' },
+        { notes: ['G3', 'B3', 'D4'], displayName: 'G' },
+        { notes: ['F3', 'A3', 'C4'], displayName: 'F' },
+        { notes: ['A3', 'C4', 'E4'], displayName: 'Am' },
+      ],
+    },
   },
   {
     id: 'lvl-3-inversiones',
     title: 'curriculum.lvl3.title',
     subtitle: 'curriculum.lvl3.subtitle',
+    stage: 'curriculum.stage3.title',
     role: 'acordes',
     steps: [],
   },
   {
-    id: 'lvl-4-progresiones',
-    title: 'curriculum.lvl4.title',
-    subtitle: 'curriculum.lvl4.subtitle',
-    role: 'acompanamiento',
+    id: 'lvl-4-acordes-menores',
+    title: 'curriculum.lvl4AcordesMenores.title',
+    subtitle: 'curriculum.lvl4AcordesMenores.subtitle',
+    stage: 'curriculum.stage4.title',
+    role: 'acordes',
+    steps: [],
+  },
+  {
+    id: 'lvl-5-escalas',
+    title: 'curriculum.lvl5Escalas.title',
+    subtitle: 'curriculum.lvl5Escalas.subtitle',
+    stage: 'curriculum.stage5.title',
+    role: 'escalas',
+    steps: [],
+  },
+  {
+    id: 'lvl-6-tonalidades',
+    title: 'curriculum.lvl6Tonalidades.title',
+    subtitle: 'curriculum.lvl6Tonalidades.subtitle',
+    stage: 'curriculum.stage6.title',
+    role: 'tonalidades',
+    steps: [],
+  },
+  {
+    id: 'lvl-7-ritmo',
+    title: 'curriculum.lvl7Ritmo.title',
+    subtitle: 'curriculum.lvl7Ritmo.subtitle',
+    stage: 'curriculum.stage7.title',
+    role: 'ritmo',
+    steps: [],
+  },
+  {
+    id: 'lvl-8-oido',
+    title: 'curriculum.lvl8Oido.title',
+    subtitle: 'curriculum.lvl8Oido.subtitle',
+    stage: 'curriculum.stage8.title',
+    role: 'oido',
+    steps: [],
+  },
+  {
+    id: 'lvl-9-repertorio',
+    title: 'curriculum.lvl9Repertorio.title',
+    subtitle: 'curriculum.lvl9Repertorio.subtitle',
+    stage: 'curriculum.stage9.title',
+    role: 'repertorio',
+    steps: [],
+  },
+  {
+    id: 'lvl-99-lectura',
+    title: 'curriculum.lvl99Lectura.title',
+    subtitle: 'curriculum.lvl99Lectura.subtitle',
+    stage: 'curriculum.stage99.title',
+    role: 'lectura',
     steps: [],
   },
 ];
@@ -516,15 +402,35 @@ export const sampleSongs: Song[] = [
       'Melodía e himno de dominio público (Amazing Grace); arreglo específico pendiente de confirmación por un humano antes de publicar.',
     levelIds: ['lvl-1-melodia', 'lvl-2b-practica-acordes'],
   },
+  {
+    id: 'song-cuan-grande-es-el',
+    title: 'curriculum.songCuanGrandeEsEl',
+    source: 'dominio_publico',
+    licenseStatus: 'pendiente_revision_humana',
+    licenseInfo:
+      'Himno de dominio público (How Great Thou Art); arreglo específico pendiente de confirmación por un humano antes de publicar. Todavía sin lección práctica asociada.',
+    levelIds: [],
+  },
+  {
+    id: 'song-grande-es-tu-fidelidad',
+    title: 'curriculum.songGrandeEsTuFidelidad',
+    source: 'dominio_publico',
+    licenseStatus: 'pendiente_revision_humana',
+    licenseInfo:
+      'Himno de dominio público (Great Is Thy Faithfulness); arreglo específico pendiente de confirmación por un humano antes de publicar. Todavía sin lección práctica asociada.',
+    levelIds: [],
+  },
 ];
 
 // Progreso inicial de un usuario nuevo: nada completado todavía, empieza en
-// Fundamentos. (Antes arrancaba en "Acordes básicos" por datos de ejemplo
-// que simulaban progreso ya avanzado — confuso para una primera prueba real.)
+// la primera etapa. (Antes arrancaba en "Acordes básicos" por datos de
+// ejemplo que simulaban progreso ya avanzado — confuso para una primera
+// prueba real.)
 export const sampleUserProgress: UserProgress = {
   completedLevelIds: [],
   currentStreak: 0,
   lastPracticeDate: null,
   chordsLearned: [],
   stepProgress: {},
+  practiceDates: [],
 };

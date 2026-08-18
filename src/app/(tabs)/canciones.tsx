@@ -1,5 +1,6 @@
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, Pressable, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -8,6 +9,8 @@ import { Radii, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 import { sampleLevels, sampleSongs } from '@/lib/curriculum/sample-data';
 import { Song } from '@/lib/curriculum/types';
+
+type SourceFilter = 'todas' | Song['source'];
 
 function SongCard({ song }: { song: Song }) {
   const theme = useTheme();
@@ -48,7 +51,27 @@ function SongCard({ song }: { song: Song }) {
 }
 
 export default function CancionesScreen() {
+  const theme = useTheme();
   const { t } = useTranslation();
+  const [query, setQuery] = useState('');
+  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('todas');
+
+  // Filtro real (no decorativo): por título y por origen de la canción —
+  // ambos son datos que ya existen en `Song`, sin inventar categorías.
+  const filteredSongs = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return sampleSongs.filter((song) => {
+      if (sourceFilter !== 'todas' && song.source !== sourceFilter) return false;
+      if (q && !t(song.title).toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }, [query, sourceFilter, t]);
+
+  const filters: { key: SourceFilter; labelKey: string }[] = [
+    { key: 'todas', labelKey: 'canciones.filterAll' },
+    { key: 'dominio_publico', labelKey: 'canciones.publicDomain' },
+    { key: 'licenciada', labelKey: 'canciones.licensed' },
+  ];
 
   return (
     <ThemedView style={styles.container}>
@@ -60,11 +83,46 @@ export default function CancionesScreen() {
           </ThemedText>
         </View>
 
+        <View style={styles.searchWrap}>
+          <TextInput
+            value={query}
+            onChangeText={setQuery}
+            placeholder={t('canciones.searchPlaceholder')}
+            placeholderTextColor={theme.textSecondary}
+            style={[styles.search, { backgroundColor: theme.backgroundElement, color: theme.text, borderColor: theme.border }]}
+          />
+        </View>
+
+        <View style={styles.filters}>
+          {filters.map((f) => {
+            const active = sourceFilter === f.key;
+            return (
+              <Pressable
+                key={f.key}
+                onPress={() => setSourceFilter(f.key)}
+                style={[
+                  styles.filterChip,
+                  { borderColor: theme.border },
+                  active && { backgroundColor: theme.accent, borderColor: theme.accentStrong },
+                ]}>
+                <ThemedText type="smallBold" style={active ? { color: theme.accentOn } : undefined}>
+                  {t(f.labelKey)}
+                </ThemedText>
+              </Pressable>
+            );
+          })}
+        </View>
+
         <FlatList
-          data={sampleSongs}
+          data={filteredSongs}
           keyExtractor={(song) => song.id}
           renderItem={({ item }) => <SongCard song={item} />}
           contentContainerStyle={styles.list}
+          ListEmptyComponent={
+            <ThemedText type="small" themeColor="textSecondary" style={styles.emptyText}>
+              {t('canciones.noResults')}
+            </ThemedText>
+          }
         />
       </SafeAreaView>
     </ThemedView>
@@ -80,6 +138,27 @@ const styles = StyleSheet.create({
     paddingBottom: Spacing.three,
     gap: Spacing.half,
   },
+  searchWrap: { paddingHorizontal: Spacing.four, marginBottom: Spacing.two },
+  search: {
+    borderWidth: 1.5,
+    borderRadius: Radii.md,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    fontSize: 14,
+  },
+  filters: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    paddingHorizontal: Spacing.four,
+    marginBottom: Spacing.three,
+  },
+  filterChip: {
+    borderWidth: 1.5,
+    borderRadius: Radii.pill,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.one,
+  },
+  emptyText: { textAlign: 'center', marginTop: Spacing.six },
   list: {
     paddingHorizontal: Spacing.four,
     paddingBottom: Spacing.six,

@@ -1,4 +1,28 @@
 {
+  "bienvenida": {
+    "eyebrow": "Piano · Worship · From scratch",
+    "headline": "Your music,\nyour offering.",
+    "pitch": "We listen to what you play through the microphone and guide you note by note, no matter where you're starting from.",
+    "start": "Get started",
+    "haveAccount": "I already have an account"
+  },
+  "onboarding": {
+    "step": "Step {{current}} of {{total}}",
+    "levelQuestion": "What's your level today?",
+    "levelSubtitle": "We tailor every lesson to your real starting point.",
+    "skillNever": "Never played before",
+    "skillNeverDesc": "We'll start with posture and notes",
+    "skillBasic": "I know the basics",
+    "skillBasicDesc": "I can read some notes and play simple chords",
+    "skillFluent": "I play comfortably",
+    "skillFluentDesc": "I want to sharpen my ear and repertoire",
+    "goalQuestion": "What do you want to play for?",
+    "goalChurch": "Serve at my church",
+    "goalFamily": "Accompany my family",
+    "goalHymns": "Classic hymns",
+    "goalPersonal": "Personal growth",
+    "createPath": "Create my path"
+  },
   "tabs": {
     "inicio": "Home",
     "canciones": "Songs",
@@ -12,19 +36,41 @@
     "progress": "progress",
     "levelOf": "Lv. {{current}} of {{total}}",
     "unit": "Unit 1 · Fundamentals",
-    "continuePractice": "Continue practicing"
+    "continuePractice": "Continue practicing",
+    "stageLabel": "Level {{number}} · {{title}}",
+    "lessonCount": "{{done}}/{{total}} lessons",
+    "kindTeoria": "theory",
+    "kindPractica": "practice",
+    "kindProximamente": "coming soon"
   },
   "canciones": {
     "title": "Songs",
     "subtitle": "Repertoire available to practice",
     "publicDomain": "Public domain",
     "licensed": "Licensed",
-    "pendingReview": "License pending human review before publishing."
+    "pendingReview": "License pending human review before publishing.",
+    "searchPlaceholder": "Search song",
+    "filterAll": "All",
+    "noResults": "No songs match your search."
   },
   "perfil": {
     "title": "Profile",
     "levelsCompleted": "levels completed",
     "streakDaysLabel": "day streak",
+    "lessonsPracticed": "lessons practiced",
+    "week": "Your week",
+    "weekdayMon": "M",
+    "weekdayTue": "T",
+    "weekdayWed": "W",
+    "weekdayThu": "T",
+    "weekdayFri": "F",
+    "weekdaySat": "S",
+    "weekdaySun": "S",
+    "badgesTitle": "Achievements",
+    "badges": {
+      "racha7": "7-day streak",
+      "primerAcorde": "First chord"
+    },
     "chordsLearned": "Chords learned",
     "noChordsYet": "No chords learned yet.",
     "curriculum": "Curriculum",
@@ -47,6 +93,7 @@
     "modeKeyboard": "Touch keyboard",
     "modeMic": "Microphone",
     "micPermissionDenied": "Microphone permission denied.",
+    "micNotSupported": "Microphone isn't available in this preview — use the \"Touch keyboard\" tab.",
     "listening": "Listening…",
     "micHint": "Tap \"Listen\" and play the note on your piano.",
     "heardNotes": "Notes heard: {{notes}}",
@@ -56,20 +103,48 @@
     "noSteps": "This level doesn't have practice steps loaded yet.",
     "back": "Back",
     "continue": "Continue",
+    "previous": "Previous",
     "finger": "Finger {{number}}",
     "congrats": "Congratulations!",
     "congratsBody": "You finished \"{{title}}\". Repeat it as many times as you want until you master it, or move on to the next level.",
     "repeatLevel": "Repeat this level",
-    "nextLevel": "Next: {{title}}"
+    "nextLevel": "Next: {{title}}",
+    "micTrouble": "We're not hearing you well",
+    "micTroubleBody": "Get closer to the microphone or turn up the piano's volume.",
+    "micTroubleSwitchToKeyboard": "Use touch keyboard",
+    "micTroubleDismiss": "Dismiss"
   },
   "curriculum": {
-    "lvl0Teoria": { "title": "Fundamentals: Theory", "subtitle": "Note locations and posture" },
-    "lvl0Practica": { "title": "Fundamentals: Practice", "subtitle": "Identify notes with both hands" },
+    "stage0": { "title": "Posture and the keyboard map" },
+    "stage1": { "title": "Notes and first melodies" },
+    "stage2": { "title": "Chords and American notation" },
+    "stage3": { "title": "Inversions" },
+    "stage4": { "title": "Minor chords" },
+    "stage5": { "title": "Scales" },
+    "stage6": { "title": "Worship keys" },
+    "stage7": { "title": "Rhythm and accompaniment" },
+    "stage8": { "title": "Playing by ear" },
+    "stage9": { "title": "Repertoire and live playing" },
+    "stage99": { "title": "Optional: Reading sheet music" },
+    "lvl0Teoria": {
+      "title": "Theory",
+      "subtitle": "Note locations and finger numbering, right and left hand"
+    },
+    "lvl0PracticaDerecha": { "title": "Right hand", "subtitle": "Practice" },
+    "lvl0PracticaIzquierda": { "title": "Left hand", "subtitle": "Practice" },
     "lvl1Melodia": { "title": "Right-hand melody", "subtitle": "Amazing Grace, note by note" },
     "lvl2Teoria": { "title": "Chords: Theory", "subtitle": "What they are and how they're built" },
     "lvl2Practica": { "title": "Chords: Practice", "subtitle": "Major and minor triads" },
     "lvl3": { "title": "Inversions", "subtitle": "First and second inversion" },
-    "lvl4": { "title": "Worship progressions", "subtitle": "I-V-vi-IV in common keys" },
-    "songSublimeGracia": "Amazing Grace"
+    "lvl4AcordesMenores": { "title": "Minor chords", "subtitle": "Coming soon" },
+    "lvl5Escalas": { "title": "Scales", "subtitle": "Coming soon" },
+    "lvl6Tonalidades": { "title": "Worship keys", "subtitle": "Coming soon" },
+    "lvl7Ritmo": { "title": "Rhythm and accompaniment", "subtitle": "Coming soon" },
+    "lvl8Oido": { "title": "Playing by ear", "subtitle": "Coming soon" },
+    "lvl9Repertorio": { "title": "Repertoire and live playing", "subtitle": "Coming soon" },
+    "lvl99Lectura": { "title": "Reading sheet music", "subtitle": "Coming soon" },
+    "songSublimeGracia": "Amazing Grace",
+    "songCuanGrandeEsEl": "How Great Thou Art",
+    "songGrandeEsTuFidelidad": "Great Is Thy Faithfulness"
   }
 }

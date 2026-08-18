@@ -1,28 +1,32 @@
-import Svg, { Circle, Rect, Text as SvgText } from 'react-native-svg';
+import { mdiHandFrontLeft, mdiHandFrontRight } from '@mdi/js';
+import { View } from 'react-native';
+import Svg, { Circle, G, Path, Text as SvgText } from 'react-native-svg';
 
 import { useTheme } from '@/hooks/use-theme';
 
-const W = 220;
-const H = 130;
-const PALM_X = 48;
-const PALM_W = 124;
-const PALM_Y = 88;
+// Ícono de mano de un set ya diseñado (Material Design Icons), como datos
+// vectoriales crudos (no una fuente tipográfica) — así el trazo es siempre
+// idéntico sin importar navegador/plataforma, y las medallas numeradas
+// caen exactamente donde se calibraron, siempre.
+const ICON_VIEWBOX = 24;
 
-// Dedos numerados según convención de piano: 1 = pulgar … 5 = meñique.
-// Cada dedo termina justo antes de PALM_Y (deja un hueco real con la palma,
-// no solo un borde) para que se lean como formas separadas, igual que las
-// teclas del piano se separan con un hueco real entre ellas.
-const RIGHT_FINGERS = [
-  { number: 1, x: 20, y: 60, w: 26, h: 26 },
-  { number: 2, x: 68, y: 40, w: 18, h: 42 },
-  { number: 3, x: 96, y: 22, w: 18, h: 60 },
-  { number: 4, x: 124, y: 30, w: 18, h: 52 },
-  { number: 5, x: 152, y: 46, w: 16, h: 36 },
+type Badge = { number: number; x: number; y: number };
+
+// Posiciones calibradas sobre la cuadrícula nativa del ícono (0–24).
+const BADGES_RIGHT: Badge[] = [
+  { number: 1, x: 19.75, y: 8 },
+  { number: 2, x: 16.25, y: 2 },
+  { number: 3, x: 12.75, y: 0 },
+  { number: 4, x: 9.25, y: 1.5 },
+  { number: 5, x: 5.75, y: 4.5 },
 ];
-
-function mirrorX(x: number, w: number) {
-  return W - x - w;
-}
+const BADGES_LEFT: Badge[] = [
+  { number: 1, x: 4.25, y: 8 },
+  { number: 2, x: 7.75, y: 2 },
+  { number: 3, x: 11.25, y: 0 },
+  { number: 4, x: 14.75, y: 1.5 },
+  { number: 5, x: 18.25, y: 4.5 },
+];
 
 export function HandDiagram({
   side = 'right',
@@ -34,50 +38,50 @@ export function HandDiagram({
   height?: number;
 }) {
   const theme = useTheme();
-  const mirror = side === 'left';
-  const fingers = mirror ? RIGHT_FINGERS.map((f) => ({ ...f, x: mirrorX(f.x, f.w) })) : RIGHT_FINGERS;
-  const palmX = mirror ? mirrorX(PALM_X, PALM_W) : PALM_X;
-  const outline = theme.textSecondary;
+  const badges = side === 'left' ? BADGES_LEFT : BADGES_RIGHT;
+  const size = height * 0.9;
+  // Radio de medalla en unidades del viewBox del ícono (0–24), para que
+  // escale junto con el ícono sin importar el tamaño final en pantalla.
+  // Los 4 dedos (sin el pulgar) quedan a solo ~3.5 unidades entre sí, así
+  // que el radio tiene que ser bien chico para que las medallas no se
+  // encimen entre ellas.
+  const badgeR = 1.5;
+  const fontSize = 1.7;
+
+  // La medalla del dedo más alto (3, y=0) queda justo en el borde superior
+  // del ícono — sin margen extra el círculo se recorta ahí. Se agranda el
+  // viewBox hacia arriba (sin mover el ícono) para que quepa completa.
+  const topPad = 2;
 
   return (
-    <Svg width="100%" height={height} viewBox={`0 0 ${W} ${H}`}>
-      <Rect x={palmX} y={PALM_Y} width={PALM_W} height={40} rx={20} fill={theme.backgroundElement} stroke={outline} strokeWidth={1.5} />
-      {fingers.map((f) => (
-        <Rect
-          key={`finger-${f.number}`}
-          x={f.x}
-          y={f.y}
-          width={f.w}
-          height={f.h}
-          rx={f.w / 2}
-          fill={f.number === highlightFinger ? theme.accent : '#FFFFFF'}
-          stroke={outline}
-          strokeWidth={2}
-        />
-      ))}
-      {fingers.map((f) => (
-        <Circle
-          key={`badge-${f.number}`}
-          cx={f.x + f.w / 2}
-          cy={f.y + 17}
-          r={10}
-          fill={f.number === highlightFinger ? theme.accent : theme.background}
-          stroke={outline}
-          strokeWidth={1.5}
-        />
-      ))}
-      {fingers.map((f) => (
-        <SvgText
-          key={`label-${f.number}`}
-          x={f.x + f.w / 2}
-          y={f.y + 21}
-          fontSize={11}
-          fontWeight="700"
-          textAnchor="middle"
-          fill={f.number === highlightFinger ? theme.accentOn : theme.text}>
-          {f.number}
-        </SvgText>
-      ))}
-    </Svg>
+    <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+      <Svg width={size} height={(size * (ICON_VIEWBOX + topPad)) / ICON_VIEWBOX} viewBox={`0 ${-topPad} ${ICON_VIEWBOX} ${ICON_VIEWBOX + topPad}`}>
+        <Path d={side === 'left' ? mdiHandFrontLeft : mdiHandFrontRight} fill={theme.text} />
+        {badges.map((b) => {
+          const isActive = b.number === highlightFinger;
+          return (
+            <G key={b.number}>
+              <Circle
+                cx={b.x}
+                cy={b.y}
+                r={badgeR}
+                fill={isActive ? theme.accent : theme.background}
+                stroke={theme.text}
+                strokeWidth={0.5}
+              />
+              <SvgText
+                x={b.x}
+                y={b.y + fontSize * 0.35}
+                fontSize={fontSize}
+                fontWeight="800"
+                textAnchor="middle"
+                fill={isActive ? theme.accentOn : theme.text}>
+                {b.number}
+              </SvgText>
+            </G>
+          );
+        })}
+      </Svg>
+    </View>
   );
 }
