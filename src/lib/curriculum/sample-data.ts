@@ -292,17 +292,37 @@ export const sampleLevels: Level[] = [
       {
         kind: 'info',
         expectedNotes: [],
-        displayName: 'Primero, en bloque',
-        instructionText:
-          'En la práctica vas a tocar primero las 3 notas de cada acorde juntas, al mismo tiempo, con una mano — así es como sonará cuando acompañes de verdad. Esa parte usa el teclado táctil, porque el micrófono no puede escuchar varias notas a la vez.',
+        displayName: 'C — Do mayor',
+        instructionText: 'Do (fundamental) → Mi (tercera) → Sol (quinta).',
         illustration: { kind: 'keyboard', highlightNotes: ['C4', 'E4', 'G4'] },
       },
       {
         kind: 'info',
         expectedNotes: [],
-        displayName: '¿Qué es arpegiar?',
+        displayName: 'G — Sol mayor',
+        instructionText: 'Sol (fundamental) → Si (tercera) → Re (quinta).',
+        illustration: { kind: 'keyboard', highlightNotes: ['G3', 'B3', 'D4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'F — Fa mayor',
+        instructionText: 'Fa (fundamental) → La (tercera) → Do (quinta).',
+        illustration: { kind: 'keyboard', highlightNotes: ['F3', 'A3', 'C4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Am — La menor',
+        instructionText: 'La (fundamental) → Do (tercera) → Mi (quinta).',
+        illustration: { kind: 'keyboard', highlightNotes: ['A3', 'C4', 'E4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
         instructionText:
-          'Arpegiar es tocar las notas de un acorde una por una en vez de todas juntas — como "desenrollar" el acorde. Es una técnica real que vas a usar para intros y rellenos, y también es la única forma en que el micrófono del teléfono puede reconocer un acorde: solo escucha una nota a la vez, así que si las tocas por separado las va acumulando hasta reconocer el acorde completo. Esa es la segunda parte de la práctica.',
+          'Toca las 3 notas del acorde en tu piano (o en el teclado táctil), todas juntas, tal como sonaría de verdad. El micrófono va escuchando y acumulando las notas que detecta hasta reconocer que sonó el acorde completo — no importa el orden ni si quedan perfectamente sincronizadas. Los 4 acordes salen en orden al azar, y distinto cada vez que repitas.',
       },
     ],
   },
@@ -313,10 +333,10 @@ export const sampleLevels: Level[] = [
     stage: 'curriculum.stage2.title',
     role: 'acordes',
     steps: [],
-    // Los 4 acordes se practican en bloque y luego arpegiados, pero en
-    // orden al azar y distinto en cada intento (incluyendo "repetir nivel").
-    // Nombres en notación americana (C/G/F/Am), consistente con el paso de
-    // teoría "Notación americana" de lvl-2a.
+    // Los 4 acordes salen en orden al azar y distinto en cada intento
+    // (incluyendo "repetir nivel"). Nombres en notación americana
+    // (C/G/F/Am), consistente con el paso de teoría "Notación americana"
+    // de lvl-2a.
     practicePool: {
       chords: [
         { notes: ['C4', 'E4', 'G4'], displayName: 'C' },
@@ -332,7 +352,53 @@ export const sampleLevels: Level[] = [
     subtitle: 'curriculum.lvl3.subtitle',
     stage: 'curriculum.stage3.title',
     role: 'acordes',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Qué es una inversión?',
+        instructionText:
+          'Un acorde tiene 3 notas, pero no siempre hay que tocarlas en el mismo orden. Si mueves la fundamental una octava arriba, las mismas 3 notas quedan en un orden distinto — es el mismo acorde, con otra nota como la más grave (el "bajo").',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Primera inversión',
+        instructionText:
+          'La tercera pasa a ser la nota más grave. En Do mayor: Mi (bajo) → Sol → Do.',
+        illustration: { kind: 'keyboard', highlightNotes: ['E4', 'G4', 'C5'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Segunda inversión',
+        instructionText:
+          'La quinta pasa a ser la nota más grave. En Do mayor: Sol (bajo) → Do → Mi.',
+        illustration: { kind: 'keyboard', highlightNotes: ['G4', 'C5', 'E5'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Para qué sirve?',
+        instructionText:
+          'Las inversiones evitan saltos grandes de la mano al cambiar de acorde — la nota más cercana del acorde siguiente queda a la mano, y la progresión suena más suave. Es lo que hace que un acompañamiento se sienta fluido en vez de "saltado".',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
+        instructionText:
+          'Vas a practicar la primera y segunda inversión de C y de G — las mismas 3 notas de cada acorde, pero empezando desde la nota indicada como bajo. Salen en orden al azar, y distinto cada vez que repitas.',
+      },
+    ],
+    practicePool: {
+      chords: [
+        { notes: ['E4', 'G4', 'C5'], displayName: 'C — 1ª inversión' },
+        { notes: ['G4', 'C5', 'E5'], displayName: 'C — 2ª inversión' },
+        { notes: ['B3', 'D4', 'G4'], displayName: 'G — 1ª inversión' },
+        { notes: ['D4', 'G4', 'B4'], displayName: 'G — 2ª inversión' },
+      ],
+    },
   },
   {
     id: 'lvl-4-acordes-menores',
@@ -340,7 +406,50 @@ export const sampleLevels: Level[] = [
     subtitle: 'curriculum.lvl4AcordesMenores.subtitle',
     stage: 'curriculum.stage4.title',
     role: 'acordes',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Repaso: ¿qué hace menor a un acorde?',
+        instructionText:
+          'Ya conoces Am. La fórmula es la misma que un acorde mayor (fundamental, tercera, quinta) pero con la tercera un semitono más abajo — esa sola nota es lo que cambia el color de brillante a melancólico.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Dm — Re menor',
+        instructionText: 'Re (fundamental) → Fa (tercera) → La (quinta).',
+        illustration: { kind: 'keyboard', highlightNotes: ['D4', 'F4', 'A4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Em — Mi menor',
+        instructionText: 'Mi (fundamental) → Sol (tercera) → Si (quinta).',
+        illustration: { kind: 'keyboard', highlightNotes: ['E4', 'G4', 'B4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Los tres menores de esta tonalidad',
+        instructionText:
+          'Am, Dm y Em son los tres acordes menores que aparecen de forma natural en las tonalidades de Do y Sol mayor — los vas a ver todo el tiempo en cancioneros de alabanza, muchas veces junto a C, F, G.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
+        instructionText:
+          'Vas a practicar Am, Dm y Em en posición fundamental. Salen en orden al azar, y distinto cada vez que repitas.',
+      },
+    ],
+    practicePool: {
+      chords: [
+        { notes: ['A3', 'C4', 'E4'], displayName: 'Am' },
+        { notes: ['D4', 'F4', 'A4'], displayName: 'Dm' },
+        { notes: ['E4', 'G4', 'B4'], displayName: 'Em' },
+      ],
+    },
   },
   {
     id: 'lvl-5-escalas',
@@ -428,8 +537,6 @@ export const sampleSongs: Song[] = [
 // prueba real.)
 export const sampleUserProgress: UserProgress = {
   completedLevelIds: [],
-  currentStreak: 0,
-  lastPracticeDate: null,
   chordsLearned: [],
   stepProgress: {},
   practiceDates: [],

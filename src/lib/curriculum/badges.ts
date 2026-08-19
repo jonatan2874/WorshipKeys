@@ -1,3 +1,4 @@
+import { getCurrentStreak } from './progress';
 import { StageGroup } from './stages';
 import { UserProgress } from './types';
 
@@ -26,7 +27,7 @@ export function getEarnedBadges(progress: UserProgress, stages: StageGroup[]): B
   badges.push({
     id: 'streak-7',
     labelKey: 'perfil.badges.racha7',
-    earned: progress.currentStreak >= 7,
+    earned: getCurrentStreak(progress.practiceDates) >= 7,
   });
 
   badges.push({

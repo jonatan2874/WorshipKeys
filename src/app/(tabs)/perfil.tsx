@@ -13,7 +13,7 @@ import { useAuth } from '@/contexts/auth-context';
 import { useProgress } from '@/contexts/progress-context';
 import { useTheme } from '@/hooks/use-theme';
 import { getEarnedBadges } from '@/lib/curriculum/badges';
-import { getLevelStatuses } from '@/lib/curriculum/progress';
+import { getCurrentStreak, getLevelStatuses } from '@/lib/curriculum/progress';
 import { curriculumStages, sampleLevels } from '@/lib/curriculum/sample-data';
 import { groupLevelsByStage } from '@/lib/curriculum/stages';
 
@@ -88,11 +88,13 @@ export default function PerfilScreen() {
   const stages = groupLevelsByStage(sampleLevels, curriculumStages, statuses);
   const badges = getEarnedBadges(progress, stages);
   const weekDays = useWeekDays(progress.practiceDates);
+  const currentStreak = getCurrentStreak(progress.practiceDates);
   const initial = (user?.displayName ?? user?.email ?? 'W').charAt(0).toUpperCase();
 
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea} edges={['top']}>
+        <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
           <ThemedText type="title">{t('perfil.title')}</ThemedText>
         </View>
@@ -144,7 +146,7 @@ export default function PerfilScreen() {
           </View>
           <View style={[styles.statCard, { backgroundColor: theme.backgroundElement }]}>
             <ThemedText type="title" style={{ color: theme.done }}>
-              {progress.currentStreak}
+              {currentStreak}
             </ThemedText>
             <ThemedText type="small" themeColor="textSecondary">
               {t('perfil.streakDaysLabel')}
@@ -265,6 +267,7 @@ export default function PerfilScreen() {
             ]}
           />
         </View>
+        </ScrollView>
       </SafeAreaView>
     </ThemedView>
   );
@@ -273,6 +276,8 @@ export default function PerfilScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: Spacing.four },
+  scroll: { flex: 1 },
+  scrollContent: { paddingBottom: Spacing.six },
   header: { paddingTop: Spacing.two, paddingBottom: Spacing.three },
   accountCard: {
     flexDirection: 'row',

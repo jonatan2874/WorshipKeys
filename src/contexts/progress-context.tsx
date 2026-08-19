@@ -82,7 +82,6 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         completedLevelIds: prev.completedLevelIds.includes(levelId)
           ? prev.completedLevelIds
           : [...prev.completedLevelIds, levelId],
-        lastPracticeDate: new Date().toISOString(),
       };
       persist(next);
       return next;

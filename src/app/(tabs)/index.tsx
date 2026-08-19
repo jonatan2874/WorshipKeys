@@ -12,7 +12,7 @@ import { ThemedView } from '@/components/themed-view';
 import { MaxContentWidth, Radii, Spacing } from '@/constants/theme';
 import { useProgress } from '@/contexts/progress-context';
 import { useTheme } from '@/hooks/use-theme';
-import { getLevelStatuses, getStageLabel } from '@/lib/curriculum/progress';
+import { getCurrentStreak, getLevelStatuses, getStageLabel } from '@/lib/curriculum/progress';
 import { curriculumStages, sampleLevels } from '@/lib/curriculum/sample-data';
 import { groupLevelsByStage } from '@/lib/curriculum/stages';
 
@@ -26,6 +26,7 @@ export default function InicioScreen() {
   const stages = groupLevelsByStage(sampleLevels, curriculumStages, statuses);
   const currentLevel = sampleLevels.find((level) => statuses[level.id] === 'current');
   const currentStageNumber = stages.find((s) => s.status === 'current')?.number ?? stages[0]?.number ?? '0';
+  const currentStreak = getCurrentStreak(progress.practiceDates);
 
   return (
     <ThemedView style={styles.container}>
@@ -34,7 +35,7 @@ export default function InicioScreen() {
           <View style={styles.chips}>
             <StatChip
               icon={<IconFlame />}
-              value={t('inicio.streakDays', { count: progress.currentStreak })}
+              value={t('inicio.streakDays', { count: currentStreak })}
               label={t('inicio.streak')}
             />
             <StatChip

@@ -97,20 +97,6 @@ export default function LeccionScreen() {
     };
   }, [mode, isListening, step, detectedNote]);
 
-  // Algunos pasos sugieren un modo específico (ej. práctica en bloque =
-  // teclado, porque el micrófono no puede captar varias notas a la vez).
-  // El usuario igual puede cambiarlo a mano con las pestañas. Se ajusta
-  // durante el render (no en un efecto) siguiendo el mismo patrón que el
-  // reinicio al cambiar de nivel, para no encadenar renders innecesarios.
-  const appliedModeKeyRef = useRef<string | null>(null);
-  const modeKey = `${level.id}:${stepIndex}`;
-  if (appliedModeKeyRef.current !== modeKey) {
-    appliedModeKeyRef.current = modeKey;
-    if (step?.recommendedMode && step.recommendedMode !== mode) {
-      setMode(step.recommendedMode);
-    }
-  }
-
   // Al cambiar de nivel, retoma el paso donde se quedó (no repite lo ya
   // visto) en vez de arrancar siempre desde 0. Se ajusta durante el render
   // (no en un efecto), siguiendo el patrón recomendado por React para esto.

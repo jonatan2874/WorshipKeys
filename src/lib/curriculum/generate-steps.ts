@@ -35,15 +35,13 @@ function noteToStep(item: NotePoolItem): Step {
   };
 }
 
-function chordToStep(item: ChordPoolItem, mode: 'teclado' | 'microfono'): Step {
+function chordToStep(item: ChordPoolItem): Step {
   const noteNames = item.notes.map(pitchClassOf).join(', ');
   return {
     kind: 'chord',
     expectedNotes: item.notes,
-    instructionText:
-      mode === 'teclado' ? `Toca las notas juntas: ${noteNames}` : `Arpegia: ${noteNames}, una por una`,
+    instructionText: `Toca el acorde completo: ${noteNames}`,
     displayName: item.displayName,
-    recommendedMode: mode,
   };
 }
 
@@ -58,8 +56,7 @@ export function generatePracticeSteps(pool: PracticePool): Step[] {
   }
 
   if (pool.chords && pool.chords.length > 0) {
-    steps.push(...shuffle(pool.chords).map((c) => chordToStep(c, 'teclado')));
-    steps.push(...shuffle(pool.chords).map((c) => chordToStep(c, 'microfono')));
+    steps.push(...shuffle(pool.chords).map(chordToStep));
   }
 
   return steps;

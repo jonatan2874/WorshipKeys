@@ -35,10 +35,6 @@ export interface Step {
    * siguen mostrando `instructionText` como párrafo único. */
   keyPoints?: { label: string; description: string }[];
   timing?: { beat: number; durationBeats: number };
-  /** Modo de entrada sugerido al entrar a este paso (el usuario lo puede
-   * cambiar igual). Útil para práctica en bloque (teclado, ya que el
-   * micrófono no puede captar varias notas a la vez) vs. arpegiada (mic). */
-  recommendedMode?: 'teclado' | 'microfono';
 }
 
 /** Nota disponible para armar pasos de identificación al azar. */
@@ -101,8 +97,6 @@ export interface Song {
 
 export interface UserProgress {
   completedLevelIds: string[];
-  currentStreak: number;
-  lastPracticeDate: string | null;
   chordsLearned: string[];
   /** Último paso alcanzado por nivel (id de nivel -> índice de paso), para
    * poder retomar donde se quedó sin repetir lo ya visto. */
