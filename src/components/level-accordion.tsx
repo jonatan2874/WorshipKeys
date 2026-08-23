@@ -5,8 +5,10 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { IconCheck, IconLock } from '@/components/icons';
 import { ThemedText } from '@/components/themed-text';
 import { Radii, Spacing } from '@/constants/theme';
+import { useAuth } from '@/contexts/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { getLessonKind } from '@/lib/curriculum/lesson-kind';
+import { isPremiumLevel } from '@/lib/curriculum/paywall';
 import { LevelStatus } from '@/lib/curriculum/progress';
 import { StageGroup } from '@/lib/curriculum/stages';
 import { Level } from '@/lib/curriculum/types';
@@ -28,6 +30,7 @@ export function LevelAccordion({
 }) {
   const theme = useTheme();
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [openKey, setOpenKey] = useState<string | null>(stages.find((s) => s.status === 'current')?.key ?? null);
 
   return (
@@ -106,6 +109,13 @@ export function LevelAccordion({
                           {t(KIND_LABEL_KEY[kind])}
                         </ThemedText>
                       </View>
+                      {isPremiumLevel(level) && !user && (
+                        <View style={[styles.premiumBadge, { backgroundColor: theme.done }]}>
+                          <ThemedText type="label" style={{ color: '#fff' }}>
+                            {t('inicio.premiumBadge')}
+                          </ThemedText>
+                        </View>
+                      )}
                     </Pressable>
                   );
                 })}
@@ -158,6 +168,12 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   dot: { width: 6, height: 6, borderRadius: 3 },
+  premiumBadge: {
+    borderRadius: Radii.pill,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+    flexShrink: 0,
+  },
   lessonTitles: { flex: 1, gap: 1, minWidth: 0 },
   lessonTitleText: { fontWeight: '700' },
 });

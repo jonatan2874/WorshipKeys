@@ -6,19 +6,23 @@ import Animated, { FadeInDown, FadeOutUp } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { HandDiagram } from '@/components/illustrations/hand-diagram';
-import { IconClose, IconMicOff } from '@/components/icons';
+import { IconClose, IconInfinity, IconList, IconMicOff } from '@/components/icons';
 import { PianoKeyboard } from '@/components/illustrations/piano-keyboard';
 import { PracticeRoll } from '@/components/practice/practice-roll';
+import { ReferenceItem, ReferenceSheet } from '@/components/practice/reference-sheet';
 import { PressButton } from '@/components/press-button';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { TouchKeyboard } from '@/components/touch-keyboard';
 import { Radii, Spacing } from '@/constants/theme';
+import { useAuth } from '@/contexts/auth-context';
 import { useProgress } from '@/contexts/progress-context';
 import { useTheme } from '@/hooks/use-theme';
-import { buildLevelSteps } from '@/lib/curriculum/generate-steps';
+import { buildLevelSteps, generatePracticeSteps } from '@/lib/curriculum/generate-steps';
+import { isPremiumLevel } from '@/lib/curriculum/paywall';
 import { getLevelStatuses } from '@/lib/curriculum/progress';
 import { sampleLevels } from '@/lib/curriculum/sample-data';
+import { Step } from '@/lib/curriculum/types';
 import { evaluateAttempt, pitchClassOf } from '@/lib/evaluation/note-match';
 import { useMicPitchDetector } from '@/lib/pitch/use-mic-pitch-detector';
 
@@ -34,6 +38,7 @@ export default function LeccionScreen() {
   const { t } = useTranslation();
   const { levelId } = useLocalSearchParams<{ levelId?: string }>();
   const { progress, completeLevel, updateStepProgress } = useProgress();
+  const { user } = useAuth();
 
   const level = useMemo(() => {
     const statuses = getLevelStatuses(sampleLevels, progress.completedLevelIds);
@@ -52,14 +57,23 @@ export default function LeccionScreen() {
     // primer render.
   }, [levelId, progress.completedLevelIds]);
 
-  // Se recalcula (nueva secuencia al azar) cada vez que cambia el nivel o
-  // se repite el intento — así el repaso nunca sale igual dos veces.
-  const [randomSeed, setRandomSeed] = useState(0);
-  const steps = useMemo(
-    () => buildLevelSteps(level),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [level.id, randomSeed],
-  );
+  // Etapas avanzadas requieren cuenta iniciada — por ahora, sin pagos reales
+  // todavía, cualquier cuenta de Google desbloquea todo (ver /paywall).
+  useEffect(() => {
+    if (isPremiumLevel(level) && !user) {
+      router.replace(`/paywall?levelId=${level.id}`);
+    }
+  }, [level, user, router]);
+
+  // Nueva secuencia al azar cada vez que cambia el nivel o se repite el
+  // intento — así el repaso nunca sale igual dos veces. Es estado (no un
+  // useMemo) porque la práctica infinita necesita poder agregarle más
+  // pasos generados sin reiniciar los ya hechos.
+  const [steps, setSteps] = useState<Step[]>(() => buildLevelSteps(level));
+  const [infinitePractice, setInfinitePractice] = useState(false);
+  // Cuántos pasos tenía `steps` la última vez que se extendió — evita
+  // extender más de una vez para el mismo final de secuencia.
+  const extendedAtRef = useRef(0);
 
   const [stepIndex, setStepIndex] = useState(() =>
     Math.min(progress.stepProgress[level.id] ?? 0, steps.length),
@@ -67,6 +81,17 @@ export default function LeccionScreen() {
   const [mode, setMode] = useState<Mode>('microfono');
   const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
+  const [referenceOpen, setReferenceOpen] = useState(false);
+
+  // Lista de consulta rápida (imagen + notas) de todo lo que se practica en
+  // este nivel — para no tener que volver atrás a la teoría a revisarlo.
+  const referenceItems: ReferenceItem[] = useMemo(() => {
+    const pool = level.practicePool;
+    if (!pool) return [];
+    const chordItems = (pool.chords ?? []).map((c) => ({ displayName: c.displayName, notes: c.notes }));
+    const noteItems = (pool.notes ?? []).map((n) => ({ displayName: n.displayName, notes: [n.note] }));
+    return [...chordItems, ...noteItems];
+  }, [level.practicePool]);
 
   const step = steps[stepIndex];
   const { isListening, hasPermission, detectedNote, isSupported, start, stop } = useMicPitchDetector();
@@ -103,12 +128,25 @@ export default function LeccionScreen() {
   const prevLevelIdRef = useRef(level.id);
   if (prevLevelIdRef.current !== level.id) {
     prevLevelIdRef.current = level.id;
-    setRandomSeed((s) => s + 1);
-    const resumeIndex = Math.min(progress.stepProgress[level.id] ?? 0, steps.length);
+    const freshSteps = buildLevelSteps(level);
+    setSteps(freshSteps);
+    extendedAtRef.current = 0;
+    setInfinitePractice(false);
+    const resumeIndex = Math.min(progress.stepProgress[level.id] ?? 0, freshSteps.length);
     setStepIndex(resumeIndex);
     setSelectedNotes([]);
     setFeedback(null);
     heardRef.current = [];
+  }
+
+  // Práctica infinita: al llegar al final de la secuencia, en vez de mostrar
+  // la pantalla de "nivel completo" se le agregan más pasos generados al
+  // azar del mismo pool — se ajusta durante el render (no en un efecto)
+  // para no mostrar ni por un instante la pantalla de cierre.
+  if (infinitePractice && level.practicePool && stepIndex >= steps.length && extendedAtRef.current < steps.length) {
+    extendedAtRef.current = steps.length;
+    const pool = level.practicePool;
+    setSteps((prev) => [...prev, ...generatePracticeSteps(pool)]);
   }
 
   useEffect(() => {
@@ -117,7 +155,11 @@ export default function LeccionScreen() {
   }, []);
 
   useEffect(() => {
-    if (mode !== 'microfono' || !detectedNote || !step) return;
+    // Los pasos de teoría ('info') no tienen expectedNotes — sin este freno,
+    // cualquier sonido ambiental que el micrófono detecte se cuenta como
+    // "acierto" (un set vacío de notas esperadas siempre está satisfecho) y
+    // el paso avanza solo, sin que el usuario haga nada.
+    if (mode !== 'microfono' || !detectedNote || !step || step.kind === 'info') return;
     // Se acumulan notas distintas detectadas durante el intento (sirve tanto
     // para notas sueltas como para acordes arpegiados). El éxito solo exige
     // que la(s) nota(s) esperada(s) hayan sonado — una detección ruidosa de
@@ -149,8 +191,10 @@ export default function LeccionScreen() {
       setSelectedNotes([]);
       setFeedback(null);
       setStepIndex(0);
+      setInfinitePractice(false);
+      extendedAtRef.current = 0;
       // Nueva secuencia al azar en cada repaso — nunca la misma dos veces.
-      setRandomSeed((s) => s + 1);
+      setSteps(buildLevelSteps(level));
     }
 
     return (
@@ -195,6 +239,9 @@ export default function LeccionScreen() {
   }
 
   function checkAttempt(playedNotes: string[]) {
+    // Un paso de teoría no tiene nada que evaluar — expectedNotes vacío
+    // haría que cualquier intento se lea como "correcto" de inmediato.
+    if (step.kind === 'info') return;
     const result = evaluateAttempt(step.expectedNotes, playedNotes);
     if (result.missing.length === 0) {
       setFeedback('correct');
@@ -322,7 +369,37 @@ export default function LeccionScreen() {
                   </ThemedText>
                 </Pressable>
               ))}
+              {referenceItems.length > 0 && (
+                <Pressable
+                  onPress={() => setReferenceOpen(true)}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('leccion.reference')}
+                  style={[styles.infinityToggle, { borderColor: theme.border }]}>
+                  <IconList size={18} color={theme.textSecondary} />
+                </Pressable>
+              )}
+              {level.practicePool && (
+                <Pressable
+                  onPress={() => setInfinitePractice((v) => !v)}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('leccion.infinitePractice')}
+                  accessibilityState={{ selected: infinitePractice }}
+                  style={[
+                    styles.infinityToggle,
+                    { borderColor: theme.border },
+                    infinitePractice && { backgroundColor: theme.accent, borderColor: theme.accentStrong },
+                  ]}>
+                  <IconInfinity size={18} color={infinitePractice ? theme.accentOn : theme.textSecondary} />
+                </Pressable>
+              )}
             </View>
+            {infinitePractice && (
+              <ThemedText type="small" themeColor="textSecondary" style={styles.infinityHint}>
+                {t('leccion.infinitePracticeActive')}
+              </ThemedText>
+            )}
 
             <PracticeRoll steps={steps} currentIndex={stepIndex} feedback={feedback} />
 
@@ -332,9 +409,7 @@ export default function LeccionScreen() {
                 {step.kind === 'chord' ? t('leccion.playChord') : t('leccion.playNote')}
               </ThemedText>
               <ThemedText type="title" style={styles.instruction}>
-                {step.kind === 'note'
-                  ? `${step.displayName} (${pitchClassOf(step.expectedNotes[0])})`
-                  : step.displayName}
+                {step.displayName}
               </ThemedText>
               <ThemedText type="small" themeColor="textSecondary">
                 {step.instructionText}
@@ -346,9 +421,7 @@ export default function LeccionScreen() {
                   </ThemedText>
                 </View>
               )}
-              {step.fingerNumber && step.hand && (
-                <HandDiagram side={step.hand} highlightFinger={step.fingerNumber} height={80} />
-              )}
+              {step.hand && <HandDiagram side={step.hand} highlightFinger={step.fingerNumber} height={80} />}
 
               {feedback === 'correct' && (
                 <ThemedText type="smallBold" style={{ color: theme.accent, marginTop: Spacing.two }}>
@@ -428,6 +501,13 @@ export default function LeccionScreen() {
             </Pressable>
           </Animated.View>
         )}
+
+        <ReferenceSheet
+          visible={referenceOpen}
+          onClose={() => setReferenceOpen(false)}
+          title={t(level.title)}
+          items={referenceItems}
+        />
       </SafeAreaView>
     </ThemedView>
   );
@@ -458,6 +538,19 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
     alignItems: 'center',
   },
+  infinityToggle: {
+    width: 42,
+    height: 42,
+    borderWidth: 1.5,
+    borderRadius: Radii.pill,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  infinityHint: {
+    marginTop: -Spacing.two,
+    marginBottom: Spacing.three,
+    lineHeight: 18,
+  },
   card: {
     borderRadius: Radii.md,
     padding: Spacing.four,
@@ -475,7 +568,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  heroEmoji: { fontSize: 36 },
+  heroEmoji: { fontSize: 36, lineHeight: 44 },
   keyPoints: { width: '100%' },
   keyPointRow: { paddingVertical: Spacing.two, gap: 2 },
   infoActions: { flexDirection: 'row', gap: Spacing.two },

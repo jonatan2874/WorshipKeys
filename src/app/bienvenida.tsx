@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { BrandTile } from '@/components/brand-mark';
 import { PressButton } from '@/components/press-button';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -30,7 +31,8 @@ export default function BienvenidaScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.top}>
-          <ThemedText type="label" style={{ color: theme.accentStrong }}>
+          <BrandTile size={56} />
+          <ThemedText type="label" style={[{ color: theme.accentStrong }, styles.eyebrow]}>
             {t('bienvenida.eyebrow')}
           </ThemedText>
           <ThemedText type="title" style={styles.headline}>
@@ -62,6 +64,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   top: { gap: Spacing.two },
+  eyebrow: { marginTop: Spacing.four },
   headline: { fontSize: 32, lineHeight: 38 },
   pitch: { lineHeight: 22, marginTop: Spacing.two, maxWidth: 320 },
   bottom: {},

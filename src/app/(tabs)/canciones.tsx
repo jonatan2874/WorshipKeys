@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Pressable, StyleSheet, TextInput, View } from 'react-native';
@@ -6,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { Radii, Spacing } from '@/constants/theme';
+import { useAuth } from '@/contexts/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { sampleLevels, sampleSongs } from '@/lib/curriculum/sample-data';
 import { Song } from '@/lib/curriculum/types';
@@ -52,7 +54,9 @@ function SongCard({ song }: { song: Song }) {
 
 export default function CancionesScreen() {
   const theme = useTheme();
+  const router = useRouter();
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [query, setQuery] = useState('');
   const [sourceFilter, setSourceFilter] = useState<SourceFilter>('todas');
 
@@ -113,6 +117,24 @@ export default function CancionesScreen() {
           })}
         </View>
 
+        {!user && (
+          <Pressable
+            onPress={() => router.push('/paywall')}
+            style={[styles.proBanner, { backgroundColor: theme.backgroundElement, borderColor: theme.border }]}>
+            <View style={[styles.proBannerBadge, { backgroundColor: theme.done }]}>
+              <ThemedText type="label" style={{ color: '#fff' }}>
+                {t('inicio.premiumBadge')}
+              </ThemedText>
+            </View>
+            <ThemedText type="small" style={styles.proBannerText}>
+              {t('canciones.proBanner')}
+            </ThemedText>
+            <ThemedText type="smallBold" style={{ color: theme.accentStrong }}>
+              {t('canciones.proBannerCta')}
+            </ThemedText>
+          </Pressable>
+        )}
+
         <FlatList
           data={filteredSongs}
           keyExtractor={(song) => song.id}
@@ -159,6 +181,23 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.one,
   },
   emptyText: { textAlign: 'center', marginTop: Spacing.six },
+  proBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    marginHorizontal: Spacing.four,
+    marginBottom: Spacing.three,
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    padding: Spacing.three,
+  },
+  proBannerBadge: {
+    borderRadius: Radii.pill,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+    flexShrink: 0,
+  },
+  proBannerText: { flex: 1 },
   list: {
     paddingHorizontal: Spacing.four,
     paddingBottom: Spacing.six,

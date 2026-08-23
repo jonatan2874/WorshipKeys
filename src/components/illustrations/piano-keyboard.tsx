@@ -14,12 +14,13 @@ const HAS_BLACK_AFTER: Record<string, boolean> = {
   B: false,
 };
 
+// Mismo rango que TouchKeyboard (C3–B5) — así la imagen de guía siempre
+// puede mostrar cualquier nota que el teclado táctil pueda tocar.
 function buildWhiteNotes(fromOctave: number, toOctave: number): string[] {
   const notes: string[] = [];
-  for (let octave = fromOctave; octave < toOctave; octave++) {
+  for (let octave = fromOctave; octave <= toOctave; octave++) {
     for (const letter of WHITE_LETTERS) notes.push(`${letter}${octave}`);
   }
-  notes.push(`C${toOctave}`);
   return notes;
 }
 

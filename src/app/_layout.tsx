@@ -73,6 +73,7 @@ function RootLayoutNavigator() {
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: theme.background } }}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="leccion" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
         <Stack.Screen name="bienvenida" />
         <Stack.Screen name="onboarding-nivel" />
       </Stack>

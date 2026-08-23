@@ -28,7 +28,7 @@ function noteToStep(item: NotePoolItem): Step {
   return {
     kind: 'note',
     expectedNotes: [item.note],
-    instructionText: `${label}: ${item.displayName} (${pitchClassOf(item.note)})`,
+    instructionText: `${label}: ${item.displayName}`,
     displayName: item.displayName,
     fingerNumber: item.fingerNumber,
     hand: item.hand,
@@ -40,7 +40,7 @@ function chordToStep(item: ChordPoolItem): Step {
   return {
     kind: 'chord',
     expectedNotes: item.notes,
-    instructionText: `Toca el acorde completo: ${noteNames}`,
+    instructionText: `Toca todas las notas: ${noteNames}`,
     displayName: item.displayName,
   };
 }
