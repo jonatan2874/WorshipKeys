@@ -1,0 +1,198 @@
+- generic [active] [ref=f113e1]:
+  - generic [ref=f113e2]:
+    - complementary [ref=f113e3]:
+      - generic [ref=f113e4]:
+        - generic [ref=f113e9]: Vigía SST
+        - button "Colapsar menú" [ref=f113e10] [cursor=pointer]
+      - navigation [ref=f113e13]:
+        - generic [ref=f113e14]:
+          - generic [ref=f113e15]: Principal
+          - link "Panel general" [ref=f113e16] [cursor=pointer]:
+            - /url: http://localhost/dashboard
+        - generic [ref=f113e21]:
+          - generic [ref=f113e22]: Gestión SST
+          - link "Planeación" [ref=f113e23] [cursor=pointer]:
+            - /url: http://localhost/objectives
+          - link "Matriz de riesgos" [ref=f113e28] [cursor=pointer]:
+            - /url: http://localhost/risks
+          - link "Inspecciones" [ref=f113e35] [cursor=pointer]:
+            - /url: http://localhost/inspections
+          - link "Permisos de trabajo" [ref=f113e41] [cursor=pointer]:
+            - /url: http://localhost/work-permits
+        - generic [ref=f113e47]:
+          - generic [ref=f113e48]: Personas
+          - link "Trabajadores" [ref=f113e49] [cursor=pointer]:
+            - /url: http://localhost/workers
+          - link "Capacitación" [ref=f113e56] [cursor=pointer]:
+            - /url: http://localhost/trainings
+          - link "Salud ocupacional" [ref=f113e61] [cursor=pointer]:
+            - /url: http://localhost/medical-exams
+          - link "Incidentes y AT" [ref=f113e66] [cursor=pointer]:
+            - /url: http://localhost/incidents
+          - link "COPASST y comités" [ref=f113e70] [cursor=pointer]:
+            - /url: http://localhost/committee-sessions
+          - link "Contratistas" [ref=f113e77] [cursor=pointer]:
+            - /url: http://localhost/contractors
+        - generic [ref=f113e82]:
+          - generic [ref=f113e83]: Preparación
+          - link "Emergencias" [ref=f113e84] [cursor=pointer]:
+            - /url: http://localhost/emergencies
+        - generic [ref=f113e89]:
+          - generic [ref=f113e90]: Análisis
+          - link "Indicadores" [ref=f113e91] [cursor=pointer]:
+            - /url: http://localhost/indicators
+          - link "Documentos" [ref=f113e94] [cursor=pointer]:
+            - /url: http://localhost/documents
+        - generic [ref=f113e99]:
+          - link "Configuración" [ref=f113e100] [cursor=pointer]:
+            - /url: http://localhost/settings
+          - link "Ayuda" [ref=f113e105] [cursor=pointer]:
+            - /url: http://localhost/help
+      - button "AT Admin Test Administrador" [ref=f113e112] [cursor=pointer]:
+        - generic [ref=f113e113]: AT
+        - generic [ref=f113e114]:
+          - generic [ref=f113e115]: Admin Test
+          - text: Administrador
+    - generic [ref=f113e116]:
+      - banner [ref=f113e117]:
+        - button [ref=f113e118] [cursor=pointer]
+        - button [ref=f113e121] [cursor=pointer]
+        - generic [ref=f113e127]:
+          - button "Tema" [ref=f113e129] [cursor=pointer]
+          - button "3" [ref=f113e134] [cursor=pointer]
+          - button "AT" [ref=f113e140] [cursor=pointer]
+      - main [ref=f113e144]:
+        - generic [ref=f113e145]:
+          - generic [ref=f113e146]:
+            - generic [ref=f113e147]:
+              - heading "Hola, Admin 👋" [level=1] [ref=f113e148]
+              - paragraph [ref=f113e149]: Administrador · Textiles del Valle S.A.S — sede Sede Bogotá
+            - generic [ref=f113e150]: viernes, 11 de septiembre de 2026
+          - generic [ref=f113e151]:
+            - generic [ref=f113e152]:
+              - button "¿Cómo se calcula?" [ref=f113e154] [cursor=pointer]
+              - generic [ref=f113e157]: —
+              - generic [ref=f113e158]: Índice de Frecuencia AT
+            - generic [ref=f113e159]:
+              - button "¿Cómo se calcula?" [ref=f113e161] [cursor=pointer]
+              - generic [ref=f113e164]: —
+              - generic [ref=f113e165]: Índice de Severidad AT
+          - generic [ref=f113e166]:
+            - generic [ref=f113e167]:
+              - generic [ref=f113e172]: "0"
+              - generic [ref=f113e173]: Accidentes de trabajo (2026)
+            - generic [ref=f113e174]:
+              - generic [ref=f113e179]: "0"
+              - generic [ref=f113e180]: Días de incapacidad (2026)
+            - generic [ref=f113e181]:
+              - generic [ref=f113e187]: "0"
+              - generic [ref=f113e188]: Incidentes en investigación
+            - generic [ref=f113e189]:
+              - generic [ref=f113e196]: 0% Crítico
+              - generic [ref=f113e197]: Autoevaluación Res. 0312
+          - generic [ref=f113e204]:
+            - generic [ref=f113e205]: 0.0 B
+            - generic [ref=f113e206]: Almacenamiento usado en adjuntos · 0 archivos
+          - generic [ref=f113e207]:
+            - generic [ref=f113e208]:
+              - generic [ref=f113e209]:
+                - generic [ref=f113e210]:
+                  - heading "Accidentalidad mensual" [level=3] [ref=f113e211]
+                  - paragraph [ref=f113e212]: Casos reportados · 2026
+                - generic [ref=f113e213]: Este año
+              - generic [ref=f113e216]:
+                - generic [ref=f113e217]: Ene
+                - generic [ref=f113e220]: Feb
+                - generic [ref=f113e223]: Mar
+                - generic [ref=f113e226]: Abr
+                - generic [ref=f113e229]: May
+                - generic [ref=f113e232]: Jun
+                - generic [ref=f113e235]: Jul
+                - generic [ref=f113e238]: Ago
+                - generic [ref=f113e241]: Sep
+                - generic [ref=f113e244]: Oct
+                - generic [ref=f113e247]: Nov
+                - generic [ref=f113e250]: Dic
+            - generic [ref=f113e253]:
+              - generic [ref=f113e255]:
+                - heading "Cobertura de formación" [level=3] [ref=f113e256]
+                - paragraph [ref=f113e257]: Inducción y reinducción
+              - generic [ref=f113e258]:
+                - generic [ref=f113e259]: 0%
+                - generic [ref=f113e261]:
+                  - generic [ref=f113e262]: Formados
+                  - generic [ref=f113e264]: Pendientes
+          - generic [ref=f113e266]:
+            - generic [ref=f113e267]:
+              - generic [ref=f113e268]:
+                - generic [ref=f113e269]:
+                  - heading "Mapa de calor — Matriz de riesgos" [level=3] [ref=f113e270]
+                  - paragraph [ref=f113e271]: Probabilidad × Severidad · GTC 45
+                - generic [ref=f113e272]: 6 peligros identificados
+              - generic [ref=f113e273]:
+                - generic [ref=f113e274]:
+                  - generic [ref=f113e275]: "1"
+                  - generic [ref=f113e276]: "2"
+                  - generic [ref=f113e277]: "3"
+                  - generic [ref=f113e278]: "4"
+                  - generic [ref=f113e279]: "5"
+                - generic [ref=f113e280]:
+                  - generic [ref=f113e281]:
+                    - generic [ref=f113e282]: "0"
+                    - generic [ref=f113e283]: "0"
+                    - generic [ref=f113e284]: "0"
+                    - generic [ref=f113e285]: "0"
+                    - generic [ref=f113e286]: "0"
+                    - generic [ref=f113e287]: "0"
+                    - generic [ref=f113e288]: "1"
+                    - generic [ref=f113e289]: "1"
+                    - generic [ref=f113e290]: "0"
+                    - generic [ref=f113e291]: "0"
+                    - generic [ref=f113e292]: "0"
+                    - generic [ref=f113e293]: "0"
+                    - generic [ref=f113e294]: "1"
+                    - generic [ref=f113e295]: "0"
+                    - generic [ref=f113e296]: "0"
+                    - generic [ref=f113e297]: "0"
+                    - generic [ref=f113e298]: "0"
+                    - generic [ref=f113e299]: "0"
+                    - generic [ref=f113e300]: "1"
+                    - generic [ref=f113e301]: "1"
+                    - generic [ref=f113e302]: "0"
+                    - generic [ref=f113e303]: "0"
+                    - generic [ref=f113e304]: "0"
+                    - generic [ref=f113e305]: "0"
+                    - generic [ref=f113e306]: "1"
+                  - generic [ref=f113e307]:
+                    - generic [ref=f113e308]: "1"
+                    - generic [ref=f113e309]: "2"
+                    - generic [ref=f113e310]: "3"
+                    - generic [ref=f113e311]: "4"
+                    - generic [ref=f113e312]: "5"
+                  - generic [ref=f113e313]:
+                    - generic [ref=f113e314]: Severidad →
+                    - generic [ref=f113e315]: ← Probabilidad (eje izquierdo)
+            - generic [ref=f113e316]:
+              - generic [ref=f113e318]:
+                - heading "Alertas críticas" [level=3] [ref=f113e319]
+                - paragraph [ref=f113e320]: Requieren atención inmediata
+              - paragraph [ref=f113e321]: Sin alertas críticas por ahora.
+          - generic [ref=f113e322]:
+            - generic [ref=f113e323]:
+              - generic [ref=f113e324]:
+                - heading "Próximos vencimientos" [level=3] [ref=f113e325]
+                - paragraph [ref=f113e326]: Capacitaciones programadas del SG-SST
+              - link "Ver cronograma completo" [ref=f113e327] [cursor=pointer]:
+                - /url: http://localhost/trainings
+            - table [ref=f113e329]:
+              - rowgroup [ref=f113e330]:
+                - row [ref=f113e331]:
+                  - columnheader "Actividad" [ref=f113e332]
+                  - columnheader "Tipo" [ref=f113e333]
+                  - columnheader "Responsable" [ref=f113e334]
+                  - columnheader "Fecha límite" [ref=f113e335]
+                  - columnheader "Estado" [ref=f113e336]
+              - rowgroup [ref=f113e337]:
+                - row [ref=f113e338]:
+                  - cell "No hay capacitaciones programadas próximamente." [ref=f113e339]
+  - button "Abrir ayuda" [ref=f113e341] [cursor=pointer]

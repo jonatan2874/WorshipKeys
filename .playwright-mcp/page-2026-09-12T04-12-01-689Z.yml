@@ -1,0 +1,62 @@
+- generic [ref=f38e2]:
+  - navigation [ref=f38e3]:
+    - generic [ref=f38e5]:
+      - generic [ref=f38e6]:
+        - link [ref=f38e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f38e11]:
+          - link "Dashboard" [ref=f38e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f38e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+          - link "Usuarios" [ref=f38e14] [cursor=pointer]:
+            - /url: http://localhost:8080/users
+      - button "Administrador" [ref=f38e18] [cursor=pointer]
+  - banner [ref=f38e23]:
+    - heading "Editar cliente" [level=2] [ref=f38e25]
+  - main [ref=f38e26]:
+    - generic [ref=f38e30]:
+      - generic [ref=f38e31]:
+        - generic [ref=f38e32]:
+          - generic [ref=f38e33]: Código
+          - textbox "Código" [ref=f38e34]: TEST01
+        - generic [ref=f38e35]:
+          - generic [ref=f38e36]: NIT
+          - textbox "NIT" [ref=f38e37]: 900123456-1
+        - generic [ref=f38e38]:
+          - generic [ref=f38e39]: Razón Social
+          - textbox "Razón Social" [ref=f38e40]: Cliente de Prueba SAS Editado
+        - generic [ref=f38e41]:
+          - generic [ref=f38e42]: Representante Legal
+          - textbox "Representante Legal" [ref=f38e43]: Juan Perez
+        - generic [ref=f38e44]:
+          - generic [ref=f38e45]: Dirección
+          - textbox "Dirección" [ref=f38e46]: "Calle 123 #45-67"
+        - generic [ref=f38e47]:
+          - generic [ref=f38e48]: Ciudad
+          - textbox "Ciudad" [ref=f38e49]: Bogota
+        - generic [ref=f38e50]:
+          - generic [ref=f38e51]: N.º Trabajadores Promedio
+          - spinbutton "N.º Trabajadores Promedio" [ref=f38e52]: "15"
+        - generic [ref=f38e53]:
+          - generic [ref=f38e54]: ¿Tiene Sucursal?
+          - generic [ref=f38e55]:
+            - generic [ref=f38e56]:
+              - radio "Sí" [checked] [ref=f38e57]
+              - generic [ref=f38e58]: Sí
+            - generic [ref=f38e59]:
+              - radio "No" [ref=f38e60]
+              - generic [ref=f38e61]: "No"
+          - generic [ref=f38e62]:
+            - generic [ref=f38e63]: Lugar/Ciudad de Sucursal
+            - textbox "Lugar/Ciudad de Sucursal" [ref=f38e64]: Medellin
+        - generic [ref=f38e65]:
+          - generic [ref=f38e66]: Valor Mensual
+          - spinbutton "Valor Mensual" [ref=f38e67]: "1500000.00"
+      - generic [ref=f38e68]:
+        - button "Eliminar" [ref=f38e69] [cursor=pointer]
+        - generic [ref=f38e70]:
+          - link [ref=f38e71] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+            - button "Cancelar" [ref=f38e72]
+          - button "Actualizar" [ref=f38e73] [cursor=pointer]

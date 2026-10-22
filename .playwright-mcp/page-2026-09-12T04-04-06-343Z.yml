@@ -1,0 +1,22 @@
+- generic [ref=f14e2]:
+  - navigation [ref=f14e3]:
+    - generic [ref=f14e5]:
+      - generic [ref=f14e6]:
+        - link [ref=f14e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f14e11]:
+          - link "Dashboard" [ref=f14e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f14e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+      - button "Asistente" [ref=f14e17] [cursor=pointer]
+  - banner [ref=f14e22]:
+    - heading "Dashboard" [level=2] [ref=f14e24]
+  - main [ref=f14e25]:
+    - generic [ref=f14e28]:
+      - generic [ref=f14e29]:
+        - generic [ref=f14e30]: Total de clientes
+        - generic [ref=f14e31]: "20"
+      - generic [ref=f14e32]:
+        - generic [ref=f14e33]: Con sucursal
+        - generic [ref=f14e34]: "7"

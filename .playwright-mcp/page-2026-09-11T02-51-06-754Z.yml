@@ -1,0 +1,113 @@
+- generic [active] [ref=f51e1]:
+  - generic [ref=f51e2]:
+    - generic [ref=f51e3]: Vigía SST
+    - generic [ref=f51e5]: Documento técnico · v1.0
+  - heading "Seguridad y privacidad de los datos en Vigía SST" [level=1] [ref=f51e6]: Seguridad y privacidadde los datos en Vigía SST
+  - paragraph [ref=f51e7]: Resumen técnico de cómo se protegen, aíslan y respaldan los datos de tu Sistema de Gestión de Seguridad y Salud en el Trabajo — pensado para compartir con tu equipo de cumplimiento o con tus propios clientes.
+  - generic [ref=f51e8]:
+    - generic [ref=f51e9]:
+      - generic [ref=f51e10]: Aislado
+      - text: Por empresa, sin excepción
+    - generic [ref=f51e11]:
+      - generic [ref=f51e12]: Privado
+      - text: Almacenamiento en la nube sin acceso público
+    - generic [ref=f51e13]:
+      - generic [ref=f51e14]: Trazable
+      - text: Bitácora de auditoría de todo cambio
+  - generic [ref=f51e15]:
+    - heading "Aislamiento de datos multiempresa" [level=2] [ref=f51e16]
+    - generic [ref=f51e17]:
+      - generic [ref=f51e18]:
+        - generic [ref=f51e19]: "1"
+        - paragraph [ref=f51e20]:
+          - generic [ref=f51e21]: Cada registro pertenece a una sola empresa
+          - text: Todas las tablas del sistema llevan la empresa propietaria del dato, y cada consulta a la base de datos se filtra automáticamente por la empresa activa de la sesión — a nivel de la capa de datos, no solo de la interfaz.
+      - generic [ref=f51e22]:
+        - generic [ref=f51e23]: "2"
+        - paragraph [ref=f51e24]:
+          - generic [ref=f51e25]: Sin filtraciones entre empresas cliente
+          - text: "Si administras varias empresas desde un portafolio, cada una ve exclusivamente su propia información: matriz de riesgos, trabajadores, incidentes, adjuntos."
+  - generic [ref=f51e26]:
+    - heading "Roles y permisos reforzados" [level=2] [ref=f51e27]
+    - generic [ref=f51e28]:
+      - generic [ref=f51e29]:
+        - generic [ref=f51e30]: "3"
+        - paragraph [ref=f51e31]:
+          - generic [ref=f51e32]: Verificación en cada solicitud
+          - text: Los roles (Administrador, Coordinador SST, COPASST, Trabajador) se validan en el servidor en cada acción — no basta con ocultar un botón en la pantalla.
+      - generic [ref=f51e33]:
+        - generic [ref=f51e34]: "4"
+        - paragraph [ref=f51e35]:
+          - generic [ref=f51e36]: Principio de mínimo privilegio
+          - text: Cada rol ve y gestiona únicamente los módulos que le corresponden según su función real dentro del SG-SST.
+  - generic [ref=f51e37]:
+    - heading "Almacenamiento de archivos y adjuntos" [level=2] [ref=f51e38]
+    - generic [ref=f51e39]:
+      - generic [ref=f51e40]:
+        - generic [ref=f51e41]: "5"
+        - paragraph [ref=f51e42]:
+          - generic [ref=f51e43]: Bucket privado en la nube
+          - text: Actas, certificados, exámenes y demás soportes se guardan en almacenamiento de objetos en la nube (Cloudflare R2) configurado como privado — nunca existe una URL pública directa a un archivo.
+      - generic [ref=f51e44]:
+        - generic [ref=f51e45]: "6"
+        - paragraph [ref=f51e46]:
+          - generic [ref=f51e47]: Entrega siempre autenticada
+          - text: Descargar un adjunto siempre pasa por el backend de la aplicación, que primero confirma que el usuario pertenece a la empresa dueña de ese archivo.
+      - generic [ref=f51e48]:
+        - generic [ref=f51e49]: "7"
+        - paragraph [ref=f51e50]:
+          - generic [ref=f51e51]: Nombres de archivo no predecibles
+          - text: Cada archivo se guarda con un identificador único generado por el sistema, nunca con el nombre original — evita que alguien adivine o enumere rutas de archivos ajenos.
+      - generic [ref=f51e52]:
+        - generic [ref=f51e53]: "8"
+        - paragraph [ref=f51e54]:
+          - generic [ref=f51e55]: Optimización sin exponer el original
+          - text: Imágenes y PDF se comprimen automáticamente al subir, reduciendo el costo de almacenamiento sin afectar la legibilidad del soporte.
+  - generic [ref=f51e56]:
+    - heading "Cuentas, contraseñas y trazabilidad" [level=2] [ref=f51e57]
+    - generic [ref=f51e58]:
+      - generic [ref=f51e59]:
+        - generic [ref=f51e60]: "9"
+        - paragraph [ref=f51e61]:
+          - generic [ref=f51e62]: Contraseñas nunca en texto plano
+          - text: "Se guardan como hash irreversible (bcrypt): ni el equipo técnico ni una filtración de la base de datos exponen la contraseña real de un usuario."
+      - generic [ref=f51e63]:
+        - generic [ref=f51e64]: "10"
+        - paragraph [ref=f51e65]:
+          - generic [ref=f51e66]: Bitácora de auditoría
+          - text: Toda creación, modificación y eliminación queda registrada con usuario, fecha y detalle del cambio — con posibilidad de restaurar un registro eliminado por error.
+      - generic [ref=f51e67]:
+        - generic [ref=f51e68]: "11"
+        - paragraph [ref=f51e69]:
+          - generic [ref=f51e70]: Tráfico cifrado
+          - text: Toda comunicación entre el navegador y la aplicación viaja cifrada mediante HTTPS/TLS.
+      - generic [ref=f51e71]:
+        - generic [ref=f51e72]: "12"
+        - paragraph [ref=f51e73]:
+          - generic [ref=f51e74]: Copias de seguridad antes de cambios mayores
+          - text: Antes de cualquier actualización estructural de la base de datos se toma un respaldo completo, verificado antes de aplicar el cambio.
+  - generic [ref=f51e75]:
+    - generic [ref=f51e76]: Marco legal
+    - paragraph [ref=f51e77]: "El tratamiento de datos personales dentro de Vigía SST se orienta a los principios de la Ley 1581 de 2012 (Régimen General de Protección de Datos Personales de Colombia): finalidad, seguridad, confidencialidad y acceso restringido a la información del titular."
+  - generic [ref=f51e78]:
+    - heading "Qué NO hacemos" [level=2] [ref=f51e79]
+    - table [ref=f51e80]:
+      - rowgroup [ref=f51e81]:
+        - row [ref=f51e82]:
+          - columnheader "Práctica" [ref=f51e83]
+          - columnheader "En Vigía SST" [ref=f51e84]
+        - row [ref=f51e85]:
+          - cell "Archivos en un bucket público" [ref=f51e86]
+          - cell "Nunca — todo adjunto exige autenticación y verificación de empresa." [ref=f51e87]
+        - row [ref=f51e88]:
+          - cell "Contraseñas en texto plano" [ref=f51e89]
+          - cell "Nunca — únicamente hash irreversible." [ref=f51e90]
+        - row [ref=f51e91]:
+          - cell "Consultas sin filtro de empresa" [ref=f51e92]
+          - cell "Nunca — el aislamiento aplica desde la capa de datos, no como capa opcional." [ref=f51e93]
+        - row [ref=f51e94]:
+          - cell "Borrado silencioso sin registro" [ref=f51e95]
+          - cell "Nunca — toda eliminación queda en la bitácora, con opción de restaurar." [ref=f51e96]
+  - contentinfo [ref=f51e97]:
+    - generic [ref=f51e98]: Vigía SST — by Pralli
+    - generic [ref=f51e99]: Documento informativo, no constituye un informe de auditoría de seguridad certificado.

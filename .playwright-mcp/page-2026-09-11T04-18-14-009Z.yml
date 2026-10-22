@@ -1,0 +1,81 @@
+- generic [ref=f84e2]:
+  - complementary [ref=f84e3]:
+    - generic [ref=f84e4]:
+      - generic [ref=f84e9]: Vigía SST
+      - button "Colapsar menú" [ref=f84e10] [cursor=pointer]
+    - navigation [ref=f84e13]:
+      - generic [ref=f84e14]:
+        - generic [ref=f84e15]: Principal
+        - link "Panel general" [ref=f84e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f84e21]:
+        - generic [ref=f84e22]: Gestión SST
+        - link "Planeación" [ref=f84e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f84e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f84e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f84e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f84e47]:
+        - generic [ref=f84e48]: Personas
+        - link "Trabajadores" [ref=f84e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f84e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f84e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f84e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f84e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f84e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f84e82]:
+        - generic [ref=f84e83]: Preparación
+        - link "Emergencias" [ref=f84e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f84e89]:
+        - generic [ref=f84e90]: Análisis
+        - link "Indicadores" [ref=f84e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f84e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f84e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "AT Admin Test Administrador" [ref=f84e107] [cursor=pointer]:
+      - generic [ref=f84e108]: AT
+      - generic [ref=f84e109]:
+        - generic [ref=f84e110]: Admin Test
+        - text: Administrador
+  - generic [ref=f84e111]:
+    - banner [ref=f84e112]:
+      - button "Textiles del Valle S.A.S" [ref=f84e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f84e125]
+      - generic [ref=f84e126]:
+        - button "Tema" [ref=f84e128] [cursor=pointer]
+        - button "3" [ref=f84e133] [cursor=pointer]
+        - button "AT" [ref=f84e139] [cursor=pointer]
+    - main [ref=f84e143]:
+      - generic [ref=f84e144]:
+        - generic [ref=f84e146]:
+          - generic [ref=f84e147]: SISTEMA / CONFIGURACIÓN / USUARIOS
+          - heading "Editar rol" [level=1] [ref=f84e148]
+          - paragraph [ref=f84e149]: Camila Ríos · camila.rios@textilesdelvalle.com
+        - generic [ref=f84e150]:
+          - generic [ref=f84e158]:
+            - heading "Datos del usuario" [level=3] [ref=f84e159]
+            - paragraph [ref=f84e160]: Actualiza la información y el rol de este usuario dentro de la plataforma.
+          - generic [ref=f84e162]:
+            - generic [ref=f84e163]: Rol
+            - combobox "Rol" [ref=f84e164] [cursor=pointer]:
+              - option "Selecciona..."
+              - option "Administrador"
+              - option "Coordinador SST" [selected]
+              - option "Miembro COPASST"
+              - option "Trabajador"
+          - generic [ref=f84e165]:
+            - link "Cancelar" [ref=f84e166] [cursor=pointer]:
+              - /url: http://localhost/settings/users
+            - button "Guardar cambios" [ref=f84e167] [cursor=pointer]

@@ -1,0 +1,96 @@
+- generic [ref=f35e2]:
+  - complementary [ref=f35e3]:
+    - generic [ref=f35e4]:
+      - generic [ref=f35e9]: Vigía SST
+      - button "Colapsar menú" [ref=f35e10] [cursor=pointer]
+    - navigation [ref=f35e13]:
+      - generic [ref=f35e14]:
+        - generic [ref=f35e15]: Principal
+        - link "Panel general" [ref=f35e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f35e21]:
+        - generic [ref=f35e22]: Gestión SST
+        - link "Planeación" [ref=f35e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f35e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f35e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f35e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f35e47]:
+        - generic [ref=f35e48]: Personas
+        - link "Trabajadores" [ref=f35e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f35e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f35e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f35e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f35e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f35e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f35e82]:
+        - generic [ref=f35e83]: Preparación
+        - link "Emergencias" [ref=f35e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f35e89]:
+        - generic [ref=f35e90]: Análisis
+        - link "Indicadores" [ref=f35e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f35e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f35e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "TV Tester Verificacion Coordinador SST" [ref=f35e107] [cursor=pointer]:
+      - generic [ref=f35e108]: TV
+      - generic [ref=f35e109]:
+        - generic [ref=f35e110]: Tester Verificacion
+        - text: Coordinador SST
+  - generic [ref=f35e111]:
+    - banner [ref=f35e112]:
+      - button "Empresa Verificacion" [ref=f35e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f35e125]
+      - generic [ref=f35e126]:
+        - button "Tema" [ref=f35e128] [cursor=pointer]
+        - button "3" [ref=f35e132] [cursor=pointer]
+        - button "TV" [ref=f35e138] [cursor=pointer]
+    - main [ref=f35e142]:
+      - generic [ref=f35e143]:
+        - generic [ref=f35e145]:
+          - generic [ref=f35e146]: GESTIÓN SST / PERMISOS DE TRABAJO
+          - heading "Nuevo permiso" [level=1] [ref=f35e147]
+        - generic [ref=f35e148]:
+          - generic [ref=f35e155]:
+            - heading "Datos del permiso de trabajo" [level=3] [ref=f35e156]
+            - paragraph [ref=f35e157]: Registra el permiso, sus condiciones y responsables.
+          - generic [ref=f35e158]:
+            - generic [ref=f35e159]:
+              - generic [ref=f35e160]: Trabajador registrado (opcional)
+              - combobox "Trabajador registrado (opcional)" [ref=f35e161] [cursor=pointer]:
+                - option "Sin vincular — escribir el nombre abajo" [selected]
+                - option "Trabajador Prueba Uno — 1000000001"
+            - generic [ref=f35e162]:
+              - generic [ref=f35e163]: Tipo de permiso
+              - textbox "Tipo de permiso" [ref=f35e164]
+            - generic [ref=f35e165]:
+              - generic [ref=f35e166]: Área
+              - textbox "Área" [ref=f35e167]
+            - generic [ref=f35e168]:
+              - generic [ref=f35e169]: Solicitante
+              - textbox "Solicitante" [ref=f35e170]
+            - generic [ref=f35e171]:
+              - generic [ref=f35e172]: Vigente hasta
+              - textbox "Vigente hasta" [ref=f35e173]
+            - generic [ref=f35e174]:
+              - generic [ref=f35e175]: Estado
+              - combobox "Estado" [ref=f35e176] [cursor=pointer]:
+                - option "Vigente" [selected]
+                - option "Cancelado"
+              - paragraph [ref=f35e177]: "\"Vencido\"/\"Por vencer\" se calculan solos según la fecha de vigencia."
+          - generic [ref=f35e178]:
+            - link "Cancelar" [ref=f35e179] [cursor=pointer]:
+              - /url: http://localhost/work-permits
+            - button "Crear permiso" [ref=f35e180] [cursor=pointer]

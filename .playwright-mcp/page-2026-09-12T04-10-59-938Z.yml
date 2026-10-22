@@ -1,0 +1,57 @@
+- generic [ref=f32e2]:
+  - navigation [ref=f32e3]:
+    - generic [ref=f32e5]:
+      - generic [ref=f32e6]:
+        - link [ref=f32e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f32e11]:
+          - link "Dashboard" [ref=f32e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f32e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+          - link "Usuarios" [ref=f32e14] [cursor=pointer]:
+            - /url: http://localhost:8080/users
+      - button "Administrador" [ref=f32e18] [cursor=pointer]
+  - banner [ref=f32e23]:
+    - heading "Nuevo cliente" [level=2] [ref=f32e25]
+  - main [ref=f32e26]:
+    - generic [ref=f32e30]:
+      - generic [ref=f32e31]:
+        - generic [ref=f32e32]:
+          - generic [ref=f32e33]: Código
+          - textbox "Código" [ref=f32e34]
+        - generic [ref=f32e35]:
+          - generic [ref=f32e36]: NIT
+          - textbox "NIT" [ref=f32e37]
+        - generic [ref=f32e38]:
+          - generic [ref=f32e39]: Razón Social
+          - textbox "Razón Social" [ref=f32e40]
+        - generic [ref=f32e41]:
+          - generic [ref=f32e42]: Representante Legal
+          - textbox "Representante Legal" [ref=f32e43]
+        - generic [ref=f32e44]:
+          - generic [ref=f32e45]: Dirección
+          - textbox "Dirección" [ref=f32e46]
+        - generic [ref=f32e47]:
+          - generic [ref=f32e48]: Ciudad
+          - textbox "Ciudad" [ref=f32e49]
+        - generic [ref=f32e50]:
+          - generic [ref=f32e51]: N.º Trabajadores Promedio
+          - spinbutton "N.º Trabajadores Promedio" [ref=f32e52]
+        - generic [ref=f32e53]:
+          - generic [ref=f32e54]: ¿Tiene Sucursal?
+          - generic [ref=f32e55]:
+            - generic [ref=f32e56]:
+              - radio "Sí" [ref=f32e57]
+              - generic [ref=f32e58]: Sí
+            - generic [ref=f32e59]:
+              - radio "No" [checked] [ref=f32e60]
+              - generic [ref=f32e61]: "No"
+        - generic [ref=f32e62]:
+          - generic [ref=f32e63]: Valor Mensual
+          - spinbutton "Valor Mensual" [ref=f32e64]
+      - generic [ref=f32e65]:
+        - link [ref=f32e66] [cursor=pointer]:
+          - /url: http://localhost:8080/clients
+          - button "Cancelar" [ref=f32e67]
+        - button "Guardar" [ref=f32e68] [cursor=pointer]

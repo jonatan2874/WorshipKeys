@@ -1,0 +1,14 @@
+- generic [ref=f20e2]:
+  - link [ref=f20e4] [cursor=pointer]:
+    - /url: /
+  - generic [ref=f20e8]:
+    - generic [ref=f20e9]:
+      - generic [ref=f20e10]: Email
+      - textbox "Email" [active] [ref=f20e11]: admin@crm.test
+    - generic [ref=f20e12]:
+      - generic [ref=f20e13]: Password
+      - textbox "Password" [ref=f20e14]
+    - generic [ref=f20e15]:
+      - generic [ref=f20e16]: Confirm Password
+      - textbox "Confirm Password" [ref=f20e17]
+    - button "Reset Password" [ref=f20e19] [cursor=pointer]

@@ -1,0 +1,97 @@
+- generic [ref=f90e2]:
+  - complementary [ref=f90e3]:
+    - generic [ref=f90e4]:
+      - generic [ref=f90e9]: Vigía SST
+      - button "Colapsar menú" [ref=f90e10] [cursor=pointer]
+    - navigation [ref=f90e13]:
+      - generic [ref=f90e14]:
+        - generic [ref=f90e15]: Principal
+        - link "Panel general" [ref=f90e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f90e21]:
+        - generic [ref=f90e22]: Gestión SST
+        - link "Planeación" [ref=f90e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f90e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f90e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f90e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f90e47]:
+        - generic [ref=f90e48]: Personas
+        - link "Trabajadores" [ref=f90e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f90e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f90e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f90e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f90e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f90e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f90e82]:
+        - generic [ref=f90e83]: Preparación
+        - link "Emergencias" [ref=f90e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f90e89]:
+        - generic [ref=f90e90]: Análisis
+        - link "Indicadores" [ref=f90e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f90e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f90e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "AT Admin Test Administrador" [ref=f90e107] [cursor=pointer]:
+      - generic [ref=f90e108]: AT
+      - generic [ref=f90e109]:
+        - generic [ref=f90e110]: Admin Test
+        - text: Administrador
+  - generic [ref=f90e111]:
+    - banner [ref=f90e112]:
+      - button "Textiles del Valle S.A.S" [ref=f90e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f90e125]
+      - generic [ref=f90e126]:
+        - button "Tema" [ref=f90e128] [cursor=pointer]
+        - button "3" [ref=f90e133] [cursor=pointer]
+        - button "AT" [ref=f90e139] [cursor=pointer]
+    - main [ref=f90e143]:
+      - generic [ref=f90e144]:
+        - generic [ref=f90e145]:
+          - generic [ref=f90e146]:
+            - generic [ref=f90e147]: SISTEMA / CONFIGURACIÓN / USUARIOS
+            - heading "Usuarios y roles" [level=1] [ref=f90e148]
+            - paragraph [ref=f90e149]: Usuarios con acceso a esta empresa
+          - link "Nuevo usuario" [ref=f90e151] [cursor=pointer]:
+            - /url: http://localhost/settings/users/create
+        - table [ref=f90e154]:
+          - rowgroup [ref=f90e155]:
+            - row [ref=f90e156]:
+              - columnheader "Nombre" [ref=f90e157]
+              - columnheader "Correo" [ref=f90e158]
+              - columnheader "Rol" [ref=f90e159]
+              - columnheader [ref=f90e160]
+          - rowgroup [ref=f90e161]:
+            - row [ref=f90e162]:
+              - cell "Camila Ríos" [ref=f90e163]
+              - cell "camila.rios@textilesdelvalle.com" [ref=f90e164]
+              - cell "Coordinador SST" [ref=f90e165]
+              - cell [ref=f90e167]:
+                - link "Editar rol" [ref=f90e168] [cursor=pointer]:
+                  - /url: http://localhost/settings/users/7/edit
+                - button "Quitar de la empresa" [ref=f90e173] [cursor=pointer]
+            - row [ref=f90e177]:
+              - cell "Admin Test" [ref=f90e178]
+              - cell "admin@test.com" [ref=f90e179]
+              - cell "Administrador" [ref=f90e180]
+              - cell [ref=f90e182]
+            - row [ref=f90e183]:
+              - cell "Tercero Test" [ref=f90e184]
+              - cell "tercero@test.com" [ref=f90e185]
+              - cell "Trabajador" [ref=f90e186]
+              - cell [ref=f90e188]:
+                - link "Editar rol" [ref=f90e189] [cursor=pointer]:
+                  - /url: http://localhost/settings/users/12/edit
+                - button "Quitar de la empresa" [ref=f90e194] [cursor=pointer]

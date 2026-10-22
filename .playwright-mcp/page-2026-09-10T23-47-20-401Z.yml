@@ -1,0 +1,117 @@
+- generic [ref=f15e2]:
+  - complementary [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - generic [ref=f15e9]: Vigía SST
+      - button "Colapsar menú" [ref=f15e10] [cursor=pointer]
+    - navigation [ref=f15e13]:
+      - generic [ref=f15e14]:
+        - generic [ref=f15e15]: Principal
+        - link "Panel general" [ref=f15e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f15e21]:
+        - generic [ref=f15e22]: Gestión SST
+        - link "Planeación" [ref=f15e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f15e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f15e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f15e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f15e47]:
+        - generic [ref=f15e48]: Personas
+        - link "Trabajadores" [ref=f15e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f15e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f15e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f15e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f15e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f15e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f15e82]:
+        - generic [ref=f15e83]: Preparación
+        - link "Emergencias" [ref=f15e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f15e89]:
+        - generic [ref=f15e90]: Análisis
+        - link "Indicadores" [ref=f15e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f15e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f15e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "TV Tester Verificacion Coordinador SST" [ref=f15e107] [cursor=pointer]:
+      - generic [ref=f15e108]: TV
+      - generic [ref=f15e109]:
+        - generic [ref=f15e110]: Tester Verificacion
+        - text: Coordinador SST
+  - generic [ref=f15e111]:
+    - banner [ref=f15e112]:
+      - button "Empresa Verificacion" [ref=f15e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f15e125]
+      - generic [ref=f15e126]:
+        - button "Tema" [ref=f15e128] [cursor=pointer]
+        - button "3" [ref=f15e132] [cursor=pointer]
+        - button "TV" [ref=f15e138] [cursor=pointer]
+    - main [ref=f15e142]:
+      - generic [ref=f15e143]:
+        - generic [ref=f15e145]:
+          - generic [ref=f15e146]: PERSONAS / INCIDENTES Y AT
+          - heading "Reportar incidente" [level=1] [ref=f15e147]
+          - paragraph [ref=f15e148]: Registra un incidente o accidente de trabajo para su investigación
+        - generic [ref=f15e149]:
+          - generic [ref=f15e154]:
+            - heading "Detalles del incidente" [level=3] [ref=f15e155]
+            - paragraph [ref=f15e156]: Registra los datos del evento, la clasificación y el seguimiento de la investigación.
+          - generic [ref=f15e157]:
+            - generic [ref=f15e158]:
+              - generic [ref=f15e159]: Trabajador registrado (opcional)
+              - combobox "Trabajador registrado (opcional)" [ref=f15e160] [cursor=pointer]:
+                - option "Sin vincular — escribir el nombre abajo" [selected]
+                - option "Trabajador Prueba Uno — 1000000001"
+            - generic [ref=f15e161]:
+              - generic [ref=f15e162]: Trabajador
+              - textbox "Trabajador" [ref=f15e163]
+            - generic [ref=f15e164]:
+              - generic [ref=f15e165]: Área
+              - textbox "Área" [ref=f15e166]
+            - generic [ref=f15e167]:
+              - generic [ref=f15e168]: Tipo
+              - combobox "Tipo" [ref=f15e169] [cursor=pointer]:
+                - option "Selecciona..." [selected]
+                - option "Accidente de trabajo"
+                - option "Incidente"
+            - generic [ref=f15e170]:
+              - generic [ref=f15e171]: Severidad
+              - combobox "Severidad" [ref=f15e172] [cursor=pointer]:
+                - option "Selecciona..." [selected]
+                - option "Leve"
+                - option "Grave"
+                - option "Mortal"
+                - option "Sin lesión"
+            - generic [ref=f15e173]:
+              - generic [ref=f15e174]: Estado de investigación
+              - combobox "Estado de investigación" [ref=f15e175] [cursor=pointer]:
+                - option "Selecciona..." [selected]
+                - option "En investigación"
+                - option "Cerrada"
+            - generic [ref=f15e176]:
+              - generic [ref=f15e177]: Responsable
+              - textbox "Responsable" [ref=f15e178]
+            - generic [ref=f15e179]:
+              - generic [ref=f15e180]: Fecha
+              - textbox "Fecha" [ref=f15e181]
+            - generic [ref=f15e182]:
+              - generic [ref=f15e183]: Días de incapacidad
+              - spinbutton "Días de incapacidad" [ref=f15e184]: "0"
+            - generic [ref=f15e185]:
+              - generic [ref=f15e186]: Descripción
+              - textbox "Descripción" [ref=f15e187]
+          - generic [ref=f15e188]:
+            - link "Cancelar" [ref=f15e189] [cursor=pointer]:
+              - /url: http://localhost/incidents
+            - button "Reportar incidente" [ref=f15e190] [cursor=pointer]

@@ -1,0 +1,24 @@
+- generic [ref=f74e1]:
+  - button "Tema" [ref=f74e3] [cursor=pointer]
+  - generic [ref=f74e9]:
+    - text: Acceso corporativo
+    - heading "Inicia sesión" [level=2] [ref=f74e10]
+    - paragraph [ref=f74e11]: Ingresa tus credenciales para continuar con la gestión del SG-SST.
+    - generic [ref=f74e12]:
+      - generic [ref=f74e13]:
+        - generic [ref=f74e14]: Correo electrónico
+        - textbox "Correo electrónico" [active] [ref=f74e15]
+      - generic [ref=f74e16]:
+        - generic [ref=f74e17]: Contraseña
+        - generic [ref=f74e18]:
+          - textbox "Contraseña" [ref=f74e19]
+          - button "Mostrar u ocultar contraseña" [ref=f74e20] [cursor=pointer]
+      - generic [ref=f74e24]:
+        - generic [ref=f74e25] [cursor=pointer]:
+          - checkbox "Recordarme" [ref=f74e26]
+          - text: Recordarme
+        - link "¿Olvidaste tu contraseña?" [ref=f74e27] [cursor=pointer]:
+          - /url: http://localhost/forgot-password
+      - button "Iniciar sesión" [ref=f74e28] [cursor=pointer]
+    - paragraph [ref=f74e29]: ¿Primera vez aquí? Contacta a tu administrador SST para obtener acceso.
+    - paragraph [ref=f74e30]: Al continuar aceptas la Política de tratamiento de datos, conforme a la Ley 1581 de 2012.

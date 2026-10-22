@@ -1,0 +1,267 @@
+- generic [ref=f45e2]:
+  - complementary [ref=f45e3]:
+    - generic [ref=f45e4]:
+      - generic [ref=f45e12]: Pralli
+      - button "Colapsar menú" [ref=f45e13] [cursor=pointer]
+    - navigation [ref=f45e16]:
+      - generic [ref=f45e17]:
+        - generic [ref=f45e18]: Principal
+        - link "Panel general" [ref=f45e19] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - link "Clientes" [ref=f45e24] [cursor=pointer]:
+          - /url: http://localhost:8080/clients
+      - generic [ref=f45e29]:
+        - generic [ref=f45e30]: Administración
+        - link "Usuarios" [ref=f45e31] [cursor=pointer]:
+          - /url: http://localhost:8080/users
+    - link "A Administrador Administrador" [ref=f45e39] [cursor=pointer]:
+      - /url: http://localhost:8080/profile
+      - generic [ref=f45e40]: A
+      - generic [ref=f45e41]:
+        - generic [ref=f45e42]: Administrador
+        - text: Administrador
+  - generic [ref=f45e43]:
+    - banner [ref=f45e44]:
+      - generic [ref=f45e45]:
+        - button "Tema" [ref=f45e46] [cursor=pointer]
+        - button "A" [ref=f45e50] [cursor=pointer]
+    - main [ref=f45e54]:
+      - generic [ref=f45e55]:
+        - generic [ref=f45e56]:
+          - generic [ref=f45e57]:
+            - generic [ref=f45e58]: CRM
+            - heading "Clientes" [level=1] [ref=f45e59]
+            - generic [ref=f45e60]: 20 clientes registrados
+          - link "Nuevo cliente" [ref=f45e62] [cursor=pointer]:
+            - /url: http://localhost:8080/clients/create
+        - searchbox "Buscar por código, razón social o NIT" [ref=f45e69]
+        - table [ref=f45e71]:
+          - rowgroup [ref=f45e72]:
+            - row [ref=f45e73]:
+              - columnheader "Código" [ref=f45e74]
+              - columnheader "Razón Social" [ref=f45e75]
+              - columnheader "NIT" [ref=f45e76]
+              - columnheader "Representante Legal" [ref=f45e77]
+              - columnheader "Ciudad" [ref=f45e78]
+              - columnheader "Sucursal" [ref=f45e79]
+              - columnheader "N.º Trabajadores" [ref=f45e80]
+              - columnheader "Valor Mensual" [ref=f45e81]
+              - columnheader [ref=f45e82]
+          - rowgroup [ref=f45e83]:
+            - row [ref=f45e84]:
+              - cell "830" [ref=f45e85]
+              - cell "Bartell-Beer" [ref=f45e86]
+              - cell "944391203-3" [ref=f45e87]
+              - cell "Cornell Connelly" [ref=f45e88]
+              - cell "Princessborough" [ref=f45e89]
+              - cell "No" [ref=f45e90]
+              - cell "22" [ref=f45e92]
+              - cell "$3.070.872" [ref=f45e93]
+              - cell [ref=f45e94]:
+                - link "Ver" [ref=f45e95] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/8
+                - link "Editar" [ref=f45e96] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/8/edit
+            - row [ref=f45e97]:
+              - cell "993" [ref=f45e98]
+              - cell "Bashirian-Ernser" [ref=f45e99]
+              - cell "927242775-7" [ref=f45e100]
+              - cell "Katherine Bogan" [ref=f45e101]
+              - cell "Kuhlmanfurt" [ref=f45e102]
+              - cell "No" [ref=f45e103]
+              - cell "8" [ref=f45e105]
+              - cell "$4.210.074" [ref=f45e106]
+              - cell [ref=f45e107]:
+                - link "Ver" [ref=f45e108] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/6
+                - link "Editar" [ref=f45e109] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/6/edit
+            - row [ref=f45e110]:
+              - cell "664" [ref=f45e111]
+              - cell "Berge, Smith and Eichmann" [ref=f45e112]
+              - cell "937357623-4" [ref=f45e113]
+              - cell "Yessenia Marks MD" [ref=f45e114]
+              - cell "Kuphalport" [ref=f45e115]
+              - cell "No" [ref=f45e116]
+              - cell "153" [ref=f45e118]
+              - cell "$1.251.133" [ref=f45e119]
+              - cell [ref=f45e120]:
+                - link "Ver" [ref=f45e121] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/7
+                - link "Editar" [ref=f45e122] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/7/edit
+            - row [ref=f45e123]:
+              - cell "943" [ref=f45e124]
+              - cell "Bergnaum-Williamson" [ref=f45e125]
+              - cell "913866889-9" [ref=f45e126]
+              - cell "Alysson Buckridge" [ref=f45e127]
+              - cell "Madalineview" [ref=f45e128]
+              - cell "No" [ref=f45e129]
+              - cell "6" [ref=f45e131]
+              - cell "$2.306.790" [ref=f45e132]
+              - cell [ref=f45e133]:
+                - link "Ver" [ref=f45e134] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/2
+                - link "Editar" [ref=f45e135] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/2/edit
+            - row [ref=f45e136]:
+              - cell "942" [ref=f45e137]
+              - cell "Blanda-Bogisich" [ref=f45e138]
+              - cell "958457550-9" [ref=f45e139]
+              - cell "Davin Herman" [ref=f45e140]
+              - cell "Karlfort" [ref=f45e141]
+              - cell "No" [ref=f45e142]
+              - cell "3" [ref=f45e144]
+              - cell "$4.511.122" [ref=f45e145]
+              - cell [ref=f45e146]:
+                - link "Ver" [ref=f45e147] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/17
+                - link "Editar" [ref=f45e148] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/17/edit
+            - row [ref=f45e149]:
+              - cell "498" [ref=f45e150]
+              - cell "Bradtke, Okuneva and Kihn" [ref=f45e151]
+              - cell "930576080-4" [ref=f45e152]
+              - cell "Delphine Feest PhD" [ref=f45e153]
+              - cell "South Jacquelyn" [ref=f45e154]
+              - cell "Sí · North Sidneyshire" [ref=f45e155]
+              - cell "78" [ref=f45e157]
+              - cell "$3.376.692" [ref=f45e158]
+              - cell [ref=f45e159]:
+                - link "Ver" [ref=f45e160] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/14
+                - link "Editar" [ref=f45e161] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/14/edit
+            - row [ref=f45e162]:
+              - cell "398" [ref=f45e163]
+              - cell "Durgan-Walker" [ref=f45e164]
+              - cell "948170977-4" [ref=f45e165]
+              - cell "Josefa Schmitt" [ref=f45e166]
+              - cell "Kolbyburgh" [ref=f45e167]
+              - cell "No" [ref=f45e168]
+              - cell "94" [ref=f45e170]
+              - cell "$1.886.071" [ref=f45e171]
+              - cell [ref=f45e172]:
+                - link "Ver" [ref=f45e173] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/16
+                - link "Editar" [ref=f45e174] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/16/edit
+            - row [ref=f45e175]:
+              - cell "525" [ref=f45e176]
+              - cell "Grimes-Wunsch" [ref=f45e177]
+              - cell "982750261-0" [ref=f45e178]
+              - cell "Khalid Greenholt Jr." [ref=f45e179]
+              - cell "Gislasonville" [ref=f45e180]
+              - cell "No" [ref=f45e181]
+              - cell "36" [ref=f45e183]
+              - cell "$521.860" [ref=f45e184]
+              - cell [ref=f45e185]:
+                - link "Ver" [ref=f45e186] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/20
+                - link "Editar" [ref=f45e187] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/20/edit
+            - row [ref=f45e188]:
+              - cell "998" [ref=f45e189]
+              - cell "Herzog and Sons" [ref=f45e190]
+              - cell "923787917-4" [ref=f45e191]
+              - cell "Mr. Santiago Bayer" [ref=f45e192]
+              - cell "Hilpertstad" [ref=f45e193]
+              - cell "No" [ref=f45e194]
+              - cell "44" [ref=f45e196]
+              - cell "$3.132.508" [ref=f45e197]
+              - cell [ref=f45e198]:
+                - link "Ver" [ref=f45e199] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/11
+                - link "Editar" [ref=f45e200] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/11/edit
+            - row [ref=f45e201]:
+              - cell "975" [ref=f45e202]
+              - cell "Howell-Haag" [ref=f45e203]
+              - cell "920207874-5" [ref=f45e204]
+              - cell "Sophia Kilback DVM" [ref=f45e205]
+              - cell "Walterview" [ref=f45e206]
+              - cell "Sí · D'Amorehaven" [ref=f45e207]
+              - cell "150" [ref=f45e209]
+              - cell "$1.532.440" [ref=f45e210]
+              - cell [ref=f45e211]:
+                - link "Ver" [ref=f45e212] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/9
+                - link "Editar" [ref=f45e213] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/9/edit
+            - row [ref=f45e214]:
+              - cell "292" [ref=f45e215]
+              - cell "Johnston Group" [ref=f45e216]
+              - cell "936330928-9" [ref=f45e217]
+              - cell "Prof. Darryl Huels DDS" [ref=f45e218]
+              - cell "Cartermouth" [ref=f45e219]
+              - cell "Sí · Jeannemouth" [ref=f45e220]
+              - cell "164" [ref=f45e222]
+              - cell "$1.754.904" [ref=f45e223]
+              - cell [ref=f45e224]:
+                - link "Ver" [ref=f45e225] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/3
+                - link "Editar" [ref=f45e226] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/3/edit
+            - row [ref=f45e227]:
+              - cell "263" [ref=f45e228]
+              - cell "Kautzer-Bailey" [ref=f45e229]
+              - cell "969183821-3" [ref=f45e230]
+              - cell "Prof. Jordan Kerluke" [ref=f45e231]
+              - cell "South Bryon" [ref=f45e232]
+              - cell "Sí · New Allene" [ref=f45e233]
+              - cell "123" [ref=f45e235]
+              - cell "$4.883.755" [ref=f45e236]
+              - cell [ref=f45e237]:
+                - link "Ver" [ref=f45e238] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/5
+                - link "Editar" [ref=f45e239] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/5/edit
+            - row [ref=f45e240]:
+              - cell "845" [ref=f45e241]
+              - cell "Kutch LLC" [ref=f45e242]
+              - cell "985175567-3" [ref=f45e243]
+              - cell "Natalie Heidenreich DDS" [ref=f45e244]
+              - cell "Lake Etha" [ref=f45e245]
+              - cell "No" [ref=f45e246]
+              - cell "118" [ref=f45e248]
+              - cell "$3.637.475" [ref=f45e249]
+              - cell [ref=f45e250]:
+                - link "Ver" [ref=f45e251] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/1
+                - link "Editar" [ref=f45e252] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/1/edit
+            - row [ref=f45e253]:
+              - cell "241" [ref=f45e254]
+              - cell "Lesch Ltd" [ref=f45e255]
+              - cell "920481404-8" [ref=f45e256]
+              - cell "Prof. Vladimir Kuphal V" [ref=f45e257]
+              - cell "Preciousview" [ref=f45e258]
+              - cell "No" [ref=f45e259]
+              - cell "102" [ref=f45e261]
+              - cell "$4.336.192" [ref=f45e262]
+              - cell [ref=f45e263]:
+                - link "Ver" [ref=f45e264] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/4
+                - link "Editar" [ref=f45e265] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/4/edit
+            - row [ref=f45e266]:
+              - cell "719" [ref=f45e267]
+              - cell "Luettgen LLC" [ref=f45e268]
+              - cell "917979139-7" [ref=f45e269]
+              - cell "Mr. Monserrat Schaefer" [ref=f45e270]
+              - cell "Lake Naomiberg" [ref=f45e271]
+              - cell "Sí · Carrollmouth" [ref=f45e272]
+              - cell "154" [ref=f45e274]
+              - cell "$3.371.747" [ref=f45e275]
+              - cell [ref=f45e276]:
+                - link "Ver" [ref=f45e277] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/18
+                - link "Editar" [ref=f45e278] [cursor=pointer]:
+                  - /url: http://localhost:8080/clients/18/edit
+        - navigation "Paginación" [ref=f45e280]:
+          - generic [ref=f45e281]: «
+          - generic [ref=f45e282]: "1"
+          - link "2" [ref=f45e284] [cursor=pointer]:
+            - /url: http://localhost:8080/clients?page=2
+          - link "»" [ref=f45e285] [cursor=pointer]:
+            - /url: http://localhost:8080/clients?page=2

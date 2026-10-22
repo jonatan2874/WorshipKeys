@@ -1,0 +1,240 @@
+- generic [active] [ref=f40e1]:
+  - banner [ref=f40e2]:
+    - generic [ref=f40e3]:
+      - link [ref=f40e4] [cursor=pointer]:
+        - /url: /landing/
+      - navigation [ref=f40e9]:
+        - link "Módulos" [ref=f40e10] [cursor=pointer]:
+          - /url: "#modulos"
+        - link "Para consultores" [ref=f40e11] [cursor=pointer]:
+          - /url: "#consultores"
+        - link "Seguridad" [ref=f40e12] [cursor=pointer]:
+          - /url: "#seguridad"
+        - link "Manual" [ref=f40e13] [cursor=pointer]:
+          - /url: /manual
+      - generic [ref=f40e14]:
+        - link "Iniciar sesión" [ref=f40e15] [cursor=pointer]:
+          - /url: /login
+        - link "Solicitar demo" [ref=f40e16] [cursor=pointer]:
+          - /url: "#cta"
+  - main [ref=f40e17]:
+    - generic [ref=f40e19]:
+      - generic [ref=f40e20]:
+        - generic [ref=f40e21]: Decreto 1072 · Resolución 0312 de 2019
+        - heading "TU SG-SST, SIN EL CAOS DE EXCEL." [level=1] [ref=f40e22]:
+          - generic [ref=f40e23]: TU SG-SST,
+          - generic [ref=f40e25]: SIN EL CAOS
+          - generic [ref=f40e27]: DE EXCEL.
+        - paragraph [ref=f40e29]: Vigía centraliza matriz de riesgos, capacitaciones, incidentes, permisos de trabajo, COPASST e indicadores de un Sistema de Gestión de Seguridad y Salud en el Trabajo — con trazabilidad real y evidencia lista para cualquier auditoría.
+        - generic [ref=f40e30]:
+          - link "Solicitar una demo" [ref=f40e31] [cursor=pointer]:
+            - /url: "#cta"
+          - link "Ver los 18 módulos" [ref=f40e34] [cursor=pointer]:
+            - /url: "#modulos"
+        - paragraph [ref=f40e35]: Multiempresa desde el día uno · Aislamiento real de datos por empresa
+      - generic [ref=f40e36]:
+        - generic [ref=f40e37]: Auditoría al día
+        - generic [ref=f40e41]: Roles y permisos reales
+        - generic [ref=f40e44]:
+          - text: VIGÍA · PANEL SG-SST
+          - generic [ref=f40e45]:
+            - generic [ref=f40e46]:
+              - generic [ref=f40e47]: "2.4"
+              - text: Índice frecuencia AT
+            - generic [ref=f40e48]:
+              - generic [ref=f40e49]: 96%
+              - text: Cumplimiento
+            - generic [ref=f40e50]:
+              - generic [ref=f40e51]: "18"
+              - text: Módulos activos
+          - generic [ref=f40e52]:
+            - generic [ref=f40e53]:
+              - generic [ref=f40e55]: Permiso de trabajo en alturas — Cubierta bodega 2
+              - generic [ref=f40e56]: Vigente
+            - generic [ref=f40e57]:
+              - generic [ref=f40e59]: Examen periódico — 4 trabajadores
+              - generic [ref=f40e60]: Por vencer
+            - generic [ref=f40e61]:
+              - generic [ref=f40e63]: Inspección de extintores — Sede Bogotá
+              - generic [ref=f40e64]: Cerrada
+    - generic [ref=f40e66]:
+      - generic [ref=f40e67]: Matriz de riesgos GTC 45 ◆
+      - generic [ref=f40e68]: COPASST ◆
+      - generic [ref=f40e69]: Permisos de trabajo ◆
+      - generic [ref=f40e70]: Incidentes y AT ◆
+      - generic [ref=f40e71]: Salud ocupacional ◆
+      - generic [ref=f40e72]: Capacitaciones ◆
+      - generic [ref=f40e73]: Contratistas ◆
+      - generic [ref=f40e74]: Emergencias ◆
+      - generic [ref=f40e75]: Indicadores ◆
+      - generic [ref=f40e76]: Matriz de riesgos GTC 45 ◆
+      - generic [ref=f40e77]: COPASST ◆
+      - generic [ref=f40e78]: Permisos de trabajo ◆
+      - generic [ref=f40e79]: Incidentes y AT ◆
+      - generic [ref=f40e80]: Salud ocupacional ◆
+      - generic [ref=f40e81]: Capacitaciones ◆
+      - generic [ref=f40e82]: Contratistas ◆
+      - generic [ref=f40e83]: Emergencias ◆
+      - generic [ref=f40e84]: Indicadores ◆
+    - generic [ref=f40e87]:
+      - generic [ref=f40e88]:
+        - generic [ref=f40e89]: 60+
+        - text: Estándares mínimos cubiertos
+      - generic [ref=f40e90]:
+        - generic [ref=f40e91]: "18"
+        - text: Módulos SST integrados
+      - generic [ref=f40e92]:
+        - generic [ref=f40e93]: 100%
+        - text: Trazabilidad con bitácora
+      - generic [ref=f40e94]:
+        - generic [ref=f40e95]: 5×5
+        - text: Matriz de riesgos GTC 45
+    - generic [ref=f40e97]:
+      - generic [ref=f40e98]:
+        - generic [ref=f40e99]: El problema real
+        - heading "Cumplir no debería doler" [level=2] [ref=f40e100]
+      - generic [ref=f40e101]:
+        - generic [ref=f40e102]:
+          - heading "Antes" [level=3] [ref=f40e103]
+          - list [ref=f40e106]:
+            - listitem [ref=f40e107]: La matriz de riesgos vive en un Excel que solo entiende quien lo hizo.
+            - listitem [ref=f40e110]: Los soportes de capacitaciones y exámenes están repartidos entre carpetas, correos y WhatsApp.
+            - listitem [ref=f40e113]: Nadie sabe con certeza el Índice de Frecuencia y Severidad hasta que toca calcularlo a mano.
+            - listitem [ref=f40e116]: Si manejas varios clientes SST, cada uno tiene su propio caos, sin visión conjunta.
+        - generic [ref=f40e119]:
+          - heading "Con Vigía" [level=3] [ref=f40e120]
+          - list [ref=f40e124]:
+            - listitem [ref=f40e125]: Una sola matriz de riesgos GTC 45, viva y compartida por todo el equipo SST.
+            - listitem [ref=f40e128]: Cada acta, examen y certificado queda adjunto directo al registro que le corresponde.
+            - listitem [ref=f40e131]: Índices de Frecuencia y Severidad calculados en vivo, con las horas hombre reales.
+            - listitem [ref=f40e134]: Un portafolio para administrar todas tus empresas cliente desde un mismo panel.
+    - generic [ref=f40e138]:
+      - generic [ref=f40e139]:
+        - generic [ref=f40e140]: Todo el SG-SST, un solo lugar
+        - heading "18 módulos que ya sabes que necesitas" [level=2] [ref=f40e141]
+        - paragraph [ref=f40e142]: Cada módulo con su propio flujo, sus adjuntos y sus permisos — nada de plantillas genéricas que no encajan con cómo trabaja tu equipo.
+      - generic [ref=f40e143]:
+        - generic [ref=f40e145]:
+          - heading "Matriz de riesgos GTC 45" [level=4] [ref=f40e152]
+          - paragraph [ref=f40e153]: Identifica peligros, clasifica y evalúa probabilidad × consecuencia, y deja los controles existentes documentados — todo en la metodología que ya conoces.
+        - generic [ref=f40e154]:
+          - heading "Planeación y objetivos" [level=4] [ref=f40e159]
+          - paragraph [ref=f40e160]: Metas, responsables y avance del SG-SST en un solo tablero.
+        - generic [ref=f40e161]:
+          - heading "Permisos de trabajo" [level=4] [ref=f40e165]
+          - paragraph [ref=f40e166]: Alturas, en caliente, espacios confinados — con vigencia que se calcula sola.
+        - generic [ref=f40e167]:
+          - heading "Inspecciones" [level=4] [ref=f40e172]
+          - paragraph [ref=f40e173]: Programa, ejecuta y deja hallazgos con evidencia fotográfica.
+        - generic [ref=f40e174]:
+          - heading "Capacitación" [level=4] [ref=f40e179]
+          - paragraph [ref=f40e180]: Asistentes programados vs. registrados, con certificado adjunto.
+        - generic [ref=f40e181]:
+          - heading "Salud ocupacional" [level=4] [ref=f40e185]
+          - paragraph [ref=f40e186]: Exámenes de ingreso, periódicos y de egreso con su concepto de aptitud.
+        - generic [ref=f40e187]:
+          - heading "Incidentes y AT" [level=4] [ref=f40e191]
+          - paragraph [ref=f40e192]: Índice de Frecuencia y Severidad calculados automáticamente.
+        - generic [ref=f40e193]:
+          - heading "COPASST y comités" [level=4] [ref=f40e200]
+          - paragraph [ref=f40e201]: Actas de sesión, quórum y estado, listas para mostrar en auditoría.
+        - generic [ref=f40e202]:
+          - heading "Contratistas" [level=4] [ref=f40e207]
+          - paragraph [ref=f40e208]: Afiliación ARL y documentación al día, por cada contratista.
+        - generic [ref=f40e209]:
+          - heading "Emergencias" [level=4] [ref=f40e213]
+          - paragraph [ref=f40e214]: Simulacros, brigadas y planes de preparación documentados.
+        - generic [ref=f40e215]:
+          - heading "Documentos y trabajadores" [level=4] [ref=f40e220]
+          - paragraph [ref=f40e221]: Política, reglamento y la hoja de vida SST de cada trabajador, centralizados.
+    - generic [ref=f40e223]:
+      - generic [ref=f40e225]:
+        - generic [ref=f40e226]:
+          - generic [ref=f40e227]: TÚ
+          - generic [ref=f40e228]:
+            - generic [ref=f40e229]: Tu firma consultora
+            - text: Administra el portafolio
+        - generic [ref=f40e231]:
+          - generic [ref=f40e232]: A
+          - generic [ref=f40e233]:
+            - generic [ref=f40e234]: Empresa cliente A
+            - text: Textil · Riesgo III
+        - generic [ref=f40e235]:
+          - generic [ref=f40e236]: B
+          - generic [ref=f40e237]:
+            - generic [ref=f40e238]: Empresa cliente B
+            - text: Agroindustria · Riesgo II
+        - generic [ref=f40e239]:
+          - generic [ref=f40e240]: C
+          - generic [ref=f40e241]:
+            - generic [ref=f40e242]: Empresa cliente C
+            - text: Logística · Riesgo IV
+      - generic [ref=f40e243]:
+        - generic [ref=f40e244]: Hecho para consultores SST
+        - heading "¿Manejas el SG-SST de varias empresas?" [level=2] [ref=f40e245]
+        - paragraph [ref=f40e246]: Un portafolio te deja crear y administrar todas tus empresas cliente desde una sola cuenta — cada una con sus propios datos completamente aislados, sus propios roles y su propia matriz de riesgos.
+        - list [ref=f40e247]:
+          - listitem [ref=f40e248]: Cambia de empresa activa en un clic, sin cerrar sesión.
+          - listitem [ref=f40e251]: Los datos de una empresa nunca se mezclan con los de otra.
+          - listitem [ref=f40e254]: Cada empresa cliente entra con su propio usuario y su propio rol.
+        - link "Quiero administrar varias empresas" [ref=f40e257] [cursor=pointer]:
+          - /url: "#cta"
+    - generic [ref=f40e259]:
+      - generic [ref=f40e260]:
+        - generic [ref=f40e261]: Confianza y trazabilidad
+        - heading "Pensado para resistir una auditoría" [level=2] [ref=f40e262]
+        - paragraph [ref=f40e263]: No es solo registrar datos — es poder demostrar, en cualquier momento, quién hizo qué y cuándo.
+      - generic [ref=f40e264]:
+        - generic [ref=f40e265]:
+          - heading "Roles y permisos reales" [level=4] [ref=f40e268]
+          - paragraph [ref=f40e269]: Administrador, Coordinador SST, COPASST y Trabajador — cada uno ve y hace solo lo que le corresponde, reforzado a nivel de servidor, no solo de interfaz.
+        - generic [ref=f40e270]:
+          - heading "Aislamiento entre empresas" [level=4] [ref=f40e274]
+          - paragraph [ref=f40e275]: Cada registro pertenece a una sola empresa. Ni una consulta accidental ni un error de permisos puede filtrar datos entre clientes distintos.
+        - generic [ref=f40e276]:
+          - heading "Bitácora de auditoría" [level=4] [ref=f40e280]
+          - paragraph [ref=f40e281]: Cada creación, cambio y borrado queda registrado — con posibilidad de restaurar lo eliminado. Nada desaparece sin dejar rastro.
+    - generic [ref=f40e284]:
+      - generic [ref=f40e285]: Empieza hoy
+      - heading "Deja de perseguir papeles para tu SG-SST" [level=2] [ref=f40e286]: Deja de perseguirpapeles para tu SG-SST
+      - paragraph [ref=f40e287]: Agenda una demo y te mostramos cómo se vería tu matriz de riesgos, tus indicadores y tu portafolio de empresas ya funcionando dentro de Vigía.
+      - generic [ref=f40e288]:
+        - link "Solicitar una demo" [ref=f40e289] [cursor=pointer]:
+          - /url: mailto:contacto@pralli.com.co?subject=Quiero%20una%20demo%20de%20Vig%C3%ADa%20SST
+        - link "Ya soy cliente, iniciar sesión" [ref=f40e290] [cursor=pointer]:
+          - /url: /login
+  - contentinfo [ref=f40e292]:
+    - generic [ref=f40e293]:
+      - generic [ref=f40e294]:
+        - generic [ref=f40e295]:
+          - link [ref=f40e296] [cursor=pointer]:
+            - /url: /landing/
+          - paragraph [ref=f40e301]: Software de gestión SG-SST para empresas y consultores en Colombia.
+        - generic [ref=f40e302]:
+          - generic [ref=f40e303]:
+            - heading "Producto" [level=5] [ref=f40e304]
+            - list [ref=f40e305]:
+              - listitem [ref=f40e306]:
+                - link "Módulos" [ref=f40e307] [cursor=pointer]:
+                  - /url: "#modulos"
+              - listitem [ref=f40e308]:
+                - link "Para consultores" [ref=f40e309] [cursor=pointer]:
+                  - /url: "#consultores"
+              - listitem [ref=f40e310]:
+                - link "Seguridad" [ref=f40e311] [cursor=pointer]:
+                  - /url: "#seguridad"
+          - generic [ref=f40e312]:
+            - heading "Cuenta" [level=5] [ref=f40e313]
+            - list [ref=f40e314]:
+              - listitem [ref=f40e315]:
+                - link "Iniciar sesión" [ref=f40e316] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=f40e317]:
+                - link "Solicitar demo" [ref=f40e318] [cursor=pointer]:
+                  - /url: "#cta"
+      - generic [ref=f40e319]:
+        - generic [ref=f40e320]: © 2026 Vigía SST. Todos los derechos reservados.
+        - link "by Pralli" [ref=f40e321] [cursor=pointer]:
+          - /url: https://pralli.com.co
+          - generic [ref=f40e328]: by
+          - generic [ref=f40e329]: Pralli

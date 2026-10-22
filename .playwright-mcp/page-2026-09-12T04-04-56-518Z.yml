@@ -1,0 +1,10 @@
+- generic [ref=f17e2]:
+  - link [ref=f17e4] [cursor=pointer]:
+    - /url: /
+  - generic [ref=f17e7]:
+    - generic [ref=f17e8]: Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+    - generic [ref=f17e9]:
+      - generic [ref=f17e10]:
+        - generic [ref=f17e11]: Email
+        - textbox "Email" [active] [ref=f17e12]
+      - button "Email Password Reset Link" [ref=f17e14] [cursor=pointer]

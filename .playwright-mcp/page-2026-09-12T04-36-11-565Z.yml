@@ -1,0 +1,44 @@
+- generic [ref=f44e2]:
+  - complementary [ref=f44e3]:
+    - generic [ref=f44e4]:
+      - generic [ref=f44e12]: Pralli
+      - button "Colapsar menú" [ref=f44e13] [cursor=pointer]
+    - navigation [ref=f44e16]:
+      - generic [ref=f44e17]:
+        - generic [ref=f44e18]: Principal
+        - link "Panel general" [ref=f44e19] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - link "Clientes" [ref=f44e24] [cursor=pointer]:
+          - /url: http://localhost:8080/clients
+      - generic [ref=f44e29]:
+        - generic [ref=f44e30]: Administración
+        - link "Usuarios" [ref=f44e31] [cursor=pointer]:
+          - /url: http://localhost:8080/users
+    - link "A Administrador Administrador" [ref=f44e39] [cursor=pointer]:
+      - /url: http://localhost:8080/profile
+      - generic [ref=f44e40]: A
+      - generic [ref=f44e41]:
+        - generic [ref=f44e42]: Administrador
+        - text: Administrador
+  - generic [ref=f44e43]:
+    - banner [ref=f44e44]:
+      - generic [ref=f44e45]:
+        - button "Tema" [ref=f44e46] [cursor=pointer]
+        - button "A" [ref=f44e50] [cursor=pointer]
+    - main [ref=f44e54]:
+      - generic [ref=f44e55]:
+        - generic [ref=f44e56]:
+          - generic [ref=f44e57]:
+            - heading "Hola, Administrador 👋" [level=1] [ref=f44e58]
+            - generic [ref=f44e59]: Administrador · Pralli CRM
+          - generic [ref=f44e60]: sábado, 12 de septiembre de 2026
+        - generic [ref=f44e61]:
+          - generic [ref=f44e62]:
+            - generic [ref=f44e68]: "20"
+            - generic [ref=f44e69]: Total de clientes
+          - generic [ref=f44e70]:
+            - generic [ref=f44e76]: "7"
+            - generic [ref=f44e77]: Con sucursal
+          - generic [ref=f44e78]:
+            - generic [ref=f44e82]: $59.924.863
+            - generic [ref=f44e83]: Valor mensual total

@@ -1,0 +1,41 @@
+- generic [ref=f5e1]:
+  - button "Tema" [ref=f5e3] [cursor=pointer]
+  - generic [ref=f5e6]:
+    - generic [ref=f5e7]:
+      - generic [ref=f5e8]: Vigía SST
+      - generic [ref=f5e14]:
+        - text: PLATAFORMA SG-SST
+        - heading "Seguridad y salud del trabajo, siempre a la vista." [level=1] [ref=f5e15]
+        - paragraph [ref=f5e16]: Administra el Sistema de Gestión de Seguridad y Salud en el Trabajo alineado con el Decreto 1072 de 2015 y la Resolución 0312 de 2019.
+      - generic [ref=f5e17]:
+        - generic [ref=f5e18]:
+          - generic [ref=f5e19]: 60+
+          - text: Estándares mínimos
+        - generic [ref=f5e20]:
+          - generic [ref=f5e21]: 5×5
+          - text: Matriz GTC 45
+        - generic [ref=f5e22]:
+          - generic [ref=f5e23]: 100%
+          - text: Trazabilidad
+    - generic [ref=f5e25]:
+      - text: Acceso corporativo
+      - heading "Inicia sesión" [level=2] [ref=f5e26]
+      - paragraph [ref=f5e27]: Ingresa tus credenciales para continuar con la gestión del SG-SST.
+      - generic [ref=f5e28]:
+        - generic [ref=f5e29]:
+          - generic [ref=f5e30]: Correo electrónico
+          - textbox "Correo electrónico" [active] [ref=f5e31]: camila.rios@textilesdelvalle.com
+        - generic [ref=f5e32]:
+          - generic [ref=f5e33]: Contraseña
+          - generic [ref=f5e34]:
+            - textbox "Contraseña" [ref=f5e35]: vigia2026
+            - button "Mostrar u ocultar contraseña" [ref=f5e36] [cursor=pointer]
+        - generic [ref=f5e40]:
+          - generic [ref=f5e41] [cursor=pointer]:
+            - checkbox "Recordarme" [ref=f5e42]
+            - text: Recordarme
+          - link "¿Olvidaste tu contraseña?" [ref=f5e43] [cursor=pointer]:
+            - /url: http://localhost/forgot-password
+        - button "Iniciar sesión" [ref=f5e44] [cursor=pointer]
+      - paragraph [ref=f5e45]: ¿Primera vez aquí? Contacta a tu administrador SST para obtener acceso.
+      - paragraph [ref=f5e46]: Al continuar aceptas la Política de tratamiento de datos, conforme a la Ley 1581 de 2012.

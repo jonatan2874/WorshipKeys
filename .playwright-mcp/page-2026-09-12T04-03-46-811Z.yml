@@ -1,0 +1,44 @@
+- generic [ref=f13e2]:
+  - navigation [ref=f13e3]:
+    - generic [ref=f13e5]:
+      - generic [ref=f13e6]:
+        - link [ref=f13e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f13e11]:
+          - link "Dashboard" [ref=f13e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f13e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+      - button "Asistente" [ref=f13e17] [cursor=pointer]
+  - banner [ref=f13e22]:
+    - heading "Kutch LLC" [level=2] [ref=f13e24]
+  - main [ref=f13e25]:
+    - generic [ref=f13e28]:
+      - generic [ref=f13e29]:
+        - generic [ref=f13e30]:
+          - term [ref=f13e31]: Código
+          - definition [ref=f13e32]: "845"
+        - generic [ref=f13e33]:
+          - term [ref=f13e34]: NIT
+          - definition [ref=f13e35]: 985175567-3
+        - generic [ref=f13e36]:
+          - term [ref=f13e37]: Razón Social
+          - definition [ref=f13e38]: Kutch LLC
+        - generic [ref=f13e39]:
+          - term [ref=f13e40]: Representante Legal
+          - definition [ref=f13e41]: Natalie Heidenreich DDS
+        - generic [ref=f13e42]:
+          - term [ref=f13e43]: Dirección
+          - definition [ref=f13e44]: 444 Tremblay Walks Suite 254
+        - generic [ref=f13e45]:
+          - term [ref=f13e46]: Ciudad
+          - definition [ref=f13e47]: Lake Etha
+        - generic [ref=f13e48]:
+          - term [ref=f13e49]: N.º Trabajadores Promedio
+          - definition [ref=f13e50]: "118"
+        - generic [ref=f13e51]:
+          - term [ref=f13e52]: Sucursal
+          - definition [ref=f13e53]: "No"
+      - link [ref=f13e55] [cursor=pointer]:
+        - /url: http://localhost:8080/clients
+        - button "Volver" [ref=f13e56]

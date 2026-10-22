@@ -1,0 +1,207 @@
+- generic [ref=f9e2]:
+  - navigation [ref=f9e3]:
+    - generic [ref=f9e5]:
+      - generic [ref=f9e6]:
+        - link [ref=f9e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f9e11]:
+          - link "Dashboard" [ref=f9e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f9e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+      - button "Asistente" [ref=f9e17] [cursor=pointer]
+  - banner [ref=f9e22]:
+    - heading "Clientes" [level=2] [ref=f9e24]
+  - main [ref=f9e25]:
+    - generic [ref=f9e28]:
+      - generic [ref=f9e30]:
+        - textbox "Buscar por código, razón social o NIT" [ref=f9e31]
+        - button "Buscar" [ref=f9e32] [cursor=pointer]
+      - table [ref=f9e34]:
+        - rowgroup [ref=f9e35]:
+          - row [ref=f9e36]:
+            - columnheader "Código" [ref=f9e37]
+            - columnheader "Razón Social" [ref=f9e38]
+            - columnheader "NIT" [ref=f9e39]
+            - columnheader "Representante Legal" [ref=f9e40]
+            - columnheader "Ciudad" [ref=f9e41]
+            - columnheader "Sucursal" [ref=f9e42]
+            - columnheader "N.º Trabajadores" [ref=f9e43]
+            - columnheader "Acciones" [ref=f9e44]
+        - rowgroup [ref=f9e45]:
+          - row [ref=f9e46]:
+            - cell "830" [ref=f9e47]
+            - cell "Bartell-Beer" [ref=f9e48]
+            - cell "944391203-3" [ref=f9e49]
+            - cell "Cornell Connelly" [ref=f9e50]
+            - cell "Princessborough" [ref=f9e51]
+            - cell "No" [ref=f9e52]
+            - cell "22" [ref=f9e53]
+            - cell [ref=f9e54]:
+              - link "Ver" [ref=f9e55] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/8
+          - row [ref=f9e56]:
+            - cell "993" [ref=f9e57]
+            - cell "Bashirian-Ernser" [ref=f9e58]
+            - cell "927242775-7" [ref=f9e59]
+            - cell "Katherine Bogan" [ref=f9e60]
+            - cell "Kuhlmanfurt" [ref=f9e61]
+            - cell "No" [ref=f9e62]
+            - cell "8" [ref=f9e63]
+            - cell [ref=f9e64]:
+              - link "Ver" [ref=f9e65] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/6
+          - row [ref=f9e66]:
+            - cell "664" [ref=f9e67]
+            - cell "Berge, Smith and Eichmann" [ref=f9e68]
+            - cell "937357623-4" [ref=f9e69]
+            - cell "Yessenia Marks MD" [ref=f9e70]
+            - cell "Kuphalport" [ref=f9e71]
+            - cell "No" [ref=f9e72]
+            - cell "153" [ref=f9e73]
+            - cell [ref=f9e74]:
+              - link "Ver" [ref=f9e75] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/7
+          - row [ref=f9e76]:
+            - cell "943" [ref=f9e77]
+            - cell "Bergnaum-Williamson" [ref=f9e78]
+            - cell "913866889-9" [ref=f9e79]
+            - cell "Alysson Buckridge" [ref=f9e80]
+            - cell "Madalineview" [ref=f9e81]
+            - cell "No" [ref=f9e82]
+            - cell "6" [ref=f9e83]
+            - cell [ref=f9e84]:
+              - link "Ver" [ref=f9e85] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/2
+          - row [ref=f9e86]:
+            - cell "942" [ref=f9e87]
+            - cell "Blanda-Bogisich" [ref=f9e88]
+            - cell "958457550-9" [ref=f9e89]
+            - cell "Davin Herman" [ref=f9e90]
+            - cell "Karlfort" [ref=f9e91]
+            - cell "No" [ref=f9e92]
+            - cell "3" [ref=f9e93]
+            - cell [ref=f9e94]:
+              - link "Ver" [ref=f9e95] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/17
+          - row [ref=f9e96]:
+            - cell "498" [ref=f9e97]
+            - cell "Bradtke, Okuneva and Kihn" [ref=f9e98]
+            - cell "930576080-4" [ref=f9e99]
+            - cell "Delphine Feest PhD" [ref=f9e100]
+            - cell "South Jacquelyn" [ref=f9e101]
+            - cell "Sí - North Sidneyshire" [ref=f9e102]
+            - cell "78" [ref=f9e103]
+            - cell [ref=f9e104]:
+              - link "Ver" [ref=f9e105] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/14
+          - row [ref=f9e106]:
+            - cell "398" [ref=f9e107]
+            - cell "Durgan-Walker" [ref=f9e108]
+            - cell "948170977-4" [ref=f9e109]
+            - cell "Josefa Schmitt" [ref=f9e110]
+            - cell "Kolbyburgh" [ref=f9e111]
+            - cell "No" [ref=f9e112]
+            - cell "94" [ref=f9e113]
+            - cell [ref=f9e114]:
+              - link "Ver" [ref=f9e115] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/16
+          - row [ref=f9e116]:
+            - cell "525" [ref=f9e117]
+            - cell "Grimes-Wunsch" [ref=f9e118]
+            - cell "982750261-0" [ref=f9e119]
+            - cell "Khalid Greenholt Jr." [ref=f9e120]
+            - cell "Gislasonville" [ref=f9e121]
+            - cell "No" [ref=f9e122]
+            - cell "36" [ref=f9e123]
+            - cell [ref=f9e124]:
+              - link "Ver" [ref=f9e125] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/20
+          - row [ref=f9e126]:
+            - cell "998" [ref=f9e127]
+            - cell "Herzog and Sons" [ref=f9e128]
+            - cell "923787917-4" [ref=f9e129]
+            - cell "Mr. Santiago Bayer" [ref=f9e130]
+            - cell "Hilpertstad" [ref=f9e131]
+            - cell "No" [ref=f9e132]
+            - cell "44" [ref=f9e133]
+            - cell [ref=f9e134]:
+              - link "Ver" [ref=f9e135] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/11
+          - row [ref=f9e136]:
+            - cell "975" [ref=f9e137]
+            - cell "Howell-Haag" [ref=f9e138]
+            - cell "920207874-5" [ref=f9e139]
+            - cell "Sophia Kilback DVM" [ref=f9e140]
+            - cell "Walterview" [ref=f9e141]
+            - cell "Sí - D'Amorehaven" [ref=f9e142]
+            - cell "150" [ref=f9e143]
+            - cell [ref=f9e144]:
+              - link "Ver" [ref=f9e145] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/9
+          - row [ref=f9e146]:
+            - cell "292" [ref=f9e147]
+            - cell "Johnston Group" [ref=f9e148]
+            - cell "936330928-9" [ref=f9e149]
+            - cell "Prof. Darryl Huels DDS" [ref=f9e150]
+            - cell "Cartermouth" [ref=f9e151]
+            - cell "Sí - Jeannemouth" [ref=f9e152]
+            - cell "164" [ref=f9e153]
+            - cell [ref=f9e154]:
+              - link "Ver" [ref=f9e155] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/3
+          - row [ref=f9e156]:
+            - cell "263" [ref=f9e157]
+            - cell "Kautzer-Bailey" [ref=f9e158]
+            - cell "969183821-3" [ref=f9e159]
+            - cell "Prof. Jordan Kerluke" [ref=f9e160]
+            - cell "South Bryon" [ref=f9e161]
+            - cell "Sí - New Allene" [ref=f9e162]
+            - cell "123" [ref=f9e163]
+            - cell [ref=f9e164]:
+              - link "Ver" [ref=f9e165] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/5
+          - row [ref=f9e166]:
+            - cell "845" [ref=f9e167]
+            - cell "Kutch LLC" [ref=f9e168]
+            - cell "985175567-3" [ref=f9e169]
+            - cell "Natalie Heidenreich DDS" [ref=f9e170]
+            - cell "Lake Etha" [ref=f9e171]
+            - cell "No" [ref=f9e172]
+            - cell "118" [ref=f9e173]
+            - cell [ref=f9e174]:
+              - link "Ver" [ref=f9e175] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/1
+          - row [ref=f9e176]:
+            - cell "241" [ref=f9e177]
+            - cell "Lesch Ltd" [ref=f9e178]
+            - cell "920481404-8" [ref=f9e179]
+            - cell "Prof. Vladimir Kuphal V" [ref=f9e180]
+            - cell "Preciousview" [ref=f9e181]
+            - cell "No" [ref=f9e182]
+            - cell "102" [ref=f9e183]
+            - cell [ref=f9e184]:
+              - link "Ver" [ref=f9e185] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/4
+          - row [ref=f9e186]:
+            - cell "719" [ref=f9e187]
+            - cell "Luettgen LLC" [ref=f9e188]
+            - cell "917979139-7" [ref=f9e189]
+            - cell "Mr. Monserrat Schaefer" [ref=f9e190]
+            - cell "Lake Naomiberg" [ref=f9e191]
+            - cell "Sí - Carrollmouth" [ref=f9e192]
+            - cell "154" [ref=f9e193]
+            - cell [ref=f9e194]:
+              - link "Ver" [ref=f9e195] [cursor=pointer]:
+                - /url: http://localhost:8080/clients/18
+      - navigation "Pagination Navigation" [ref=f9e197]:
+        - generic [ref=f9e198]:
+          - paragraph [ref=f9e200]: Showing 1 to 15 of 20 results
+          - generic [ref=f9e202]:
+            - generic "&laquo; Previous" [ref=f9e203]
+            - generic [ref=f9e207]: "1"
+            - link "Go to page 2" [ref=f9e209] [cursor=pointer]:
+              - /url: http://localhost:8080/clients?page=2
+              - text: "2"
+            - link "Next &raquo;" [ref=f9e210] [cursor=pointer]:
+              - /url: http://localhost:8080/clients?page=2

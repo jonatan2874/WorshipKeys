@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 
 import { ThemedText } from '@/components/themed-text';
@@ -28,7 +28,11 @@ export function PracticeRoll({
   if (window.length === 0) return null;
 
   return (
-    <View style={styles.track}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={styles.trackContent}
+      style={styles.trackScroll}>
       {window.map((s, i) => {
         const isNow = i === 0;
         const nowColor = feedback === 'correct' ? theme.accent : feedback === 'incorrect' ? theme.doneStrong : theme.done;
@@ -51,17 +55,22 @@ export function PracticeRoll({
           </Animated.View>
         );
       })}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  track: {
+  trackScroll: {
+    flexGrow: 0,
+    marginBottom: Spacing.three,
+  },
+  trackContent: {
     flexDirection: 'row',
     gap: Spacing.two,
     alignItems: 'center',
+    paddingHorizontal: Spacing.one,
+    minWidth: '100%',
     justifyContent: 'center',
-    marginBottom: Spacing.three,
   },
   tile: {
     minWidth: 42,

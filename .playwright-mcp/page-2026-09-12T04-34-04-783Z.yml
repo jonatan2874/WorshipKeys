@@ -1,0 +1,37 @@
+- generic [ref=f42e1]:
+  - button "Tema" [ref=f42e2] [cursor=pointer]
+  - generic [ref=f42e5]:
+    - generic [ref=f42e6]:
+      - generic [ref=f42e7]: Pralli
+      - generic [ref=f42e16]:
+        - text: SUMAR Y AVANZAR
+        - heading "Gestiona tus clientes en un solo lugar." [level=1] [ref=f42e17]
+        - paragraph [ref=f42e18]: CRM interno de Pralli para administrar clientes, sedes y datos de facturación con control por rol.
+      - generic [ref=f42e19]:
+        - generic [ref=f42e20]:
+          - generic [ref=f42e21]: "2"
+          - text: Roles de acceso
+        - generic [ref=f42e22]:
+          - generic [ref=f42e23]: 100%
+          - text: Trazabilidad
+        - generic [ref=f42e24]:
+          - generic [ref=f42e25]: "1"
+          - text: Fuente de verdad
+    - generic [ref=f42e27]:
+      - text: Bienvenido de nuevo
+      - heading "Inicia sesión" [level=2] [ref=f42e28]
+      - paragraph [ref=f42e29]: Ingresa tus credenciales para acceder al CRM.
+      - generic [ref=f42e30]:
+        - generic [ref=f42e31]:
+          - generic [ref=f42e32]: Correo electrónico
+          - textbox "Correo electrónico" [active] [ref=f42e33]
+        - generic [ref=f42e34]:
+          - generic [ref=f42e35]: Contraseña
+          - textbox "Contraseña" [ref=f42e36]
+        - generic [ref=f42e37]:
+          - generic [ref=f42e38] [cursor=pointer]:
+            - checkbox "Recordarme" [ref=f42e39]
+            - text: Recordarme
+          - link "¿Olvidaste tu contraseña?" [ref=f42e40] [cursor=pointer]:
+            - /url: http://localhost:8080/forgot-password
+        - button "Iniciar sesión" [ref=f42e41] [cursor=pointer]

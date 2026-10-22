@@ -1,0 +1,21 @@
+- generic [ref=f47e1]:
+  - button "Tema" [ref=f47e2] [cursor=pointer]
+  - generic [ref=f47e6]:
+    - generic [ref=f47e7]: Pralli
+    - text: Bienvenido de nuevo
+    - heading "Inicia sesión" [level=2] [ref=f47e16]
+    - paragraph [ref=f47e17]: Ingresa tus credenciales para acceder al CRM.
+    - generic [ref=f47e18]:
+      - generic [ref=f47e19]:
+        - generic [ref=f47e20]: Correo electrónico
+        - textbox "Correo electrónico" [active] [ref=f47e21]
+      - generic [ref=f47e22]:
+        - generic [ref=f47e23]: Contraseña
+        - textbox "Contraseña" [ref=f47e24]
+      - generic [ref=f47e25]:
+        - generic [ref=f47e26] [cursor=pointer]:
+          - checkbox "Recordarme" [ref=f47e27]
+          - text: Recordarme
+        - link "¿Olvidaste tu contraseña?" [ref=f47e28] [cursor=pointer]:
+          - /url: http://localhost:8080/forgot-password
+      - button "Iniciar sesión" [ref=f47e29] [cursor=pointer]

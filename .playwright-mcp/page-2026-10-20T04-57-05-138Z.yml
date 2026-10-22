@@ -1,0 +1,112 @@
+- generic [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - generic [ref=f18e3]:
+      - generic [ref=f18e4]: Ecos de Gracia
+      - generic [ref=f18e10] [cursor=pointer]
+      - button "Elegir paleta de color" [ref=f18e15] [cursor=pointer]
+      - button "Cambiar tema" [ref=f18e22] [cursor=pointer]
+    - generic [ref=f18e5886]:
+      - button [ref=f18e5888] [cursor=pointer]
+      - generic [ref=f18e5891]:
+        - generic [ref=f18e5892]: HIMNO N.º 465
+        - heading "No te dé temor" [level=2] [ref=f18e5893]
+        - generic [ref=f18e5894]: Celebremos Su Gloria
+        - button "Abrir en el Atril" [ref=f18e5895] [cursor=pointer]
+      - generic [ref=f18e5898]:
+        - generic [ref=f18e5899]:
+          - button "A−" [ref=f18e5900] [cursor=pointer]
+          - button "A+" [ref=f18e5901] [cursor=pointer]
+        - button "Guardar" [ref=f18e5902] [cursor=pointer]
+        - button "Proyectar" [ref=f18e5905] [cursor=pointer]
+      - generic [ref=f18e5908]:
+        - generic [ref=f18e5909]:
+          - generic [ref=f18e5910]: Estrofa 1
+          - text: No te dé temor hablar por Cristo; haz que brille en ti su luz; Al que te salvó confiesa siempre; todo debes a Jesús.
+        - generic [ref=f18e5911]:
+          - generic [ref=f18e5912]: Coro
+          - text: No te dé temor, no te dé temor, nunca, nunca, nunca; es tu amante Salvador; nunca pues, te dé temor.
+        - generic [ref=f18e5915]:
+          - generic [ref=f18e5916]: Estrofa 2
+          - text: No te dé temor hacer por Cristo cuando de tu parte está; Obra con amor, con fe y constancia; tus trabajos premiará.
+        - generic [ref=f18e5919]:
+          - generic [ref=f18e5920]: Estrofa 3
+          - text: No te dé temor sufrir por Cristo los reproches, o el dolor; Sufre con amor tus pruebas todas, cual sufrió tu Salvador.
+        - generic [ref=f18e5923]:
+          - generic [ref=f18e5924]: Estrofa 4
+          - text: No te dé temor morir por Cristo, vía, verdad y vida es él; Él te llevará con su ternura a su célico vergel.
+      - navigation "Reproductor y cambio de himno" [ref=f18e5925]:
+        - generic [ref=f18e5928]:
+          - generic [ref=f18e5929]: 0:30
+          - generic [ref=f18e5930]: 1:05
+        - generic [ref=f18e5931]:
+          - 'button "Himno anterior: 464, Nuevas Alegres" [ref=f18e5932] [cursor=pointer]'
+          - button "Pausar" [ref=f18e5935] [cursor=pointer]
+          - 'button "Himno siguiente: 466, Testifica" [ref=f18e5940] [cursor=pointer]'
+          - button "Ajustes de reproducción" [ref=f18e5943] [cursor=pointer]
+    - generic [ref=f18e5870]:
+      - button "Himnos" [ref=f18e5871] [cursor=pointer]
+      - button "Atril" [ref=f18e5874] [cursor=pointer]
+      - button "Favoritos" [ref=f18e5882] [cursor=pointer]
+  - dialog "Ajustes de reproducción" [active] [ref=f18e5949]:
+    - generic [ref=f18e5951]:
+      - heading "465 · No te dé temor" [level=3] [ref=f18e5952]
+      - button "Cerrar ajustes" [ref=f18e5953] [cursor=pointer]
+    - generic [ref=f18e5956]:
+      - generic [ref=f18e5957]: Instrumento
+      - generic [ref=f18e5958]:
+        - button "Órgano" [pressed] [ref=f18e5959] [cursor=pointer]
+        - button "Piano" [ref=f18e5960] [cursor=pointer]
+        - button "Guitarra" [ref=f18e5961] [cursor=pointer]
+        - button "Violín" [ref=f18e5962] [cursor=pointer]
+        - button "Cello" [ref=f18e5963] [cursor=pointer]
+        - button "Trompeta" [ref=f18e5964] [cursor=pointer]
+        - button "Sax" [ref=f18e5965] [cursor=pointer]
+        - button "Acordeón" [ref=f18e5966] [cursor=pointer]
+        - button "Coro" [ref=f18e5967] [cursor=pointer]
+    - generic [ref=f18e5968]:
+      - generic [ref=f18e5969]:
+        - generic [ref=f18e5970]:
+          - text: Tono
+          - emphasis
+        - generic [ref=f18e5971]:
+          - button "Bajar el tono" [ref=f18e5972] [cursor=pointer]: −
+          - generic [ref=f18e5973]: Original
+          - button "Subir el tono" [ref=f18e5974] [cursor=pointer]: +
+      - generic [ref=f18e5975]:
+        - generic [ref=f18e5976]:
+          - text: Tempo
+          - emphasis
+        - generic [ref=f18e5977]:
+          - button "Más lento" [ref=f18e5978] [cursor=pointer]: −
+          - generic [ref=f18e5979]: ♩ 132
+          - button "Más rápido" [ref=f18e5980] [cursor=pointer]: +
+    - generic [ref=f18e5982]:
+      - generic [ref=f18e5983]:
+        - text: Volumen
+        - emphasis [ref=f18e5984]: 3/10
+      - slider "Volumen" [ref=f18e5985]: "3"
+    - generic [ref=f18e5986]:
+      - generic [ref=f18e5987]: Voces
+      - generic [ref=f18e5988]:
+        - button "Soprano" [pressed] [ref=f18e5989] [cursor=pointer]
+        - button "Contralto" [pressed] [ref=f18e5990] [cursor=pointer]
+        - button "Tenor" [pressed] [ref=f18e5991] [cursor=pointer]
+        - button "Bajo" [pressed] [ref=f18e5992] [cursor=pointer]
+        - button "Solo melodía" [ref=f18e5993] [cursor=pointer]
+        - button "Metrónomo" [ref=f18e5994] [cursor=pointer]
+    - generic [ref=f18e5995]:
+      - generic [ref=f18e5996]:
+        - text: Estrofas a tocar
+        - emphasis [ref=f18e5997]: 4 de 4
+      - generic [ref=f18e5998]:
+        - button "1" [ref=f18e5999] [cursor=pointer]
+        - button "2" [ref=f18e6000] [cursor=pointer]
+        - button "3" [ref=f18e6001] [cursor=pointer]
+        - button "Todas" [pressed] [ref=f18e6002] [cursor=pointer]
+      - paragraph [ref=f18e6003]: Se aplica la próxima vez que toques el himno.
+    - generic [ref=f18e6004]:
+      - generic [ref=f18e6005]: Introducción
+      - switch "Introducción" [checked] [ref=f18e6006] [cursor=pointer]
+    - generic [ref=f18e6007]:
+      - generic [ref=f18e6008]: Pausa en los calderones
+      - switch "Pausa en los calderones" [checked] [ref=f18e6009] [cursor=pointer]

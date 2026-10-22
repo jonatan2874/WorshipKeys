@@ -1,0 +1,21 @@
+- generic [ref=f51e1]:
+  - button "Tema" [ref=f51e2] [cursor=pointer]
+  - generic [ref=f51e6]:
+    - generic [ref=f51e7]: Pralli
+    - text: Bienvenido de nuevo
+    - heading "Inicia sesión" [level=2] [ref=f51e16]
+    - paragraph [ref=f51e17]: Ingresa tus credenciales para acceder al CRM.
+    - generic [ref=f51e18]:
+      - generic [ref=f51e19]:
+        - generic [ref=f51e20]: Correo electrónico
+        - textbox "Correo electrónico" [active] [ref=f51e21]
+      - generic [ref=f51e22]:
+        - generic [ref=f51e23]: Contraseña
+        - textbox "Contraseña" [ref=f51e24]
+      - generic [ref=f51e25]:
+        - generic [ref=f51e26] [cursor=pointer]:
+          - checkbox "Recordarme" [ref=f51e27]
+          - text: Recordarme
+        - link "¿Olvidaste tu contraseña?" [ref=f51e28] [cursor=pointer]:
+          - /url: https://crm.pralli.com.co/forgot-password
+      - button "Iniciar sesión" [ref=f51e29] [cursor=pointer]

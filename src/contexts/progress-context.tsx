@@ -13,6 +13,7 @@ interface ProgressContextValue {
   progress: UserProgress;
   completeLevel: (levelId: string) => void;
   updateStepProgress: (levelId: string, stepIndex: number) => void;
+  markLevelsCompleted: (levelIds: string[]) => void;
 }
 
 const ProgressContext = createContext<ProgressContextValue | null>(null);
@@ -88,6 +89,20 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     });
   }
 
+  // Marca varios niveles como completados de una vez, sin duplicar los que
+  // ya estaban — usado por el onboarding para saltar al punto de partida
+  // que el usuario diga que le corresponde ("toco con soltura", etc.), en
+  // vez de arrancar desde cero para todos.
+  function markLevelsCompleted(levelIds: string[]) {
+    if (levelIds.length === 0) return;
+    setProgress((prev) => {
+      const merged = new Set([...prev.completedLevelIds, ...levelIds]);
+      const next: UserProgress = { ...prev, completedLevelIds: [...merged] };
+      persist(next);
+      return next;
+    });
+  }
+
   function updateStepProgress(levelId: string, stepIndex: number) {
     setProgress((prev) => {
       if ((prev.stepProgress[levelId] ?? 0) >= stepIndex) return prev;
@@ -101,7 +116,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <ProgressContext.Provider value={{ progress, completeLevel, updateStepProgress }}>
+    <ProgressContext.Provider value={{ progress, completeLevel, updateStepProgress, markLevelsCompleted }}>
       {children}
     </ProgressContext.Provider>
   );

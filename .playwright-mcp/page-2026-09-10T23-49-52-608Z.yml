@@ -1,0 +1,102 @@
+- generic [ref=f33e2]:
+  - complementary [ref=f33e3]:
+    - generic [ref=f33e4]:
+      - generic [ref=f33e9]: Vigía SST
+      - button "Colapsar menú" [ref=f33e10] [cursor=pointer]
+    - navigation [ref=f33e13]:
+      - generic [ref=f33e14]:
+        - generic [ref=f33e15]: Principal
+        - link "Panel general" [ref=f33e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f33e21]:
+        - generic [ref=f33e22]: Gestión SST
+        - link "Planeación" [ref=f33e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f33e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f33e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f33e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f33e47]:
+        - generic [ref=f33e48]: Personas
+        - link "Trabajadores" [ref=f33e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f33e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f33e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f33e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f33e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f33e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f33e82]:
+        - generic [ref=f33e83]: Preparación
+        - link "Emergencias" [ref=f33e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f33e89]:
+        - generic [ref=f33e90]: Análisis
+        - link "Indicadores" [ref=f33e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f33e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f33e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "TV Tester Verificacion Coordinador SST" [ref=f33e107] [cursor=pointer]:
+      - generic [ref=f33e108]: TV
+      - generic [ref=f33e109]:
+        - generic [ref=f33e110]: Tester Verificacion
+        - text: Coordinador SST
+  - generic [ref=f33e111]:
+    - banner [ref=f33e112]:
+      - button "Empresa Verificacion" [ref=f33e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f33e125]
+      - generic [ref=f33e126]:
+        - button "Tema" [ref=f33e128] [cursor=pointer]
+        - button "3" [ref=f33e132] [cursor=pointer]
+        - button "TV" [ref=f33e138] [cursor=pointer]
+    - main [ref=f33e142]:
+      - generic [ref=f33e143]:
+        - generic [ref=f33e145]:
+          - generic [ref=f33e146]: PERSONAS / SALUD OCUPACIONAL
+          - heading "Programar examen" [level=1] [ref=f33e147]
+        - generic [ref=f33e148]:
+          - generic [ref=f33e154]:
+            - heading "Datos de salud ocupacional" [level=3] [ref=f33e155]
+            - paragraph [ref=f33e156]: Registra el examen médico, incapacidad o seguimiento del trabajador.
+          - generic [ref=f33e157]:
+            - generic [ref=f33e158]:
+              - generic [ref=f33e159]: Trabajador registrado (opcional)
+              - combobox "Trabajador registrado (opcional)" [ref=f33e160] [cursor=pointer]:
+                - option "Sin vincular — escribir el nombre abajo" [selected]
+                - option "Trabajador Prueba Uno — 1000000001"
+            - generic [ref=f33e161]:
+              - generic [ref=f33e162]: Trabajador
+              - textbox "Trabajador" [ref=f33e163]
+            - generic [ref=f33e164]:
+              - generic [ref=f33e165]: Tipo de examen
+              - combobox "Tipo de examen" [ref=f33e166] [cursor=pointer]:
+                - option "Selecciona..." [selected]
+                - option "Ingreso"
+                - option "Periódico"
+                - option "Reingreso"
+                - option "Egreso"
+            - generic [ref=f33e167]:
+              - generic [ref=f33e168]: Concepto de aptitud
+              - combobox "Concepto de aptitud" [ref=f33e169] [cursor=pointer]:
+                - option "Selecciona..." [selected]
+                - option "Apto"
+                - option "Apto con recomendaciones"
+                - option "No apto"
+            - generic [ref=f33e170]:
+              - generic [ref=f33e171]: Fecha del examen
+              - textbox "Fecha del examen" [ref=f33e172]
+            - generic [ref=f33e173]:
+              - generic [ref=f33e174]: Vigente hasta (opcional)
+              - textbox "Vigente hasta (opcional)" [ref=f33e175]
+          - generic [ref=f33e176]:
+            - link "Cancelar" [ref=f33e177] [cursor=pointer]:
+              - /url: http://localhost/medical-exams
+            - button "Registrar examen" [ref=f33e178] [cursor=pointer]

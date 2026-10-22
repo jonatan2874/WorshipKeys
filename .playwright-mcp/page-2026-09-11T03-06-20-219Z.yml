@@ -1,0 +1,193 @@
+- generic [ref=f62e2]:
+  - complementary [ref=f62e3]:
+    - generic [ref=f62e4]:
+      - generic [ref=f62e9]: Vigía SST
+      - button "Colapsar menú" [ref=f62e10] [cursor=pointer]
+    - navigation [ref=f62e13]:
+      - generic [ref=f62e14]:
+        - generic [ref=f62e15]: Principal
+        - link "Panel general" [ref=f62e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f62e21]:
+        - generic [ref=f62e22]: Gestión SST
+        - link "Planeación" [ref=f62e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f62e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f62e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f62e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f62e47]:
+        - generic [ref=f62e48]: Personas
+        - link "Trabajadores" [ref=f62e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f62e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f62e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f62e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f62e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f62e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f62e82]:
+        - generic [ref=f62e83]: Preparación
+        - link "Emergencias" [ref=f62e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f62e89]:
+        - generic [ref=f62e90]: Análisis
+        - link "Indicadores" [ref=f62e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f62e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f62e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "CR Camila Ríos Coordinador SST" [ref=f62e107] [cursor=pointer]:
+      - generic [ref=f62e108]: CR
+      - generic [ref=f62e109]:
+        - generic [ref=f62e110]: Camila Ríos
+        - text: Coordinador SST
+  - generic [ref=f62e111]:
+    - banner [ref=f62e112]:
+      - button "Textiles del Valle S.A.S" [ref=f62e114] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f62e125]
+      - generic [ref=f62e126]:
+        - button "Tema" [ref=f62e128] [cursor=pointer]
+        - button "3" [ref=f62e133] [cursor=pointer]
+        - button "CR" [ref=f62e139] [cursor=pointer]
+    - main [ref=f62e143]:
+      - generic [ref=f62e144]:
+        - generic [ref=f62e145]:
+          - generic [ref=f62e146]:
+            - heading "Hola, Camila 👋" [level=1] [ref=f62e147]
+            - paragraph [ref=f62e148]: Coordinador SST · Textiles del Valle S.A.S — sede Sede Bogotá
+          - generic [ref=f62e149]: viernes, 11 de septiembre de 2026
+        - generic [ref=f62e150]:
+          - generic [ref=f62e151]:
+            - button "¿Cómo se calcula?" [ref=f62e153] [cursor=pointer]
+            - generic [ref=f62e156]: —
+            - generic [ref=f62e157]: Índice de Frecuencia AT
+          - generic [ref=f62e158]:
+            - button "¿Cómo se calcula?" [ref=f62e160] [cursor=pointer]
+            - generic [ref=f62e163]: —
+            - generic [ref=f62e164]: Índice de Severidad AT
+        - generic [ref=f62e165]:
+          - generic [ref=f62e166]:
+            - generic [ref=f62e171]: "0"
+            - generic [ref=f62e172]: Accidentes de trabajo (2026)
+          - generic [ref=f62e173]:
+            - generic [ref=f62e178]: "0"
+            - generic [ref=f62e179]: Días de incapacidad (2026)
+          - generic [ref=f62e180]:
+            - generic [ref=f62e186]: "0"
+            - generic [ref=f62e187]: Incidentes en investigación
+          - generic [ref=f62e188]:
+            - generic [ref=f62e195]: 0% Crítico
+            - generic [ref=f62e196]: Autoevaluación Res. 0312
+        - generic [ref=f62e203]:
+          - generic [ref=f62e204]: 0.0 B
+          - generic [ref=f62e205]: Almacenamiento usado en adjuntos · 0 archivos
+        - generic [ref=f62e206]:
+          - generic [ref=f62e207]:
+            - generic [ref=f62e208]:
+              - generic [ref=f62e209]:
+                - heading "Accidentalidad mensual" [level=3] [ref=f62e210]
+                - paragraph [ref=f62e211]: Casos reportados · 2026
+              - generic [ref=f62e212]: Este año
+            - generic [ref=f62e215]:
+              - generic [ref=f62e216]: Ene
+              - generic [ref=f62e219]: Feb
+              - generic [ref=f62e222]: Mar
+              - generic [ref=f62e225]: Abr
+              - generic [ref=f62e228]: May
+              - generic [ref=f62e231]: Jun
+              - generic [ref=f62e234]: Jul
+              - generic [ref=f62e237]: Ago
+              - generic [ref=f62e240]: Sep
+              - generic [ref=f62e243]: Oct
+              - generic [ref=f62e246]: Nov
+              - generic [ref=f62e249]: Dic
+          - generic [ref=f62e252]:
+            - generic [ref=f62e254]:
+              - heading "Cobertura de formación" [level=3] [ref=f62e255]
+              - paragraph [ref=f62e256]: Inducción y reinducción
+            - generic [ref=f62e257]:
+              - generic [ref=f62e258]: 0%
+              - generic [ref=f62e260]:
+                - generic [ref=f62e261]: Formados
+                - generic [ref=f62e263]: Pendientes
+        - generic [ref=f62e265]:
+          - generic [ref=f62e266]:
+            - generic [ref=f62e267]:
+              - generic [ref=f62e268]:
+                - heading "Mapa de calor — Matriz de riesgos" [level=3] [ref=f62e269]
+                - paragraph [ref=f62e270]: Probabilidad × Severidad · GTC 45
+              - generic [ref=f62e271]: 6 peligros identificados
+            - generic [ref=f62e272]:
+              - generic [ref=f62e273]:
+                - generic [ref=f62e274]: "1"
+                - generic [ref=f62e275]: "2"
+                - generic [ref=f62e276]: "3"
+                - generic [ref=f62e277]: "4"
+                - generic [ref=f62e278]: "5"
+              - generic [ref=f62e279]:
+                - generic [ref=f62e280]:
+                  - generic [ref=f62e281]: "0"
+                  - generic [ref=f62e282]: "0"
+                  - generic [ref=f62e283]: "0"
+                  - generic [ref=f62e284]: "0"
+                  - generic [ref=f62e285]: "0"
+                  - generic [ref=f62e286]: "0"
+                  - generic [ref=f62e287]: "1"
+                  - generic [ref=f62e288]: "1"
+                  - generic [ref=f62e289]: "0"
+                  - generic [ref=f62e290]: "0"
+                  - generic [ref=f62e291]: "0"
+                  - generic [ref=f62e292]: "0"
+                  - generic [ref=f62e293]: "1"
+                  - generic [ref=f62e294]: "0"
+                  - generic [ref=f62e295]: "0"
+                  - generic [ref=f62e296]: "0"
+                  - generic [ref=f62e297]: "0"
+                  - generic [ref=f62e298]: "0"
+                  - generic [ref=f62e299]: "1"
+                  - generic [ref=f62e300]: "1"
+                  - generic [ref=f62e301]: "0"
+                  - generic [ref=f62e302]: "0"
+                  - generic [ref=f62e303]: "0"
+                  - generic [ref=f62e304]: "0"
+                  - generic [ref=f62e305]: "1"
+                - generic [ref=f62e306]:
+                  - generic [ref=f62e307]: "1"
+                  - generic [ref=f62e308]: "2"
+                  - generic [ref=f62e309]: "3"
+                  - generic [ref=f62e310]: "4"
+                  - generic [ref=f62e311]: "5"
+                - generic [ref=f62e312]:
+                  - generic [ref=f62e313]: Severidad →
+                  - generic [ref=f62e314]: ← Probabilidad (eje izquierdo)
+          - generic [ref=f62e315]:
+            - generic [ref=f62e317]:
+              - heading "Alertas críticas" [level=3] [ref=f62e318]
+              - paragraph [ref=f62e319]: Requieren atención inmediata
+            - paragraph [ref=f62e320]: Sin alertas críticas por ahora.
+        - generic [ref=f62e321]:
+          - generic [ref=f62e322]:
+            - generic [ref=f62e323]:
+              - heading "Próximos vencimientos" [level=3] [ref=f62e324]
+              - paragraph [ref=f62e325]: Capacitaciones programadas del SG-SST
+            - link "Ver cronograma completo" [ref=f62e326] [cursor=pointer]:
+              - /url: http://localhost/trainings
+          - table [ref=f62e328]:
+            - rowgroup [ref=f62e329]:
+              - row [ref=f62e330]:
+                - columnheader "Actividad" [ref=f62e331]
+                - columnheader "Tipo" [ref=f62e332]
+                - columnheader "Responsable" [ref=f62e333]
+                - columnheader "Fecha límite" [ref=f62e334]
+                - columnheader "Estado" [ref=f62e335]
+            - rowgroup [ref=f62e336]:
+              - row [ref=f62e337]:
+                - cell "No hay capacitaciones programadas próximamente." [ref=f62e338]

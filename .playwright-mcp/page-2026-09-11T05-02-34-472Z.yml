@@ -1,0 +1,185 @@
+- generic [ref=f93e2]:
+  - complementary [ref=f93e3]:
+    - generic [ref=f93e4]:
+      - generic [ref=f93e9]: Vigía SST
+      - button "Colapsar menú" [ref=f93e10] [cursor=pointer]
+    - navigation [ref=f93e13]:
+      - generic [ref=f93e14]:
+        - generic [ref=f93e15]: Principal
+        - link "Panel general" [ref=f93e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f93e21]:
+        - generic [ref=f93e22]: Gestión SST
+        - link "Planeación" [ref=f93e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f93e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f93e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f93e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f93e47]:
+        - generic [ref=f93e48]: Personas
+        - link "Trabajadores" [ref=f93e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f93e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f93e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f93e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f93e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f93e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f93e82]:
+        - generic [ref=f93e83]: Preparación
+        - link "Emergencias" [ref=f93e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f93e89]:
+        - generic [ref=f93e90]: Análisis
+        - link "Indicadores" [ref=f93e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f93e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+    - button "CT Cliente Test Cliente" [ref=f93e101] [cursor=pointer]:
+      - generic [ref=f93e102]: CT
+      - generic [ref=f93e103]:
+        - generic [ref=f93e104]: Cliente Test
+        - text: Cliente
+  - generic [ref=f93e105]:
+    - banner [ref=f93e106]:
+      - button "Textiles del Valle S.A.S" [ref=f93e108] [cursor=pointer]
+      - searchbox "Buscar peligros, capacitaciones, personas…" [ref=f93e119]
+      - generic [ref=f93e120]:
+        - button "Tema" [ref=f93e122] [cursor=pointer]
+        - button "3" [ref=f93e127] [cursor=pointer]
+        - button "CT" [ref=f93e133] [cursor=pointer]
+    - main [ref=f93e137]:
+      - generic [ref=f93e138]:
+        - generic [ref=f93e140]:
+          - generic [ref=f93e141]: GESTIÓN SST / MATRIZ DE RIESGOS
+          - heading "Matriz de Peligros y Riesgos" [level=1] [ref=f93e142]
+          - paragraph [ref=f93e143]: Identificación y valoración conforme a la GTC 45
+        - generic [ref=f93e144]:
+          - generic [ref=f93e146]:
+            - heading "Mapa de calor" [level=3] [ref=f93e147]
+            - paragraph [ref=f93e148]: Distribución actual de los 6 peligros identificados
+          - generic [ref=f93e149]:
+            - generic [ref=f93e150]:
+              - generic [ref=f93e151]: "1"
+              - generic [ref=f93e152]: "2"
+              - generic [ref=f93e153]: "3"
+              - generic [ref=f93e154]: "4"
+              - generic [ref=f93e155]: "5"
+            - generic [ref=f93e156]:
+              - generic [ref=f93e157]:
+                - generic [ref=f93e158]: "0"
+                - generic [ref=f93e159]: "0"
+                - generic [ref=f93e160]: "0"
+                - generic [ref=f93e161]: "0"
+                - generic [ref=f93e162]: "0"
+                - generic [ref=f93e163]: "0"
+                - generic [ref=f93e164]: "1"
+                - generic [ref=f93e165]: "1"
+                - generic [ref=f93e166]: "0"
+                - generic [ref=f93e167]: "0"
+                - generic [ref=f93e168]: "0"
+                - generic [ref=f93e169]: "0"
+                - generic [ref=f93e170]: "1"
+                - generic [ref=f93e171]: "0"
+                - generic [ref=f93e172]: "0"
+                - generic [ref=f93e173]: "0"
+                - generic [ref=f93e174]: "0"
+                - generic [ref=f93e175]: "0"
+                - generic [ref=f93e176]: "1"
+                - generic [ref=f93e177]: "1"
+                - generic [ref=f93e178]: "0"
+                - generic [ref=f93e179]: "0"
+                - generic [ref=f93e180]: "0"
+                - generic [ref=f93e181]: "0"
+                - generic [ref=f93e182]: "1"
+              - generic [ref=f93e183]:
+                - generic [ref=f93e184]: "1"
+                - generic [ref=f93e185]: "2"
+                - generic [ref=f93e186]: "3"
+                - generic [ref=f93e187]: "4"
+                - generic [ref=f93e188]: "5"
+        - generic [ref=f93e189]:
+          - generic [ref=f93e190]: "Proceso: Todos"
+          - generic [ref=f93e193]: "Área: Todas"
+          - generic [ref=f93e196]: "Nivel de riesgo: Todos"
+          - generic [ref=f93e199]: "Clasificación: Todas"
+        - table [ref=f93e203]:
+          - rowgroup [ref=f93e204]:
+            - row [ref=f93e205]:
+              - columnheader "Proceso" [ref=f93e206]
+              - columnheader "Peligro" [ref=f93e207]
+              - columnheader "Clasificación" [ref=f93e208]
+              - columnheader "Efectos posibles" [ref=f93e209]
+              - columnheader "Prob." [ref=f93e210]
+              - columnheader "Consec." [ref=f93e211]
+              - columnheader "Nivel de riesgo" [ref=f93e212]
+              - columnheader "Controles existentes" [ref=f93e213]
+              - columnheader [ref=f93e214]
+          - rowgroup [ref=f93e215]:
+            - row [ref=f93e216]:
+              - cell "Logística" [ref=f93e217]
+              - cell "Manipulación manual de cargas" [ref=f93e218]
+              - cell "Biomecánico" [ref=f93e219]
+              - cell "Lesión osteomuscular" [ref=f93e220]
+              - cell "3" [ref=f93e221]
+              - cell "3" [ref=f93e222]
+              - cell "II" [ref=f93e223]
+              - cell "Capacitación en higiene postural, ayudas mecánicas" [ref=f93e225]
+              - cell [ref=f93e226]
+            - row [ref=f93e227]:
+              - cell "Mantenimiento" [ref=f93e228]
+              - cell "Contacto eléctrico directo" [ref=f93e229]
+              - cell "Eléctrico" [ref=f93e230]
+              - cell "Quemaduras, electrocución" [ref=f93e231]
+              - cell "1" [ref=f93e232]
+              - cell "5" [ref=f93e233]
+              - cell "III" [ref=f93e234]
+              - cell "Bloqueo y etiquetado (LOTO), EPP dieléctrico" [ref=f93e236]
+              - cell [ref=f93e237]
+            - row [ref=f93e238]:
+              - cell "Producción" [ref=f93e239]
+              - cell "Ruido de maquinaria" [ref=f93e240]
+              - cell "Físico" [ref=f93e241]
+              - cell "Hipoacusia neurosensorial" [ref=f93e242]
+              - cell "4" [ref=f93e243]
+              - cell "3" [ref=f93e244]
+              - cell "II" [ref=f93e245]
+              - cell "Protección auditiva, mantenimiento preventivo" [ref=f93e247]
+              - cell [ref=f93e248]
+            - row [ref=f93e249]:
+              - cell "Mantenimiento" [ref=f93e250]
+              - cell "Trabajo en alturas" [ref=f93e251]
+              - cell "Mecánico" [ref=f93e252]
+              - cell "Caída a distinto nivel" [ref=f93e253]
+              - cell "2" [ref=f93e254]
+              - cell "5" [ref=f93e255]
+              - cell "II" [ref=f93e256]
+              - cell "Arnés, línea de vida, permiso de trabajo" [ref=f93e258]
+              - cell [ref=f93e259]
+            - row [ref=f93e260]:
+              - cell "Administrativo" [ref=f93e261]
+              - cell "Carga mental / psicosocial" [ref=f93e262]
+              - cell "Psicosocial" [ref=f93e263]
+              - cell "Estrés laboral, fatiga" [ref=f93e264]
+              - cell "4" [ref=f93e265]
+              - cell "2" [ref=f93e266]
+              - cell "III" [ref=f93e267]
+              - cell "Pausas activas, batería de riesgo psicosocial" [ref=f93e269]
+              - cell [ref=f93e270]
+            - row [ref=f93e271]:
+              - cell "Producción" [ref=f93e272]
+              - cell "Contacto con sustancias químicas" [ref=f93e273]
+              - cell "Químico" [ref=f93e274]
+              - cell "Irritación dérmica y respiratoria" [ref=f93e275]
+              - cell "2" [ref=f93e276]
+              - cell "4" [ref=f93e277]
+              - cell "III" [ref=f93e278]
+              - cell "Ficha de seguridad, EPP, ventilación" [ref=f93e280]
+              - cell [ref=f93e281]

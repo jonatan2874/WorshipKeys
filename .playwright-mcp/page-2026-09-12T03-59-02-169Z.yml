@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Symfony Exception" [level=1] [ref=e4]
+      - link "Symfony Docs" [ref=e8] [cursor=pointer]:
+        - /url: https://symfony.com/doc/7.4/index.html
+  - generic [ref=e12]:
+    - generic [ref=e14]:
+      - heading [level=2] [ref=e15]:
+        - link "ErrorException" [ref=e16] [cursor=pointer]:
+          - /url: "#trace-box-1"
+      - heading "HTTP 500 Internal Server Error" [level=2] [ref=e17]
+    - 'heading "tempnam(): file created in the system''s temporary directory" [level=1] [ref=e20]'
+  - generic [ref=e25]:
+    - tablist [ref=e26]:
+      - tab "Exception" [selected] [ref=e27] [cursor=pointer]
+      - tab "Stack Trace" [ref=e28] [cursor=pointer]
+    - tabpanel [ref=e29]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - heading "ErrorException" [level=3] [ref=e38] [cursor=pointer]
+          - group [ref=e39]:
+            - generic "Show exception properties" [ref=e40] [cursor=pointer]
+        - generic [ref=e41]:
+          - generic [ref=e47] [cursor=pointer]:
+            - text: in
+            - link [ref=e48]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php#L222
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/
+              - strong [ref=e49]: Filesystem.php
+            - text: (line 222)
+          - generic [ref=e55] [cursor=pointer]:
+            - text: in
+            - link [ref=e56]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php#L265
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/
+              - strong [ref=e57]: HandleExceptions.php
+            - text: "-> handleError (line 265)"
+          - generic [ref=e59]:
+            - generic [ref=e60]: HandleExceptions
+            - text: "->Illuminate\\Foundation\\Bootstrap\\{closure}()"
+          - generic [ref=e66] [cursor=pointer]:
+            - text: in
+            - link [ref=e67]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php#L222
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/
+              - strong [ref=e68]: Filesystem.php
+            - text: tempnam (line 222)
+          - generic [ref=e75] [cursor=pointer]:
+            - text: in
+            - link [ref=e76]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php#L199
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/Compilers/
+              - strong [ref=e77]: BladeCompiler.php
+            - text: "-> replace (line 199)"
+          - generic [ref=e83] [cursor=pointer]:
+            - text: in
+            - link [ref=e84]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php#L68
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/Engines/
+              - strong [ref=e85]: CompilerEngine.php
+            - text: "-> compile (line 68)"
+          - generic [ref=e91] [cursor=pointer]:
+            - text: in
+            - link [ref=e92]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L208
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=e93]: View.php
+            - text: "-> get (line 208)"
+          - generic [ref=e99] [cursor=pointer]:
+            - text: in
+            - link [ref=e100]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L191
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=e101]: View.php
+            - text: "-> getContents (line 191)"
+          - generic [ref=e107] [cursor=pointer]:
+            - text: in
+            - link [ref=e108]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L160
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=e109]: View.php
+            - text: "-> renderContents (line 160)"
+          - generic [ref=e115] [cursor=pointer]:
+            - text: in
+            - link [ref=e116]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Renderer/Renderer.php#L95
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Renderer/
+              - strong [ref=e117]: Renderer.php
+            - text: "-> render (line 95)"
+          - generic [ref=e123] [cursor=pointer]:
+            - text: in
+            - link [ref=e124]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L993
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=e125]: Handler.php
+            - text: "-> render (line 993)"
+          - generic [ref=e131] [cursor=pointer]:
+            - text: in
+            - link [ref=e132]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L974
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=e133]: Handler.php
+            - text: "-> renderExceptionContent (line 974)"
+          - generic [ref=e139] [cursor=pointer]:
+            - text: in
+            - link [ref=e140]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L953
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=e141]: Handler.php
+            - text: "-> convertExceptionToResponse (line 953)"
+          - generic [ref=e147] [cursor=pointer]:
+            - text: in
+            - link [ref=e148]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L844
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=e149]: Handler.php
+            - text: "-> prepareResponse (line 844)"
+          - generic [ref=e155] [cursor=pointer]:
+            - text: in
+            - link [ref=e156]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L731
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=e157]: Handler.php
+            - text: "-> renderExceptionResponse (line 731)"
+          - generic [ref=e163] [cursor=pointer]:
+            - text: in
+            - link [ref=e164]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php#L228
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/
+              - strong [ref=e165]: HandleExceptions.php
+            - text: "-> render (line 228)"
+          - generic [ref=e171] [cursor=pointer]:
+            - text: in
+            - link [ref=e172]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php#L205
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/
+              - strong [ref=e173]: HandleExceptions.php
+            - text: "-> renderHttpResponse (line 205)"
+          - generic [ref=e179] [cursor=pointer]:
+            - text: in
+            - link [ref=e180]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php#L265
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/
+              - strong [ref=e181]: HandleExceptions.php
+            - text: "-> handleException (line 265)"
+          - generic [ref=e183]:
+            - generic [ref=e184]: HandleExceptions
+            - text: "->Illuminate\\Foundation\\Bootstrap\\{closure}()"

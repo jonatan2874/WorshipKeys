@@ -1,0 +1,2 @@
+[  446909ms] ReferenceError: enableSwipe is not defined
+    at http://localhost:5173/src/main.js?t=1792471102785:135:1

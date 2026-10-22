@@ -24,11 +24,11 @@ function pickRandomSequence<T>(pool: T[], count: number): T[] {
 }
 
 function noteToStep(item: NotePoolItem): Step {
-  const label = item.hand === 'left' ? 'Identifica con la izquierda' : 'Identifica';
+  const instructionText = item.hand === 'left' ? 'Identifica esta nota con la mano izquierda' : 'Identifica esta nota';
   return {
     kind: 'note',
     expectedNotes: [item.note],
-    instructionText: `${label}: ${item.displayName}`,
+    instructionText,
     displayName: item.displayName,
     fingerNumber: item.fingerNumber,
     hand: item.hand,

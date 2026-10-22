@@ -1,0 +1,109 @@
+- generic [ref=f77e2]:
+  - complementary [ref=f77e3]:
+    - generic [ref=f77e4]:
+      - generic [ref=f77e9]: Vigía SST
+      - button "Colapsar menú" [ref=f77e10] [cursor=pointer]
+    - navigation [ref=f77e13]:
+      - generic [ref=f77e14]:
+        - generic [ref=f77e15]: Principal
+        - link "Panel general" [ref=f77e16] [cursor=pointer]:
+          - /url: http://localhost/dashboard
+      - generic [ref=f77e21]:
+        - generic [ref=f77e22]: Gestión SST
+        - link "Planeación" [ref=f77e23] [cursor=pointer]:
+          - /url: http://localhost/objectives
+        - link "Matriz de riesgos" [ref=f77e28] [cursor=pointer]:
+          - /url: http://localhost/risks
+        - link "Inspecciones" [ref=f77e35] [cursor=pointer]:
+          - /url: http://localhost/inspections
+        - link "Permisos de trabajo" [ref=f77e41] [cursor=pointer]:
+          - /url: http://localhost/work-permits
+      - generic [ref=f77e47]:
+        - generic [ref=f77e48]: Personas
+        - link "Trabajadores" [ref=f77e49] [cursor=pointer]:
+          - /url: http://localhost/workers
+        - link "Capacitación" [ref=f77e56] [cursor=pointer]:
+          - /url: http://localhost/trainings
+        - link "Salud ocupacional" [ref=f77e61] [cursor=pointer]:
+          - /url: http://localhost/medical-exams
+        - link "Incidentes y AT" [ref=f77e66] [cursor=pointer]:
+          - /url: http://localhost/incidents
+        - link "COPASST y comités" [ref=f77e70] [cursor=pointer]:
+          - /url: http://localhost/committee-sessions
+        - link "Contratistas" [ref=f77e77] [cursor=pointer]:
+          - /url: http://localhost/contractors
+      - generic [ref=f77e82]:
+        - generic [ref=f77e83]: Preparación
+        - link "Emergencias" [ref=f77e84] [cursor=pointer]:
+          - /url: http://localhost/emergencies
+      - generic [ref=f77e89]:
+        - generic [ref=f77e90]: Análisis
+        - link "Indicadores" [ref=f77e91] [cursor=pointer]:
+          - /url: http://localhost/indicators
+        - link "Documentos" [ref=f77e94] [cursor=pointer]:
+          - /url: http://localhost/documents
+      - link "Configuración" [ref=f77e100] [cursor=pointer]:
+        - /url: http://localhost/settings
+    - button "AT Admin Test Administrador" [ref=f77e107] [cursor=pointer]:
+      - generic [ref=f77e108]: AT
+      - generic [ref=f77e109]:
+        - generic [ref=f77e110]: Admin Test
+        - text: Administrador
+  - generic [ref=f77e111]:
+    - banner [ref=f77e112]:
+      - button [ref=f77e113] [cursor=pointer]
+      - button [ref=f77e116] [cursor=pointer]
+      - generic [ref=f77e122]:
+        - button "Tema" [ref=f77e124] [cursor=pointer]
+        - button "3" [ref=f77e129] [cursor=pointer]
+        - button "AT" [ref=f77e135] [cursor=pointer]
+    - main [ref=f77e139]:
+      - generic [ref=f77e140]:
+        - generic [ref=f77e142]:
+          - generic [ref=f77e143]: CUENTA / MI PERFIL
+          - heading "Mi perfil" [level=1] [ref=f77e144]
+          - paragraph [ref=f77e145]: Datos de la cuenta, contraseña y seguridad
+        - generic [ref=f77e146]:
+          - generic [ref=f77e147]:
+            - generic [ref=f77e153]:
+              - heading "Información del perfil" [level=3] [ref=f77e154]
+              - paragraph [ref=f77e155]: Actualiza tu nombre y correo electrónico.
+            - generic [ref=f77e156]:
+              - generic [ref=f77e157]:
+                - generic [ref=f77e158]: Nombre
+                - textbox "Nombre" [active] [ref=f77e159]: Admin Test
+              - generic [ref=f77e160]:
+                - generic [ref=f77e161]: Correo electrónico
+                - textbox "Correo electrónico" [ref=f77e162]: admin@test.com
+              - button "Guardar" [ref=f77e164] [cursor=pointer]
+          - generic [ref=f77e165]:
+            - generic [ref=f77e171]:
+              - heading "Actualizar contraseña" [level=3] [ref=f77e172]
+              - paragraph [ref=f77e173]: Usa una contraseña larga y aleatoria para mantener tu cuenta segura.
+            - generic [ref=f77e174]:
+              - generic [ref=f77e175]:
+                - generic [ref=f77e176]: Contraseña actual
+                - generic [ref=f77e177]:
+                  - textbox "Contraseña actual" [ref=f77e178]
+                  - button "Mostrar u ocultar contraseña" [ref=f77e179] [cursor=pointer]
+              - generic [ref=f77e183]:
+                - generic [ref=f77e184]: Nueva contraseña
+                - generic [ref=f77e185]:
+                  - textbox "Nueva contraseña" [ref=f77e186]
+                  - button "Mostrar u ocultar contraseña" [ref=f77e187] [cursor=pointer]
+              - generic [ref=f77e191]:
+                - generic [ref=f77e192]: Confirmar contraseña
+                - generic [ref=f77e193]:
+                  - textbox "Confirmar contraseña" [ref=f77e194]
+                  - button "Mostrar u ocultar contraseña" [ref=f77e195] [cursor=pointer]
+              - button "Guardar" [ref=f77e200] [cursor=pointer]
+          - generic [ref=f77e201]:
+            - generic [ref=f77e207]:
+              - heading "Eliminar cuenta" [level=3] [ref=f77e208]
+              - paragraph [ref=f77e209]: "Esta acción es permanente: elimina todos tus datos."
+            - generic [ref=f77e210]:
+              - generic [ref=f77e211]:
+                - generic [ref=f77e212]: Confirma tu contraseña
+                - textbox "Confirma tu contraseña" [ref=f77e213]:
+                  - /placeholder: Contraseña
+              - button "Eliminar cuenta" [ref=f77e214] [cursor=pointer]

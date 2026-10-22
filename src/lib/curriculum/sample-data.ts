@@ -250,14 +250,14 @@ export const sampleLevels: Level[] = [
         instructionText:
           'Ya sabes ubicar cada nota — ahora vas a usarlas para tocar música de verdad. A diferencia de la práctica anterior (una nota al azar cada vez), acá las notas van en un orden fijo: es "Sublime Gracia", nota por nota, con la mano derecha.',
       },
-      { kind: 'note', expectedNotes: ['G4'], instructionText: 'Primera nota: G', displayName: 'G', hand: 'right' },
-      { kind: 'note', expectedNotes: ['C5'], instructionText: 'Sube a C', displayName: 'C', hand: 'right' },
-      { kind: 'note', expectedNotes: ['E5'], instructionText: 'Sube a E', displayName: 'E', hand: 'right' },
-      { kind: 'note', expectedNotes: ['D5'], instructionText: 'Baja a D', displayName: 'D', hand: 'right' },
-      { kind: 'note', expectedNotes: ['C5'], instructionText: 'Baja a C', displayName: 'C', hand: 'right' },
-      { kind: 'note', expectedNotes: ['A4'], instructionText: 'Baja a A', displayName: 'A', hand: 'right' },
-      { kind: 'note', expectedNotes: ['G4'], instructionText: 'Baja a G', displayName: 'G', hand: 'right' },
-      { kind: 'note', expectedNotes: ['E4'], instructionText: 'Termina en E', displayName: 'E', hand: 'right' },
+      { kind: 'note', expectedNotes: ['G4'], instructionText: 'Primera nota de la melodía', displayName: 'G', hand: 'right' },
+      { kind: 'note', expectedNotes: ['C5'], instructionText: 'Sube', displayName: 'C', hand: 'right' },
+      { kind: 'note', expectedNotes: ['E5'], instructionText: 'Sube', displayName: 'E', hand: 'right' },
+      { kind: 'note', expectedNotes: ['D5'], instructionText: 'Baja', displayName: 'D', hand: 'right' },
+      { kind: 'note', expectedNotes: ['C5'], instructionText: 'Baja', displayName: 'C', hand: 'right' },
+      { kind: 'note', expectedNotes: ['A4'], instructionText: 'Baja', displayName: 'A', hand: 'right' },
+      { kind: 'note', expectedNotes: ['G4'], instructionText: 'Baja', displayName: 'G', hand: 'right' },
+      { kind: 'note', expectedNotes: ['E4'], instructionText: 'Última nota de la melodía', displayName: 'E', hand: 'right' },
     ],
   },
   {
@@ -900,28 +900,238 @@ export const sampleLevels: Level[] = [
     },
   },
   {
-    id: 'lvl-7-ritmo',
-    title: 'curriculum.lvl7Ritmo.title',
-    subtitle: 'curriculum.lvl7Ritmo.subtitle',
+    id: 'lvl-8a-teoria-ritmo',
+    title: 'curriculum.lvl8aTeoriaRitmo.title',
+    subtitle: 'curriculum.lvl8aTeoriaRitmo.subtitle',
     stage: 'curriculum.stage8.title',
     role: 'ritmo',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Qué es acompañar?',
+        instructionText:
+          'Acompañar es sostener una canción con acordes que se mueven en un patrón — no es solo tocar un acorde y esperar, es repetir un movimiento que sostiene al que canta o a la melodía por encima.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Progresiones de acordes',
+        instructionText:
+          'Una progresión es una secuencia de acordes que se repite — es el esqueleto de la canción. C-G-Am-F es probablemente la más común en alabanza contemporánea: la vas a reconocer apenas la toques, aparece en cientos de canciones.',
+        illustration: { kind: 'keyboard', highlightNotes: ['C4', 'E4', 'G4'] },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Arpegiar como acompañamiento',
+        instructionText:
+          'Ya arpegiaste acordes para que el micrófono los reconozca — la misma técnica (tocar las notas una por una en vez de juntas) también es un estilo real de acompañamiento: más espacioso y fluido que tocar el acorde en bloque.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
+        instructionText:
+          'Vas a tocar la progresión C-G-Am-F dos veces seguidas, en orden fijo (no al azar, porque una progresión SÍ tiene un orden que importa). Primero con la mano derecha, luego con la izquierda en una lección aparte.',
+      },
+    ],
   },
   {
-    id: 'lvl-8-oido',
-    title: 'curriculum.lvl8Oido.title',
-    subtitle: 'curriculum.lvl8Oido.subtitle',
+    id: 'lvl-8b-ritmo-derecha',
+    title: 'curriculum.lvl8bRitmoDerecha.title',
+    subtitle: 'curriculum.lvl8bRitmoDerecha.subtitle',
+    stage: 'curriculum.stage8.title',
+    role: 'ritmo',
+    // Progresión fija (no un pool al azar): en una progresión el ORDEN es
+    // el punto — C-G-Am-F, dos vueltas.
+    steps: [
+      { kind: 'chord', expectedNotes: ['C4', 'E4', 'G4'], instructionText: 'Progresión (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Progresión (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A4', 'C5', 'E5'], instructionText: 'Progresión (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F4', 'A4', 'C5'], instructionText: 'Progresión (4/4)', displayName: 'F' },
+      { kind: 'chord', expectedNotes: ['C4', 'E4', 'G4'], instructionText: 'Segunda vuelta (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Segunda vuelta (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A4', 'C5', 'E5'], instructionText: 'Segunda vuelta (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F4', 'A4', 'C5'], instructionText: 'Segunda vuelta (4/4)', displayName: 'F' },
+    ],
+  },
+  {
+    id: 'lvl-8c-ritmo-izquierda',
+    title: 'curriculum.lvl8cRitmoIzquierda.title',
+    subtitle: 'curriculum.lvl8cRitmoIzquierda.subtitle',
+    stage: 'curriculum.stage8.title',
+    role: 'ritmo',
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Ahora con la mano izquierda',
+        instructionText: 'La misma progresión, una octava más abajo.',
+      },
+      { kind: 'chord', expectedNotes: ['C3', 'E3', 'G3'], instructionText: 'Progresión (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Progresión (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A3', 'C4', 'E4'], instructionText: 'Progresión (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F3', 'A3', 'C4'], instructionText: 'Progresión (4/4)', displayName: 'F' },
+      { kind: 'chord', expectedNotes: ['C3', 'E3', 'G3'], instructionText: 'Segunda vuelta (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Segunda vuelta (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A3', 'C4', 'E4'], instructionText: 'Segunda vuelta (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F3', 'A3', 'C4'], instructionText: 'Segunda vuelta (4/4)', displayName: 'F' },
+    ],
+  },
+  {
+    id: 'lvl-9a-teoria-oido',
+    title: 'curriculum.lvl9aTeoriaOido.title',
+    subtitle: 'curriculum.lvl9aTeoriaOido.subtitle',
     stage: 'curriculum.stage9.title',
     role: 'oido',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Qué es tocar de oído?',
+        instructionText:
+          'Es tocar sin partitura ni indicación exacta — reconociendo el acorde por cómo suena y reproduciéndolo de memoria, en vez de leer qué notas tocar. No es magia: es la misma información que ya tienes (las formas de los acordes), solo que sin la ayuda visual.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'La familia de acordes de una tonalidad',
+        instructionText:
+          'La mayoría de canciones de alabanza se quedan dentro de 4 acordes de la misma tonalidad — en C mayor: C, F, G y Am. Si reconoces esos 4 de oído, ya puedes seguir gran parte de un cancionero sin mirar nada.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Anticipar el cambio',
+        instructionText:
+          'En un cancionero de iglesia, el acorde va escrito arriba de la palabra donde cambia. Tocar de oído es aprender a sentir ESE momento un poco antes de que llegue, no reaccionar después.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
+        instructionText:
+          'Vas a tocar los 4 acordes que ya conoces (C, F, G, Am), pero esta vez el teclado de guía NO te muestra las teclas — solo el nombre. Es una prueba de memoria real, no de identificación. Primero con la mano derecha, luego con la izquierda en una lección aparte.',
+      },
+    ],
   },
   {
-    id: 'lvl-9-repertorio',
-    title: 'curriculum.lvl9Repertorio.title',
-    subtitle: 'curriculum.lvl9Repertorio.subtitle',
+    id: 'lvl-9b-oido-derecha',
+    title: 'curriculum.lvl9bOidoDerecha.title',
+    subtitle: 'curriculum.lvl9bOidoDerecha.subtitle',
+    stage: 'curriculum.stage9.title',
+    role: 'oido',
+    steps: [
+      { kind: 'chord', expectedNotes: ['C4', 'E4', 'G4'], instructionText: 'Toca C de memoria — sin ayuda visual.', displayName: 'C', hideHint: true },
+      { kind: 'chord', expectedNotes: ['F4', 'A4', 'C5'], instructionText: 'Toca F de memoria — sin ayuda visual.', displayName: 'F', hideHint: true },
+      { kind: 'chord', expectedNotes: ['A4', 'C5', 'E5'], instructionText: 'Toca Am de memoria — sin ayuda visual.', displayName: 'Am', hideHint: true },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Toca G de memoria — sin ayuda visual.', displayName: 'G', hideHint: true },
+      { kind: 'chord', expectedNotes: ['F4', 'A4', 'C5'], instructionText: 'Toca F de memoria — sin ayuda visual.', displayName: 'F', hideHint: true },
+      { kind: 'chord', expectedNotes: ['C4', 'E4', 'G4'], instructionText: 'Toca C de memoria — sin ayuda visual.', displayName: 'C', hideHint: true },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Toca G de memoria — sin ayuda visual.', displayName: 'G', hideHint: true },
+      { kind: 'chord', expectedNotes: ['A4', 'C5', 'E5'], instructionText: 'Toca Am de memoria — sin ayuda visual.', displayName: 'Am', hideHint: true },
+    ],
+  },
+  {
+    id: 'lvl-9c-oido-izquierda',
+    title: 'curriculum.lvl9cOidoIzquierda.title',
+    subtitle: 'curriculum.lvl9cOidoIzquierda.subtitle',
+    stage: 'curriculum.stage9.title',
+    role: 'oido',
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Ahora con la mano izquierda',
+        instructionText: 'Los mismos 4 acordes, de memoria, una octava más abajo.',
+      },
+      { kind: 'chord', expectedNotes: ['C3', 'E3', 'G3'], instructionText: 'Toca C de memoria — sin ayuda visual.', displayName: 'C', hideHint: true },
+      { kind: 'chord', expectedNotes: ['F3', 'A3', 'C4'], instructionText: 'Toca F de memoria — sin ayuda visual.', displayName: 'F', hideHint: true },
+      { kind: 'chord', expectedNotes: ['A3', 'C4', 'E4'], instructionText: 'Toca Am de memoria — sin ayuda visual.', displayName: 'Am', hideHint: true },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Toca G de memoria — sin ayuda visual.', displayName: 'G', hideHint: true },
+      { kind: 'chord', expectedNotes: ['F3', 'A3', 'C4'], instructionText: 'Toca F de memoria — sin ayuda visual.', displayName: 'F', hideHint: true },
+      { kind: 'chord', expectedNotes: ['C3', 'E3', 'G3'], instructionText: 'Toca C de memoria — sin ayuda visual.', displayName: 'C', hideHint: true },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Toca G de memoria — sin ayuda visual.', displayName: 'G', hideHint: true },
+      { kind: 'chord', expectedNotes: ['A3', 'C4', 'E4'], instructionText: 'Toca Am de memoria — sin ayuda visual.', displayName: 'Am', hideHint: true },
+    ],
+  },
+  {
+    id: 'lvl-10a-teoria-repertorio',
+    title: 'curriculum.lvl10aTeoriaRepertorio.title',
+    subtitle: 'curriculum.lvl10aTeoriaRepertorio.subtitle',
     stage: 'curriculum.stage10.title',
     role: 'repertorio',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Qué es tener repertorio?',
+        instructionText:
+          'Es tener un grupo de canciones que puedes tocar sin tener que volver a aprenderlas desde cero cada vez — ya hiciste el trabajo de reconocer sus acordes, ahora se trata de mantenerlas listas y sumar nuevas poco a poco.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Transiciones suaves',
+        instructionText:
+          'En vivo, el error más notorio no es tocar una nota equivocada — es DETENERSE. Si te equivocas, sigue el pulso y corrige en el siguiente acorde; parar por completo se nota mucho más que un tropiezo.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Modulación: cambiar de tonalidad',
+        instructionText:
+          'Modular es subir la canción a otra tonalidad a mitad de camino — típicamente en el coro final, para darle un "empujón" de energía. C a D (un tono completo arriba) es una modulación muy común en alabanza contemporánea.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Cómo vas a practicar',
+        instructionText:
+          'Vas a tocar una estructura real: una "estrofa" en C (C-G-Am-F) seguida de un "coro" modulado a D (D-A-Bm-G) — sin pausa entre las dos. Primero con la mano derecha, luego con la izquierda en una lección aparte.',
+      },
+    ],
+  },
+  {
+    id: 'lvl-10b-repertorio-derecha',
+    title: 'curriculum.lvl10bRepertorioDerecha.title',
+    subtitle: 'curriculum.lvl10bRepertorioDerecha.subtitle',
+    stage: 'curriculum.stage10.title',
+    role: 'repertorio',
+    steps: [
+      { kind: 'chord', expectedNotes: ['C4', 'E4', 'G4'], instructionText: 'Estrofa (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Estrofa (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A4', 'C5', 'E5'], instructionText: 'Estrofa (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F4', 'A4', 'C5'], instructionText: 'Estrofa (4/4)', displayName: 'F' },
+      { kind: 'chord', expectedNotes: ['D4', 'F#4', 'A4'], instructionText: 'Coro modulado (1/4)', displayName: 'D' },
+      { kind: 'chord', expectedNotes: ['A4', 'C#5', 'E5'], instructionText: 'Coro modulado (2/4)', displayName: 'A' },
+      { kind: 'chord', expectedNotes: ['B4', 'D5', 'F#5'], instructionText: 'Coro modulado (3/4)', displayName: 'Bm' },
+      { kind: 'chord', expectedNotes: ['G4', 'B4', 'D5'], instructionText: 'Coro modulado (4/4)', displayName: 'G' },
+    ],
+  },
+  {
+    id: 'lvl-10c-repertorio-izquierda',
+    title: 'curriculum.lvl10cRepertorioIzquierda.title',
+    subtitle: 'curriculum.lvl10cRepertorioIzquierda.subtitle',
+    stage: 'curriculum.stage10.title',
+    role: 'repertorio',
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Ahora con la mano izquierda',
+        instructionText: 'La misma estructura, una octava más abajo.',
+      },
+      { kind: 'chord', expectedNotes: ['C3', 'E3', 'G3'], instructionText: 'Estrofa (1/4)', displayName: 'C' },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Estrofa (2/4)', displayName: 'G' },
+      { kind: 'chord', expectedNotes: ['A3', 'C4', 'E4'], instructionText: 'Estrofa (3/4)', displayName: 'Am' },
+      { kind: 'chord', expectedNotes: ['F3', 'A3', 'C4'], instructionText: 'Estrofa (4/4)', displayName: 'F' },
+      { kind: 'chord', expectedNotes: ['D3', 'F#3', 'A3'], instructionText: 'Coro modulado (1/4)', displayName: 'D' },
+      { kind: 'chord', expectedNotes: ['A3', 'C#4', 'E4'], instructionText: 'Coro modulado (2/4)', displayName: 'A' },
+      { kind: 'chord', expectedNotes: ['B3', 'D4', 'F#4'], instructionText: 'Coro modulado (3/4)', displayName: 'Bm' },
+      { kind: 'chord', expectedNotes: ['G3', 'B3', 'D4'], instructionText: 'Coro modulado (4/4)', displayName: 'G' },
+    ],
   },
   {
     id: 'lvl-99-lectura',
@@ -929,7 +1139,50 @@ export const sampleLevels: Level[] = [
     subtitle: 'curriculum.lvl99Lectura.subtitle',
     stage: 'curriculum.stage99.title',
     role: 'lectura',
-    steps: [],
+    steps: [
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: '¿Por qué es opcional?',
+        instructionText:
+          'Toda esta app funciona con notación americana (C, D, E...) — nunca necesitas leer partitura para completar la ruta principal. Esta etapa es un bono para quien además quiera leer música clásica en pentagrama.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'El pentagrama',
+        instructionText:
+          'Son 5 líneas y 4 espacios entre ellas. Cada nota se ubica en una línea o en un espacio — mientras más arriba, más aguda es la nota.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'La clave de Sol',
+        instructionText:
+          'El símbolo al inicio del pentagrama define qué nota representa cada línea — la clave de Sol (la más común para la mano derecha) hace que su espiral rodee la segunda línea, que es la nota G.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Ubicando el C central',
+        instructionText: 'El C central queda justo debajo del pentagrama de clave de Sol, en una línea corta adicional — es el mismo C que ya conoces del teclado.',
+        illustration: { kind: 'keyboard', highlightNotes: ['C4'], markMiddleC: true },
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Duración de las figuras',
+        instructionText:
+          'Redonda = 4 tiempos. Blanca = 2 tiempos. Negra = 1 tiempo. Corchea = medio tiempo. La forma de la nota (rellena o no, con banderita o no) indica cuánto dura, no qué tan aguda es.',
+      },
+      {
+        kind: 'info',
+        expectedNotes: [],
+        displayName: 'Compases simples: 4/4 y 3/4',
+        instructionText:
+          'El número de arriba dice cuántos tiempos hay por compás; el de abajo, qué figura vale un tiempo. 4/4 es el más común en alabanza contemporánea; 3/4 da la sensación de vals, típica de himnos clásicos.',
+      },
+    ],
   },
 ];
 

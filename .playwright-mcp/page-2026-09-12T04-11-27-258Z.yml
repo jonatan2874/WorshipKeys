@@ -1,0 +1,62 @@
+- generic [ref=f35e2]:
+  - navigation [ref=f35e3]:
+    - generic [ref=f35e5]:
+      - generic [ref=f35e6]:
+        - link [ref=f35e8] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - generic [ref=f35e11]:
+          - link "Dashboard" [ref=f35e12] [cursor=pointer]:
+            - /url: http://localhost:8080/dashboard
+          - link "Clientes" [ref=f35e13] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+          - link "Usuarios" [ref=f35e14] [cursor=pointer]:
+            - /url: http://localhost:8080/users
+      - button "Administrador" [ref=f35e18] [cursor=pointer]
+  - banner [ref=f35e23]:
+    - heading "Editar cliente" [level=2] [ref=f35e25]
+  - main [ref=f35e26]:
+    - generic [ref=f35e30]:
+      - generic [ref=f35e31]:
+        - generic [ref=f35e32]:
+          - generic [ref=f35e33]: Código
+          - textbox "Código" [ref=f35e34]: TEST01
+        - generic [ref=f35e35]:
+          - generic [ref=f35e36]: NIT
+          - textbox "NIT" [ref=f35e37]: 900123456-1
+        - generic [ref=f35e38]:
+          - generic [ref=f35e39]: Razón Social
+          - textbox "Razón Social" [ref=f35e40]: Cliente de Prueba SAS
+        - generic [ref=f35e41]:
+          - generic [ref=f35e42]: Representante Legal
+          - textbox "Representante Legal" [ref=f35e43]: Juan Perez
+        - generic [ref=f35e44]:
+          - generic [ref=f35e45]: Dirección
+          - textbox "Dirección" [ref=f35e46]: "Calle 123 #45-67"
+        - generic [ref=f35e47]:
+          - generic [ref=f35e48]: Ciudad
+          - textbox "Ciudad" [ref=f35e49]: Bogota
+        - generic [ref=f35e50]:
+          - generic [ref=f35e51]: N.º Trabajadores Promedio
+          - spinbutton "N.º Trabajadores Promedio" [ref=f35e52]: "15"
+        - generic [ref=f35e53]:
+          - generic [ref=f35e54]: ¿Tiene Sucursal?
+          - generic [ref=f35e55]:
+            - generic [ref=f35e56]:
+              - radio "Sí" [checked] [ref=f35e57]
+              - generic [ref=f35e58]: Sí
+            - generic [ref=f35e59]:
+              - radio "No" [ref=f35e60]
+              - generic [ref=f35e61]: "No"
+          - generic [ref=f35e62]:
+            - generic [ref=f35e63]: Lugar/Ciudad de Sucursal
+            - textbox "Lugar/Ciudad de Sucursal" [ref=f35e64]: Medellin
+        - generic [ref=f35e65]:
+          - generic [ref=f35e66]: Valor Mensual
+          - spinbutton "Valor Mensual" [ref=f35e67]: "1500000.00"
+      - generic [ref=f35e68]:
+        - button "Eliminar" [ref=f35e69] [cursor=pointer]
+        - generic [ref=f35e70]:
+          - link [ref=f35e71] [cursor=pointer]:
+            - /url: http://localhost:8080/clients
+            - button "Cancelar" [ref=f35e72]
+          - button "Actualizar" [ref=f35e73] [cursor=pointer]

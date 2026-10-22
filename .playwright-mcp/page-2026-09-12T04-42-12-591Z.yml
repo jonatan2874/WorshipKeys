@@ -1,0 +1,71 @@
+- generic [ref=f49e2]:
+  - complementary [ref=f49e3]:
+    - generic [ref=f49e4]:
+      - generic [ref=f49e12]: Pralli
+      - button "Colapsar menú" [ref=f49e13] [cursor=pointer]
+    - navigation [ref=f49e16]:
+      - generic [ref=f49e17]:
+        - generic [ref=f49e18]: Principal
+        - link "Panel general" [ref=f49e19] [cursor=pointer]:
+          - /url: http://localhost:8080/dashboard
+        - link "Clientes" [ref=f49e24] [cursor=pointer]:
+          - /url: http://localhost:8080/clients
+      - generic [ref=f49e29]:
+        - generic [ref=f49e30]: Administración
+        - link "Usuarios" [ref=f49e31] [cursor=pointer]:
+          - /url: http://localhost:8080/users
+    - link "A Administrador Administrador" [ref=f49e39] [cursor=pointer]:
+      - /url: http://localhost:8080/profile
+      - generic [ref=f49e40]: A
+      - generic [ref=f49e41]:
+        - generic [ref=f49e42]: Administrador
+        - text: Administrador
+  - generic [ref=f49e43]:
+    - banner [ref=f49e44]:
+      - generic [ref=f49e45]:
+        - button "Tema" [ref=f49e46] [cursor=pointer]
+        - button "A" [ref=f49e51] [cursor=pointer]
+    - main [ref=f49e55]:
+      - generic [ref=f49e56]:
+        - generic [ref=f49e58]:
+          - generic [ref=f49e59]: CRM / Clientes
+          - heading "Nuevo cliente" [level=1] [ref=f49e60]
+        - generic [ref=f49e62]:
+          - generic [ref=f49e63]:
+            - generic [ref=f49e64]:
+              - generic [ref=f49e65]: Código
+              - textbox "Código" [ref=f49e66]
+            - generic [ref=f49e67]:
+              - generic [ref=f49e68]: NIT
+              - textbox "NIT" [ref=f49e69]
+            - generic [ref=f49e70]:
+              - generic [ref=f49e71]: Razón Social
+              - textbox "Razón Social" [ref=f49e72]
+            - generic [ref=f49e73]:
+              - generic [ref=f49e74]: Representante Legal
+              - textbox "Representante Legal" [ref=f49e75]
+            - generic [ref=f49e76]:
+              - generic [ref=f49e77]: Dirección
+              - textbox "Dirección" [ref=f49e78]
+            - generic [ref=f49e79]:
+              - generic [ref=f49e80]: Ciudad
+              - textbox "Ciudad" [ref=f49e81]
+            - generic [ref=f49e82]:
+              - generic [ref=f49e83]: N.º Trabajadores Promedio
+              - spinbutton "N.º Trabajadores Promedio" [ref=f49e84]
+            - generic [ref=f49e85]:
+              - generic [ref=f49e86]: ¿Tiene Sucursal?
+              - generic [ref=f49e87]:
+                - generic [ref=f49e88] [cursor=pointer]:
+                  - radio "Sí" [ref=f49e89]
+                  - text: Sí
+                - generic [ref=f49e90] [cursor=pointer]:
+                  - radio "No" [checked] [ref=f49e91]
+                  - text: "No"
+            - generic [ref=f49e92]:
+              - generic [ref=f49e93]: Valor Mensual
+              - spinbutton "Valor Mensual" [ref=f49e94]
+          - generic [ref=f49e95]:
+            - link "Cancelar" [ref=f49e96] [cursor=pointer]:
+              - /url: http://localhost:8080/clients
+            - button "Guardar" [ref=f49e97] [cursor=pointer]

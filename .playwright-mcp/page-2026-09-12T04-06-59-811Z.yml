@@ -1,0 +1,10 @@
+- generic [ref=f18e2]:
+  - link [ref=f18e4] [cursor=pointer]:
+    - /url: /
+  - generic [ref=f18e7]:
+    - generic [ref=f18e8]: Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+    - generic [ref=f18e9]:
+      - generic [ref=f18e10]:
+        - generic [ref=f18e11]: Email
+        - textbox "Email" [active] [ref=f18e12]: admin@crm.test
+      - button "Email Password Reset Link" [ref=f18e14] [cursor=pointer]

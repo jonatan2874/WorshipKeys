@@ -9,7 +9,30 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { MaxContentWidth, Radii, Spacing } from '@/constants/theme';
 import { SkillLevel, useOnboarding } from '@/contexts/onboarding-context';
+import { useProgress } from '@/contexts/progress-context';
 import { useTheme } from '@/hooks/use-theme';
+
+// Etapas 0-1 (postura, notas): quien ya sabe lo básico no necesita repasarlas.
+const SKIP_BASICO = ['lvl-0a-teoria-fundamentos', 'lvl-1a-notas-derecha', 'lvl-1b-notas-izquierda', 'lvl-1c-melodia'];
+
+// Además de lo anterior, Etapas 2-6 (todos los acordes, inversiones,
+// escalas): quien "toca con soltura" ya las conoce. Etapa 7 (Tonalidades)
+// es la más avanzada con contenido real hoy — cuando se construyan Ritmo,
+// Oído y Repertorio, este punto de partida puede subir.
+const SKIP_SOLTURA = [
+  ...SKIP_BASICO,
+  'lvl-2a-teoria-acordes', 'lvl-2b-practica-derecha', 'lvl-2c-practica-izquierda',
+  'lvl-3a-teoria-menores', 'lvl-3b-menores-derecha', 'lvl-3c-menores-izquierda',
+  'lvl-4a-teoria-sostenidos', 'lvl-4b-sostenidos-derecha', 'lvl-4c-sostenidos-izquierda',
+  'lvl-5a-teoria-inversiones', 'lvl-5b-inversiones-derecha', 'lvl-5c-inversiones-izquierda',
+  'lvl-6a-teoria-escalas', 'lvl-6b-escalas-derecha', 'lvl-6c-escalas-izquierda',
+];
+
+const SKIP_AHEAD_LEVEL_IDS: Record<SkillLevel, string[]> = {
+  nunca: [],
+  basico: SKIP_BASICO,
+  soltura: SKIP_SOLTURA,
+};
 
 const SKILL_LEVELS: { value: SkillLevel; labelKey: string; descKey: string }[] = [
   { value: 'nunca', labelKey: 'onboarding.skillNever', descKey: 'onboarding.skillNeverDesc' },
@@ -24,6 +47,7 @@ export default function OnboardingNivelScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { completeOnboarding } = useOnboarding();
+  const { markLevelsCompleted } = useProgress();
   const [skillLevel, setSkillLevel] = useState<SkillLevel>('nunca');
   const [goals, setGoals] = useState<string[]>([GOALS[0]]);
 
@@ -33,6 +57,10 @@ export default function OnboardingNivelScreen() {
 
   function handleCreate() {
     completeOnboarding(skillLevel, goals);
+    // No es una prueba de ubicación real (nadie tocó nada todavía) — es un
+    // salto por autoevaluación, para no obligar a alguien que ya sabe tocar
+    // a repasar la postura y las notas básicas desde cero.
+    markLevelsCompleted(SKIP_AHEAD_LEVEL_IDS[skillLevel]);
     router.replace('/');
   }
 

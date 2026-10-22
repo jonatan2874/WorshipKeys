@@ -35,6 +35,10 @@ export interface Step {
    * siguen mostrando `instructionText` como párrafo único. */
   keyPoints?: { label: string; description: string }[];
   timing?: { beat: number; durationBeats: number };
+  /** Si es true, el teclado de guía no resalta las teclas esperadas —
+   * para ejercicios "de memoria" donde se pide reproducir un acorde ya
+   * aprendido sin la ayuda visual, en vez de identificar una nota nueva. */
+  hideHint?: boolean;
 }
 
 /** Nota disponible para armar pasos de identificación al azar. */

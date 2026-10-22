@@ -95,7 +95,10 @@ export default function LeccionScreen() {
 
   const step = steps[stepIndex];
   const { isListening, hasPermission, detectedNote, isSupported, start, stop } = useMicPitchDetector();
-  const heardRef = useRef<string[]>([]);
+  // Cada nota escuchada guarda cuándo se detectó — así se puede "olvidar"
+  // ruido viejo en vez de acumularlo para siempre durante todo el paso (ver
+  // pruneHeard más abajo).
+  const heardRef = useRef<{ pc: string; at: number }[]>([]);
 
   // Modo micrófono: escucha automáticamente sin que el usuario tenga que
   // tocar "Escuchar" cada vez que entra o cambia de modo.
@@ -159,15 +162,27 @@ export default function LeccionScreen() {
     // cualquier sonido ambiental que el micrófono detecte se cuenta como
     // "acierto" (un set vacío de notas esperadas siempre está satisfecho) y
     // el paso avanza solo, sin que el usuario haga nada.
-    if (mode !== 'microfono' || !detectedNote || !step || step.kind === 'info') return;
+    if (mode !== 'microfono' || !detectedNote || !step || step.kind === 'info' || feedback === 'correct') return;
     // Se acumulan notas distintas detectadas durante el intento (sirve tanto
     // para notas sueltas como para acordes arpegiados). El éxito solo exige
     // que la(s) nota(s) esperada(s) hayan sonado — una detección ruidosa de
     // más no bloquea el acierto, así no hace falta "una lectura perfecta".
+    //
+    // Pero esa acumulación no puede ser indefinida: en un cuarto con ruido
+    // de fondo, tarde o temprano el micrófono termina "escuchando" por
+    // casualidad las notas que faltaban y el paso avanza solo sin que se
+    // haya tocado nada — justo lo que se reportó. Por eso cada nota se
+    // olvida pasada una ventana de tiempo (más larga cuanto más larga es la
+    // secuencia esperada, para no penalizar escalas de 8 notas).
+    const windowMs = Math.max(4000, step.expectedNotes.length * 1500);
+    const now = Date.now();
     const pc = pitchClassOf(detectedNote.noteName);
-    if (!heardRef.current.includes(pc)) {
-      heardRef.current = [...heardRef.current, pc];
-      checkAttempt(heardRef.current);
+    const stillFresh = heardRef.current.filter((h) => now - h.at < windowMs);
+    if (!stillFresh.some((h) => h.pc === pc)) {
+      heardRef.current = [...stillFresh, { pc, at: now }];
+      checkAttempt(heardRef.current.map((h) => h.pc));
+    } else if (stillFresh.length !== heardRef.current.length) {
+      heardRef.current = stillFresh;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [detectedNote?.noteName]);
@@ -244,22 +259,36 @@ export default function LeccionScreen() {
     if (step.kind === 'info') return;
     const result = evaluateAttempt(step.expectedNotes, playedNotes);
     if (result.missing.length === 0) {
-      setFeedback('correct');
-      setTimeout(advanceStep, 500);
+      // Las secuencias fijas (melodías, progresiones) avanzan de inmediato
+      // para sonar como música real — la pausa con "¡Correcto!" solo tiene
+      // sentido en el repaso al azar de un pool, donde cada intento es
+      // independiente y conviene confirmar antes de mostrar el siguiente.
+      if (level.practicePool) {
+        setFeedback('correct');
+        setTimeout(advanceStep, 500);
+      } else {
+        advanceStep();
+      }
     } else if (playedNotes.length > 0) {
       setFeedback(result.wrong.length > 0 ? 'incorrect' : null);
     }
   }
 
   function handleKeyPress(note: string) {
+    // Si el paso ya se resolvió, ignora toques mientras espera el avance
+    // automático — si no, se acumulan en `selectedNotes` y el próximo paso
+    // los pierde en cuanto `advanceStep` limpia la selección.
+    if (feedback === 'correct') return;
     setFeedback(null);
-    setSelectedNotes((prev) => {
-      const pc = pitchClassOf(note);
-      const already = prev.some((n) => pitchClassOf(n) === pc);
-      const next = already ? prev.filter((n) => pitchClassOf(n) !== pc) : [...prev, note];
-      checkAttempt(next);
-      return next;
-    });
+    // checkAttempt tiene efectos secundarios (setFeedback, avanzar de
+    // paso) — no puede llamarse desde dentro del updater funcional de
+    // setSelectedNotes, porque React puede invocarlo más de una vez para
+    // decidir si hace falta re-renderizar, duplicando el avance.
+    const pc = pitchClassOf(note);
+    const already = selectedNotes.some((n) => pitchClassOf(n) === pc);
+    const next = already ? selectedNotes.filter((n) => pitchClassOf(n) !== pc) : [...selectedNotes, note];
+    setSelectedNotes(next);
+    checkAttempt(next);
   }
 
   function switchMode(next: Mode) {
@@ -298,13 +327,10 @@ export default function LeccionScreen() {
           <View style={[styles.progressFill, { backgroundColor: theme.accent, width: `${progressPct}%` }]} />
         </View>
 
-        <Animated.View
-          key={stepIndex}
-          entering={FadeInDown.duration(450)}
-          exiting={FadeOutUp.duration(250)}
-          style={styles.stepContent}>
+        <View style={styles.stepContent}>
           {step.kind === 'info' ? (
           <>
+            <Animated.View key={stepIndex} entering={FadeInDown.duration(450)} exiting={FadeOutUp.duration(250)}>
             <View style={[styles.card, styles.infoCard, { backgroundColor: theme.backgroundElement }]}>
               {step.illustration?.kind === 'keyboard' && (
                 <PianoKeyboard
@@ -340,6 +366,7 @@ export default function LeccionScreen() {
                 </ThemedText>
               )}
             </View>
+            </Animated.View>
             <View style={styles.infoActions}>
               {stepIndex > 0 && (
                 <PressButton
@@ -401,10 +428,16 @@ export default function LeccionScreen() {
               </ThemedText>
             )}
 
-            <PracticeRoll steps={steps} currentIndex={stepIndex} feedback={feedback} />
+            <PracticeRoll
+              steps={steps}
+              currentIndex={stepIndex}
+              feedback={feedback}
+              windowSize={level.practicePool ? 5 : steps.length}
+            />
 
+            <Animated.View key={stepIndex} entering={FadeInDown.duration(450)} exiting={FadeOutUp.duration(250)}>
             <View style={[styles.card, { backgroundColor: theme.backgroundElement }]}>
-              <PianoKeyboard highlightNotes={step.expectedNotes} />
+              <PianoKeyboard highlightNotes={step.hideHint ? [] : step.expectedNotes} />
               <ThemedText type="label" themeColor="textSecondary">
                 {step.kind === 'chord' ? t('leccion.playChord') : t('leccion.playNote')}
               </ThemedText>
@@ -434,6 +467,7 @@ export default function LeccionScreen() {
                 </ThemedText>
               )}
             </View>
+            </Animated.View>
 
             {mode === 'teclado' ? (
               <TouchKeyboard selectedNotes={selectedNotes} onKeyPress={handleKeyPress} />
@@ -455,7 +489,7 @@ export default function LeccionScreen() {
                     </ThemedText>
                     {step.kind === 'chord' && heardRef.current.length > 0 && (
                       <ThemedText type="small" themeColor="textSecondary">
-                        {t('leccion.heardNotes', { notes: heardRef.current.join(', ') })}
+                        {t('leccion.heardNotes', { notes: heardRef.current.map((h) => h.pc).join(', ') })}
                       </ThemedText>
                     )}
                     <PressButton
@@ -469,7 +503,7 @@ export default function LeccionScreen() {
             )}
           </>
           )}
-        </Animated.View>
+        </View>
 
         {micTrouble && mode === 'microfono' && (
           <Animated.View

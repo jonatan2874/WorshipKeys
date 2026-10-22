@@ -1,0 +1,113 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: Atril
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "♪ +½" [ref=e8] [cursor=pointer]:
+            - text: ♪
+            - generic [ref=e9]: +½
+          - button "Subir volumen" [ref=e10] [cursor=pointer]
+          - button "♪ −½" [ref=e14] [cursor=pointer]:
+            - text: ♪
+            - generic [ref=e15]: −½
+          - button "Bajar volumen" [ref=e16] [cursor=pointer]
+        - generic [ref=e20]:
+          - button "𝄞 Sop" [pressed] [ref=e21] [cursor=pointer]:
+            - generic [ref=e22]: 𝄞
+            - text: Sop
+          - button "𝄞 Con" [pressed] [ref=e23] [cursor=pointer]:
+            - generic [ref=e24]: 𝄞
+            - text: Con
+          - button "♪ Solo" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]: ♪
+            - text: Solo
+          - button "𝄢 Ten" [pressed] [ref=e27] [cursor=pointer]:
+            - generic [ref=e28]: 𝄢
+            - text: Ten
+          - button "𝄢 Bajo" [pressed] [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]: 𝄢
+            - text: Bajo
+          - button "◫ Ritmo" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]: ◫
+            - text: Ritmo
+        - generic [ref=e33]:
+          - button "» tempo" [ref=e34] [cursor=pointer]:
+            - text: »
+            - generic [ref=e35]: tempo
+          - button "« tempo" [ref=e36] [cursor=pointer]:
+            - text: «
+            - generic [ref=e37]: tempo
+      - generic [ref=e38]:
+        - button "✱" [ref=e39] [cursor=pointer]
+        - generic [ref=e40]: "Himno:"
+        - button "#" [ref=e44] [cursor=pointer]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - button "Sax" [ref=e47] [cursor=pointer]
+          - button "Guit" [ref=e48] [cursor=pointer]
+          - button "Violín" [ref=e49] [cursor=pointer]
+          - button "Trpt" [ref=e50] [cursor=pointer]
+          - button "Cello" [ref=e51] [cursor=pointer]
+          - button "Acord" [ref=e52] [cursor=pointer]
+          - button "Piano" [ref=e53] [cursor=pointer]
+          - button "Órgano" [pressed] [ref=e54] [cursor=pointer]
+          - button "Coro" [ref=e55] [cursor=pointer]
+        - generic [ref=e56]:
+          - button "1 ABC" [ref=e57] [cursor=pointer]:
+            - text: "1"
+            - generic [ref=e58]: ABC
+          - button "2 DEF" [ref=e59] [cursor=pointer]:
+            - text: "2"
+            - generic [ref=e60]: DEF
+          - button "3 GHI" [ref=e61] [cursor=pointer]:
+            - text: "3"
+            - generic [ref=e62]: GHI
+          - button "4 JKL" [ref=e63] [cursor=pointer]:
+            - text: "4"
+            - generic [ref=e64]: JKL
+          - button "5 MNO" [ref=e65] [cursor=pointer]:
+            - text: "5"
+            - generic [ref=e66]: MNO
+          - button "6 PQR" [ref=e67] [cursor=pointer]:
+            - text: "6"
+            - generic [ref=e68]: PQR
+          - button "7 STU" [ref=e69] [cursor=pointer]:
+            - text: "7"
+            - generic [ref=e70]: STU
+          - button "8 VWX" [ref=e71] [cursor=pointer]:
+            - text: "8"
+            - generic [ref=e72]: VWX
+          - button "9 YZ" [ref=e73] [cursor=pointer]:
+            - text: "9"
+            - generic [ref=e74]: YZ
+          - button "𝄐 Calderón" [pressed] [ref=e75] [cursor=pointer]:
+            - text: 𝄐
+            - generic [ref=e76]: Calderón
+          - button "0" [ref=e77] [cursor=pointer]
+          - button "II Pausa" [ref=e79] [cursor=pointer]:
+            - text: II
+            - generic [ref=e80]: Pausa
+        - generic [ref=e81]:
+          - button "■" [ref=e82] [cursor=pointer]
+          - button "▶" [ref=e83] [cursor=pointer]
+  - paragraph [ref=e84]: Marque el número del himno (por ejemplo 45) y presione ▶. Toque un himno de la lista para elegirlo.
+  - heading "Himnario" [level=2] [ref=e86]
+  - generic [ref=e87]:
+    - heading "Agregar himnos" [level=2] [ref=e88]
+    - paragraph [ref=e89]: Los himnos del 2 al 652 salen del escaneo de Celebremos su Gloria con sus cuatro voces. El reconocimiento automático deja algunas notas equivocadas; si un himno suena raro, corrígelo en MuseScore y vuelve a cargarlo aquí.
+    - paragraph [ref=e90]:
+      - text: Puedes cargar archivos MusicXML (
+      - code [ref=e91]: .mxl
+      - text: ","
+      - code [ref=e92]: .musicxml
+      - text: o
+      - code [ref=e93]: .xml
+      - text: ) exportados de MuseScore, uno o varios a la vez. El nombre del archivo debe empezar con el número del himno, por ejemplo
+      - code [ref=e94]: 045.mxl
+      - text: o
+      - code [ref=e95]: 045 Castillo fuerte.mxl
+      - text: . Si ya existe un himno con ese número, se reemplaza.
+    - generic [ref=e96]: Elegir archivos
+    - paragraph [ref=e98]: "Sonidos de instrumentos: soundfont FluidR3 GM de Frank Wen (licencia MIT)."
+    - paragraph [ref=e99]: "Teclado de la computadora: números para marcar, Enter para tocar, Espacio para pausar, Esc para detener."

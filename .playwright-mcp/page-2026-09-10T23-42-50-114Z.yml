@@ -1,0 +1,509 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - heading "Symfony Exception" [level=1] [ref=f2e4]
+      - link "Symfony Docs" [ref=f2e8] [cursor=pointer]:
+        - /url: https://symfony.com/doc/7.4/index.html
+  - generic [ref=f2e12]:
+    - generic [ref=f2e14]:
+      - heading [level=2] [ref=f2e15]:
+        - link "ErrorException" [ref=f2e16] [cursor=pointer]:
+          - /url: "#trace-box-1"
+      - heading "HTTP 500 Internal Server Error" [level=2] [ref=f2e17]
+    - 'heading "tempnam(): file created in the system''s temporary directory" [level=1] [ref=f2e20]'
+  - generic [ref=f2e25]:
+    - tablist [ref=f2e26]:
+      - tab "Exception" [selected] [ref=f2e27] [cursor=pointer]
+      - tab "Stack Trace" [ref=f2e28] [cursor=pointer]
+    - tabpanel [ref=f2e29]:
+      - generic [ref=f2e32]:
+        - generic [ref=f2e33]:
+          - heading "ErrorException" [level=3] [ref=f2e38] [cursor=pointer]
+          - group [ref=f2e39]:
+            - generic "Show exception properties" [ref=f2e40] [cursor=pointer]
+        - generic [ref=f2e41]:
+          - generic [ref=f2e47] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e48]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php#L222
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/
+              - strong [ref=f2e49]: Filesystem.php
+            - text: (line 222)
+          - generic [ref=f2e55] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e56]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php#L263
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/
+              - strong [ref=f2e57]: HandleExceptions.php
+            - text: "-> handleError (line 263)"
+          - generic [ref=f2e59]:
+            - generic [ref=f2e60]: HandleExceptions
+            - text: "->Illuminate\\Foundation\\Bootstrap\\{closure}()"
+          - generic [ref=f2e66] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e67]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php#L222
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Filesystem/
+              - strong [ref=f2e68]: Filesystem.php
+            - text: tempnam (line 222)
+          - generic [ref=f2e75] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e76]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php#L199
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/Compilers/
+              - strong [ref=f2e77]: BladeCompiler.php
+            - text: "-> replace (line 199)"
+          - generic [ref=f2e83] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e84]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php#L68
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/Engines/
+              - strong [ref=f2e85]: CompilerEngine.php
+            - text: "-> compile (line 68)"
+          - generic [ref=f2e91] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e92]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L208
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=f2e93]: View.php
+            - text: "-> get (line 208)"
+          - generic [ref=f2e99] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e100]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L191
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=f2e101]: View.php
+            - text: "-> getContents (line 191)"
+          - generic [ref=f2e107] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e108]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/View.php#L160
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/
+              - strong [ref=f2e109]: View.php
+            - text: "-> renderContents (line 160)"
+          - generic [ref=f2e115] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e116]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Renderer/Renderer.php#L95
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Renderer/
+              - strong [ref=f2e117]: Renderer.php
+            - text: "-> render (line 95)"
+          - generic [ref=f2e123] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e124]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L982
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=f2e125]: Handler.php
+            - text: "-> render (line 982)"
+          - generic [ref=f2e131] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e132]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L963
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=f2e133]: Handler.php
+            - text: "-> renderExceptionContent (line 963)"
+          - generic [ref=f2e139] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e140]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L942
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=f2e141]: Handler.php
+            - text: "-> convertExceptionToResponse (line 942)"
+          - generic [ref=f2e147] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e148]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L833
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=f2e149]: Handler.php
+            - text: "-> prepareResponse (line 833)"
+          - generic [ref=f2e155] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e156]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php#L720
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/
+              - strong [ref=f2e157]: Handler.php
+            - text: "-> renderExceptionResponse (line 720)"
+          - generic [ref=f2e163] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e164]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php#L51
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/
+              - strong [ref=f2e165]: Pipeline.php
+            - text: "-> render (line 51)"
+          - generic [ref=f2e171] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e172]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L182
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e173]: Pipeline.php
+            - text: "-> handleException (line 182)"
+          - generic [ref=f2e179] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e180]:
+              - /url: file:///var/www/html/vendor/spatie/laravel-permission/src/Middleware/RoleMiddleware.php#L42
+              - text: /var/www/html/vendor/spatie/laravel-permission/src/Middleware/
+              - strong [ref=f2e181]: RoleMiddleware.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 42)"
+          - generic [ref=f2e187] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e188]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e189]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e195] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e196]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php#L52
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/
+              - strong [ref=f2e197]: SubstituteBindings.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 52)"
+          - generic [ref=f2e203] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e204]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e205]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e207] [cursor=pointer]:
+            - generic [ref=f2e211]: Pipeline
+            - text: "->Illuminate\\Pipeline\\{closure}()"
+            - generic [ref=f2e212]:
+              - text: in
+              - link [ref=f2e213]:
+                - /url: file:///var/www/html/app/Http/Middleware/EnsureActiveCompany.php#L40
+                - text: /var/www/html/app/Http/Middleware/
+                - strong [ref=f2e214]: EnsureActiveCompany.php
+              - text: (line 40)
+          - generic [ref=f2e220] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e221]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e222]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e228] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e229]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Auth/Middleware/EnsureEmailIsVerified.php#L41
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Auth/Middleware/
+              - strong [ref=f2e230]: EnsureEmailIsVerified.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 41)"
+          - generic [ref=f2e236] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e237]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e238]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e244] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e245]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php#L63
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Auth/Middleware/
+              - strong [ref=f2e246]: Authenticate.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 63)"
+          - generic [ref=f2e252] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e253]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e254]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e260] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e261]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestForgery.php#L104
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e262]: PreventRequestForgery.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 104)"
+          - generic [ref=f2e268] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e269]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e270]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e276] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e277]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php#L48
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/View/Middleware/
+              - strong [ref=f2e278]: ShareErrorsFromSession.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 48)"
+          - generic [ref=f2e284] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e285]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e286]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e292] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e293]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php#L120
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/
+              - strong [ref=f2e294]: StartSession.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 120)"
+          - generic [ref=f2e300] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e301]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php#L63
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/
+              - strong [ref=f2e302]: StartSession.php
+            - text: "-> handleStatefulRequest (line 63)"
+          - generic [ref=f2e308] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e309]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e310]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e316] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e317]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php#L36
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/
+              - strong [ref=f2e318]: AddQueuedCookiesToResponse.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 36)"
+          - generic [ref=f2e324] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e325]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e326]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e332] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e333]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php#L74
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/
+              - strong [ref=f2e334]: EncryptCookies.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 74)"
+          - generic [ref=f2e340] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e341]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e342]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e348] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e349]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L137
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e350]: Pipeline.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 137)"
+          - generic [ref=f2e356] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e357]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php#L821
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/
+              - strong [ref=f2e358]: Router.php
+            - text: "-> then (line 821)"
+          - generic [ref=f2e364] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e365]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php#L800
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/
+              - strong [ref=f2e366]: Router.php
+            - text: "-> runRouteWithinStack (line 800)"
+          - generic [ref=f2e372] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e373]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php#L764
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/
+              - strong [ref=f2e374]: Router.php
+            - text: "-> runRoute (line 764)"
+          - generic [ref=f2e380] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e381]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php#L753
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/
+              - strong [ref=f2e382]: Router.php
+            - text: "-> dispatchToRoute (line 753)"
+          - generic [ref=f2e388] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e389]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php#L200
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/
+              - strong [ref=f2e390]: Kernel.php
+            - text: "-> dispatch (line 200)"
+          - generic [ref=f2e396] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e397]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L180
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e398]: Pipeline.php
+            - text: "-> Illuminate\\Foundation\\Http\\{closure} (line 180)"
+          - generic [ref=f2e404] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e405]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php#L21
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e406]: TransformsRequest.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 21)"
+          - generic [ref=f2e412] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e413]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php#L31
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e414]: ConvertEmptyStringsToNull.php
+            - text: "-> handle (line 31)"
+          - generic [ref=f2e420] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e421]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e422]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e428] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e429]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php#L21
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e430]: TransformsRequest.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 21)"
+          - generic [ref=f2e436] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e437]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php#L51
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e438]: TrimStrings.php
+            - text: "-> handle (line 51)"
+          - generic [ref=f2e444] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e445]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e446]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e452] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e453]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php#L27
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/
+              - strong [ref=f2e454]: ValidatePostSize.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 27)"
+          - generic [ref=f2e460] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e461]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e462]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e468] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e469]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php#L110
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e470]: PreventRequestsDuringMaintenance.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 110)"
+          - generic [ref=f2e476] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e477]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e478]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e484] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e485]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php#L61
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/
+              - strong [ref=f2e486]: HandleCors.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 61)"
+          - generic [ref=f2e492] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e493]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e494]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e500] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e501]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php#L58
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/
+              - strong [ref=f2e502]: TrustProxies.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 58)"
+          - generic [ref=f2e508] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e509]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e510]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e516] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e517]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php#L22
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/
+              - strong [ref=f2e518]: InvokeDeferredCallbacks.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 22)"
+          - generic [ref=f2e524] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e525]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e526]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e532] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e533]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php#L28
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/
+              - strong [ref=f2e534]: ValidatePathEncoding.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 28)"
+          - generic [ref=f2e540] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e541]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L219
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e542]: Pipeline.php
+            - text: "-> handle (line 219)"
+          - generic [ref=f2e548] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e549]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php#L137
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/
+              - strong [ref=f2e550]: Pipeline.php
+            - text: "-> Illuminate\\Pipeline\\{closure} (line 137)"
+          - generic [ref=f2e556] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e557]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php#L175
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/
+              - strong [ref=f2e558]: Kernel.php
+            - text: "-> then (line 175)"
+          - generic [ref=f2e564] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e565]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php#L144
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/
+              - strong [ref=f2e566]: Kernel.php
+            - text: "-> sendRequestThroughRouter (line 144)"
+          - generic [ref=f2e572] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e573]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php#L1227
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/
+              - strong [ref=f2e574]: Application.php
+            - text: "-> handle (line 1227)"
+          - generic [ref=f2e576] [cursor=pointer]:
+            - generic [ref=f2e580]: Application
+            - text: "->handleRequest()"
+            - generic [ref=f2e581]:
+              - text: in
+              - link [ref=f2e582]:
+                - /url: file:///var/www/html/public/index.php#L20
+                - text: /var/www/html/public/
+                - strong [ref=f2e583]: index.php
+              - text: (line 20)
+          - generic [ref=f2e589] [cursor=pointer]:
+            - text: in
+            - link [ref=f2e590]:
+              - /url: file:///var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php#L23
+              - text: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/resources/
+              - strong [ref=f2e591]: server.php
+            - text: require_once (line 23)
